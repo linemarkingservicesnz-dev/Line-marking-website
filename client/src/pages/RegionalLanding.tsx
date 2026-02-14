@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import heroImage from "../assets/images/regional-nz.png";
 
 interface RegionalProps {
   location: string;
@@ -52,51 +53,62 @@ export default function RegionalLanding({ location }: RegionalProps) {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-10" data-testid={`page-regional-${location.toLowerCase()}`}>
-      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-        {location === "Rangiora"
-          ? `Expert Line Marking Services in ${location}`
-          : `Line Marking Services in ${location} | line-marking.co.nz`}
-      </h1>
-
-      <p className="text-gray-600 mb-8 leading-relaxed">{content.intro}</p>
-
-      <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Why Choose Us?</h2>
-      <div className="space-y-3 mb-8">
-        {content.whyChoose.map((item, i) => {
-          const [label, ...rest] = item.split(": ");
-          return (
-            <p key={i} className="text-gray-600">
-              <strong className="text-gray-800">{label}:</strong> {rest.join(": ")}
-            </p>
-          );
-        })}
+    <div data-testid={`page-regional-${location.toLowerCase()}`}>
+      <div className="relative w-full h-[250px] md:h-[320px] overflow-hidden">
+        <img src={heroImage} alt={`Line marking services in ${location}`} className="w-full h-full object-cover" data-testid="img-hero" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+        <div className="absolute inset-0 flex items-center">
+          <div className="max-w-4xl mx-auto px-4 w-full">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
+              {location === "Rangiora"
+                ? `Expert Line Marking Services in ${location}`
+                : `Line Marking Services in ${location}`}
+            </h1>
+            <p className="text-lg text-white/90 max-w-xl">Professional Line Marking Across Canterbury</p>
+          </div>
+        </div>
       </div>
 
-      <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Services We Offer:</h2>
-      <div className="space-y-3 mb-8">
-        {content.services.map((item, i) => {
-          const [label, ...rest] = item.split(": ");
-          return (
-            <p key={i} className="text-gray-600">
-              <strong className="text-gray-800">{label}:</strong> {rest.join(": ")}
-            </p>
-          );
-        })}
-      </div>
+      <div className="max-w-4xl mx-auto px-4 py-10">
+        <p className="text-gray-600 mb-8 leading-relaxed">{content.intro}</p>
 
-      <p className="text-gray-600 mb-4 leading-relaxed">
-        {location === "Rangiora"
-          ? `Looking for dependable line marking services in ${location}?`
-          : `For top-tier line marking services in ${location}, contact us on`}
-        {" "}
-        <a href="tel:0224393344" className="text-blue-600 hover:underline">022 439 3344</a>
-        {" "}or{" "}
-        <Link href="/Contact/">
-          <span className="text-blue-600 hover:underline cursor-pointer">click here to submit an enquiry</span>
-        </Link>
-        . We're here to help!
-      </p>
+        <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Why Choose Us?</h2>
+        <div className="space-y-3 mb-8">
+          {content.whyChoose.map((item, i) => {
+            const [label, ...rest] = item.split(": ");
+            return (
+              <p key={i} className="text-gray-600">
+                <strong className="text-gray-800">{label}:</strong> {rest.join(": ")}
+              </p>
+            );
+          })}
+        </div>
+
+        <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Services We Offer:</h2>
+        <div className="space-y-3 mb-8">
+          {content.services.map((item, i) => {
+            const [label, ...rest] = item.split(": ");
+            return (
+              <p key={i} className="text-gray-600">
+                <strong className="text-gray-800">{label}:</strong> {rest.join(": ")}
+              </p>
+            );
+          })}
+        </div>
+
+        <p className="text-gray-600 mb-4 leading-relaxed">
+          {location === "Rangiora"
+            ? `Looking for dependable line marking services in ${location}?`
+            : `For top-tier line marking services in ${location}, contact us on`}
+          {" "}
+          <a href="tel:0224393344" className="text-blue-600 hover:underline">022 439 3344</a>
+          {" "}or{" "}
+          <Link href="/Contact/">
+            <span className="text-blue-600 hover:underline cursor-pointer">click here to submit an enquiry</span>
+          </Link>
+          . We're here to help!
+        </p>
+      </div>
     </div>
   );
 }
