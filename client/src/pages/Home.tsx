@@ -30,7 +30,7 @@ export default function Home() {
       <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
         <img
           src={heroImage}
-          alt="Professional car park line marking in Christchurch"
+          alt="Professional car park line marking in New Zealand"
           className="w-full h-full object-cover"
           data-testid="img-hero"
         />
@@ -38,10 +38,10 @@ export default function Home() {
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4" data-testid="text-hero-title">
-              Welcome to Line-Marking Christchurch
+              Welcome to Line-Marking.co.nz
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-6">
-              Your premier provider of precision line marking services in Christchurch.
+              Your premier provider of precision line marking services across New Zealand.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/Contact/">
@@ -66,7 +66,7 @@ export default function Home() {
 
         <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Why Choose Line-Marking.co.nz?</h2>
         <p className="text-gray-600 mb-4 leading-relaxed">
-          Our Christchurch-based team ensures your workplace communicates with absolute clarity through expertly applied line markings. We help everyone on-site navigate safely, effectively integrating pedestrian and machinery traffic.
+          Based in Christchurch and now serving Auckland, our team ensures your workplace communicates with absolute clarity through expertly applied line markings. We help everyone on-site navigate safely, effectively integrating pedestrian and machinery traffic.
         </p>
         <p className="text-gray-600 mb-8 leading-relaxed">
           Our flexible scheduling includes night and weekend services at standard weekday rates to ensure minimal disruption to your operations.
@@ -84,7 +84,7 @@ export default function Home() {
             />
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Expert Line Marking</h3>
             <p className="text-gray-600 leading-relaxed">
-              We offer professional line marking for car parks in Christchurch, catering to both new markings and updates to existing ones using high-quality, NZTA-approved paints for durability and visibility.
+              We offer professional line marking for car parks across Christchurch and Auckland, catering to both new markings and updates to existing ones using high-quality, NZTA-approved paints for durability and visibility.
             </p>
           </div>
 
@@ -113,7 +113,7 @@ export default function Home() {
           <div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Site Safety Enhancements</h3>
             <p className="text-gray-600 leading-relaxed">
-              Our range of safety enhancements, including Walk Safe handrails and robust car park systems with wheel stops, speed humps, and bollards, are designed to manage traffic flow and increase safety in Christchurch locations.
+              Our range of safety enhancements, including Walk Safe handrails and robust car park systems with wheel stops, speed humps, and bollards, are designed to manage traffic flow and increase safety across all our service areas.
             </p>
           </div>
         </div>
@@ -157,7 +157,7 @@ export default function Home() {
           <div>
             <h3 className="text-lg font-semibold text-gray-800 mb-1">Customised Colour and Material Options</h3>
             <p className="text-gray-600 leading-relaxed">
-              Our material and colour choices are tailored to meet specific needs, ensuring clear markings for various traffic types across Christchurch &mdash; from pedestrian-only zones to mixed-use paths and vehicle-only areas.
+              Our material and colour choices are tailored to meet specific needs, ensuring clear markings for various traffic types &mdash; from pedestrian-only zones to mixed-use paths and vehicle-only areas.
             </p>
           </div>
         </div>
@@ -185,12 +185,12 @@ export default function Home() {
         </div>
 
         <p className="text-gray-600 mb-4 leading-relaxed">
-          Contact Us: For a free quote and tailored advice, contact our Christchurch team at Line-Marking.co.nz. We are dedicated to helping you maintain a safe, compliant, and clearly marked environment.
+          Contact Us: For a free quote and tailored advice, contact our team at Line-Marking.co.nz. We are dedicated to helping you maintain a safe, compliant, and clearly marked environment.
         </p>
 
         <div className="bg-gray-50 border border-gray-200 rounded-md p-6 my-8">
           <p className="text-gray-700 font-medium mb-2">
-            Choose Line-Marking.co.nz as your trusted line marking partner in Christchurch, dedicated to enhancing workplace safety and efficiency with high-quality solutions.
+            Choose Line-Marking.co.nz as your trusted line marking partner, dedicated to enhancing workplace safety and efficiency with high-quality solutions across Christchurch and Auckland.
           </p>
           <p className="text-gray-700 font-medium">
             Call Rogerio now on{" "}
