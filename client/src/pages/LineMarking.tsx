@@ -1,57 +1,83 @@
-import { ServiceLayout } from "@/components/ServiceLayout";
-import { CheckCircle2 } from "lucide-react";
+import { Link } from "wouter";
 
 export default function LineMarking() {
   return (
-    <ServiceLayout
-      title="Line Marking Services"
-      subtitle="Professional Road, Car Park & Safety Markings"
-      heroImage="https://images.unsplash.com/photo-1625246333195-09d9b4b9b942?auto=format&fit=crop&q=80" // road marking
-    >
-      <div className="space-y-6 text-slate-600">
-        <p className="lead text-xl font-medium text-slate-800">
-          We provide comprehensive line marking solutions for commercial and industrial clients across Christchurch and the South Island. Our experienced team uses NZTA-approved paints and modern equipment to ensure crisp, durable, and compliant markings.
-        </p>
+    <div className="max-w-4xl mx-auto px-4 py-10" data-testid="page-line-marking">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+        Line-Marking.co.nz: Your Specialist in Line Marking
+      </h1>
 
-        <h2 className="text-2xl font-bold text-secondary font-display uppercase mt-8">Car Park Line Marking</h2>
-        <p>
-          A well-marked car park improves safety, maximizes space, and creates a positive first impression for your customers. We handle everything from new layouts to re-marking existing lines.
-        </p>
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
-          <FeatureItem text="Parking Bays & numbering" />
-          <FeatureItem text="Disabled & Parent Parking Symbols" />
-          <FeatureItem text="Directional Arrows & Stop Bars" />
-          <FeatureItem text="Pedestrian Crossings" />
-          <FeatureItem text="Loading Zones & No Parking Areas" />
-          <FeatureItem text="EV Charging Station Markings" />
-        </ul>
+      <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Expert Line Marking for Safer, More Efficient Workspaces</h2>
+      <p className="text-gray-600 mb-6 leading-relaxed">
+        At Line-Marking.co.nz, we excel in providing top-quality line marking services tailored to your specific needs. Whether you're updating existing markings or implementing new layouts, our professional team ensures your workspace is both safe and compliant.
+      </p>
 
-        <h2 className="text-2xl font-bold text-secondary font-display uppercase mt-8">Road & Transport Markings</h2>
-        <p>
-          We work with civil contractors, councils, and private developments to apply road markings that meet strict New Zealand regulatory standards. Our high-performance road paints are designed to withstand heavy traffic and variable weather conditions.
-        </p>
+      <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Why Choose Line-Marking.co.nz for Line Marking?</h3>
+      <ul className="space-y-3 mb-6">
+        <li className="text-gray-600">
+          <strong className="text-gray-800">Precision and Quality:</strong> We use only the highest quality materials, including NZTA-approved road paint, epoxies, and polyurethane resins, to deliver clear, durable, and vibrant markings.
+        </li>
+        <li className="text-gray-600">
+          <strong className="text-gray-800">Health and Safety Compliance:</strong> Proper line marking enhances safety for both pedestrians and drivers, reducing accidents and improving overall site organisation.
+        </li>
+        <li className="text-gray-600">
+          <strong className="text-gray-800">Custom Solutions:</strong> Every site is unique. We tailor our line marking services to meet the specific requirements of your car park, factory, warehouse, or commercial space.
+        </li>
+      </ul>
 
-        <h2 className="text-2xl font-bold text-secondary font-display uppercase mt-8">Sports Courts</h2>
-        <p>
-          Precision marking for indoor and outdoor sports facilities, including tennis, netball, basketball, and multi-use courts. We use specialized non-slip paints suitable for sports surfaces.
-        </p>
+      <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Our Line Marking Services Include:</h3>
+      <ul className="space-y-3 mb-6">
+        <li className="text-gray-600">
+          <strong className="text-gray-800">Car Park Line Marking:</strong> Ensure clear and organised parking with precise line markings, directional arrows, and signage.
+        </li>
+        <li className="text-gray-600">
+          <Link href="/line-marking-pedestrian-walkways/">
+            <strong className="text-blue-600 hover:underline cursor-pointer">Pedestrian Walkways:</strong>
+          </Link>{" "}
+          Create safe pathways for pedestrians with bright, easily visible walkways and crossings.
+        </li>
+        <li className="text-gray-600">
+          <strong className="text-gray-800">Accessibility Markings:</strong> Provide designated parking and access points for visitors with mobility issues, ensuring full compliance with accessibility standards.
+        </li>
+        <li className="text-gray-600">
+          <strong className="text-gray-800">Safety Markings:</strong> Mark fire exits, keep clear zones, and hazardous areas to maintain a safe environment for all site users.
+        </li>
+        <li className="text-gray-600">
+          <strong className="text-gray-800">Directional Signage:</strong> Improve site navigation with clear directional markings, including arrows, stop signs, and give-way lines.
+        </li>
+        <li className="text-gray-600">
+          <Link href="/Our-Services/sports-court-line-marking/">
+            <strong className="text-blue-600 hover:underline cursor-pointer">Sports Court Line Marking:</strong>
+          </Link>{" "}
+          Enhance aesthetics and playability with precise, professional, and durable markings, ensuring optimal play conditions.
+        </li>
+      </ul>
 
-        <div className="my-8 p-6 bg-secondary text-white rounded-lg">
-          <h3 className="text-xl font-bold font-display uppercase text-primary mb-2">Why Quality Matters</h3>
-          <p className="text-gray-300">
-            Cheap paint fades quickly and can become slippery when wet. We strictly use industrial-grade, chlorinated rubber or waterborne road marking paints that offer superior adhesion, reflectivity, and longevity.
-          </p>
-        </div>
-      </div>
-    </ServiceLayout>
-  );
-}
+      <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Frequently Asked Questions:</h3>
 
-function FeatureItem({ text }: { text: string }) {
-  return (
-    <li className="flex items-center gap-2">
-      <CheckCircle2 className="w-5 h-5 text-primary" />
-      <span>{text}</span>
-    </li>
+      <h4 className="text-lg font-semibold text-gray-800 mt-6 mb-2">How long will the lines last?</h4>
+      <p className="text-gray-600 mb-4 leading-relaxed">
+        The longevity of line markings depends on traffic volume. Typically, they last between 18 to 24 months. High-traffic areas may require more frequent maintenance, approximately every 4 to 8 months.
+      </p>
+
+      <h4 className="text-lg font-semibold text-gray-800 mt-6 mb-2">Can I choose epoxy resin markings for durability?</h4>
+      <p className="text-gray-600 mb-4 leading-relaxed">
+        Epoxy resins are ideal for concrete surfaces and indoor areas. For outdoor applications, especially those exposed to sunlight, polyurethane resins are recommended due to their superior UV resistance.
+      </p>
+
+      <h4 className="text-lg font-semibold text-gray-800 mt-6 mb-2">Can we use MMA resin indoors?</h4>
+      <p className="text-gray-600 mb-4 leading-relaxed">
+        We do not recommend using MMA resin indoors due to its strong odour and high VOC content. It is best applied in well-ventilated outdoor areas where safety protocols can be strictly followed.
+      </p>
+
+      <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Contact Us for More Information and Free Quotes</h3>
+      <p className="text-gray-600 mb-6 leading-relaxed">
+        For professional line marking services that enhance safety and efficiency,{" "}
+        <Link href="/Contact/">
+          <span className="text-blue-600 hover:underline cursor-pointer">contact Line-Marking.co.nz today</span>
+        </Link>
+        . Ensure your workspace is optimally organised and compliant with our expert line marking solutions.
+      </p>
+    </div>
   );
 }

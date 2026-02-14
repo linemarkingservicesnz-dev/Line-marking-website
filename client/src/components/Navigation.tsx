@@ -1,125 +1,138 @@
 import { Link, useLocation } from "wouter";
-import { useState } from "react";
-import { Menu, X, Phone, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/Our-Services/Line-Marking/", label: "Line Marking" },
-  { href: "/Our-Services/Industrial/", label: "Industrial" },
-  { href: "/Our-Services/Non-Slip-Flooring/", label: "Flooring" },
-  { href: "/About-Us/", label: "About" },
-  { href: "/contact", label: "Contact" },
+const serviceLinks = [
+  { href: "/Our-Services/Line-Marking/", label: "Line Marking and Symbols" },
+  { href: "/Our-Services/Industrial/", label: "Industrial Line Marking" },
+  { href: "/Our-Services/Non-Slip-Flooring/", label: "Non-Slip Flooring" },
+  { href: "/Our-Services/Protective-Concrete-Coatings/", label: "Protective Concrete Coatings" },
+  { href: "/Our-Services/Line-And-Marking-Removals/", label: "Line and Marking Removals" },
+  { href: "/Our-Services/sports-court-line-marking/", label: "Sports Court Line Marking" },
 ];
 
 export function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const [location] = useLocation();
 
-  const isActive = (path: string) => location === path;
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setServicesOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    setMobileOpen(false);
+    setServicesOpen(false);
+  }, [location]);
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border shadow-sm">
-      {/* Top Bar - Contact Info */}
-      <div className="bg-secondary text-secondary-foreground py-2 hidden md:block">
-        <div className="container-wide flex justify-between items-center text-sm font-medium">
-          <div className="flex gap-6">
-            <span className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-primary" />
-              022 439 3344
+    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm" data-testid="navigation">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          <Link href="/" data-testid="link-home">
+            <span className="text-xl font-bold text-gray-800 cursor-pointer">
+              Line-Marking.co.nz
             </span>
-            <span className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-primary" />
-              rogeriotc2@gmail.com
-            </span>
-          </div>
-          <div className="text-primary font-bold tracking-wider">
-            SERVING CHRISTCHURCH & SOUTH ISLAND
-          </div>
-        </div>
-      </div>
-
-      {/* Main Nav */}
-      <div className="container-wide py-4">
-        <div className="flex items-center justify-between">
-          <Link href="/">
-            <div className="flex flex-col cursor-pointer group">
-              <h1 className="text-2xl font-bold font-display uppercase tracking-tighter leading-none group-hover:text-primary transition-colors">
-                Line Marking
-              </h1>
-              <span className="text-xs font-semibold tracking-widest text-muted-foreground group-hover:text-foreground transition-colors">
-                & FLOORING CHRISTCHURCH
-              </span>
-            </div>
           </Link>
 
-          {/* Desktop Links */}
-          <div className="hidden lg:flex items-center gap-1">
-            {links.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <span
-                  className={`px-4 py-2 text-sm font-semibold uppercase tracking-wide cursor-pointer transition-all hover:text-primary ${
-                    isActive(link.href) ? "text-primary border-b-2 border-primary" : "text-foreground"
-                  }`}
-                >
-                  {link.label}
-                </span>
-              </Link>
-            ))}
-            <Link href="/contact">
-              <Button className="ml-4 font-bold uppercase bg-primary text-primary-foreground hover:bg-primary/90">
-                Get a Quote
-              </Button>
+          <div className="hidden md:flex items-center gap-1">
+            <Link href="/">
+              <span className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 cursor-pointer transition-colors" data-testid="nav-home">
+                Home
+              </span>
+            </Link>
+
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
+                data-testid="nav-services"
+              >
+                Our Services
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-md shadow-lg py-1 z-50">
+                  {serviceLinks.map((link) => (
+                    <Link key={link.href} href={link.href}>
+                      <span
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 cursor-pointer"
+                        data-testid={`nav-service-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      >
+                        {link.label}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link href="/About-Us/">
+              <span className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 cursor-pointer transition-colors" data-testid="nav-about">
+                About Us
+              </span>
+            </Link>
+
+            <Link href="/Contact/">
+              <span className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 cursor-pointer transition-colors" data-testid="nav-contact">
+                Contact
+              </span>
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-foreground"
-            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            data-testid="button-mobile-menu"
           >
-            {isOpen ? <X /> : <Menu />}
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background border-b border-border"
-          >
-            <div className="container-wide py-4 flex flex-col gap-2">
-              {links.map((link) => (
-                <Link key={link.href} href={link.href}>
-                  <div
-                    onClick={() => setIsOpen(false)}
-                    className={`p-3 text-lg font-bold uppercase tracking-wide cursor-pointer hover:bg-muted ${
-                      isActive(link.href) ? "text-primary bg-muted/50" : ""
-                    }`}
-                  >
-                    {link.label}
-                  </div>
-                </Link>
-              ))}
-              <div className="mt-4 pt-4 border-t border-border flex flex-col gap-3">
-                 <a href="tel:0224393344" className="flex items-center gap-2 font-medium">
-                    <Phone className="w-5 h-5 text-primary" />
-                    022 439 3344
-                 </a>
-                 <a href="mailto:rogeriotc2@gmail.com" className="flex items-center gap-2 font-medium">
-                    <Mail className="w-5 h-5 text-primary" />
-                    rogeriotc2@gmail.com
-                 </a>
+      {mobileOpen && (
+        <div className="md:hidden border-t border-gray-200 bg-white">
+          <div className="px-4 py-2 space-y-1">
+            <Link href="/">
+              <span className="block py-2 text-sm font-medium text-gray-700" onClick={() => setMobileOpen(false)}>Home</span>
+            </Link>
+
+            <button
+              className="flex items-center justify-between w-full py-2 text-sm font-medium text-gray-700"
+              onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+            >
+              Our Services
+              <ChevronDown className={`w-4 h-4 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {mobileServicesOpen && (
+              <div className="pl-4 space-y-1">
+                {serviceLinks.map((link) => (
+                  <Link key={link.href} href={link.href}>
+                    <span className="block py-2 text-sm text-gray-600" onClick={() => setMobileOpen(false)}>
+                      {link.label}
+                    </span>
+                  </Link>
+                ))}
               </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            )}
+
+            <Link href="/About-Us/">
+              <span className="block py-2 text-sm font-medium text-gray-700" onClick={() => setMobileOpen(false)}>About Us</span>
+            </Link>
+            <Link href="/Contact/">
+              <span className="block py-2 text-sm font-medium text-gray-700" onClick={() => setMobileOpen(false)}>Contact</span>
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

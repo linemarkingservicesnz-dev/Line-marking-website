@@ -1,53 +1,34 @@
-import { ServiceLayout } from "@/components/ServiceLayout";
-import { CheckCircle2 } from "lucide-react";
+import { Link } from "wouter";
 
 export default function About() {
   return (
-    <ServiceLayout
-      title="About Us"
-      subtitle="Your Trusted Partner in Industrial Safety"
-      heroImage="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80" // construction worker
-    >
-      <div className="space-y-6 text-slate-600">
-        <p className="lead text-xl font-medium text-slate-800">
-          Line Marking & Flooring Christchurch is a locally owned and operated business dedicated to improving safety and efficiency in workplaces across the South Island.
-        </p>
+    <div className="max-w-4xl mx-auto px-4 py-10" data-testid="page-about">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About Us</h1>
 
-        <h2 className="text-2xl font-bold text-secondary font-display uppercase mt-8">Our Mission</h2>
-        <p>
-          To provide high-quality, durable, and compliant marking and flooring solutions that protect people and assets. We believe that a safe workplace is a productive workplace.
-        </p>
+      <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+        We are expert facilitators in floor markings informing visitors, machine operators and workers where to safely walk or drive, making them aware of potential hazards.
+      </p>
 
-        <h2 className="text-2xl font-bold text-secondary font-display uppercase mt-8">Expertise You Can Trust</h2>
-        <p>
-          With years of experience in the civil and industrial sectors, we understand the specific challenges of New Zealand environments. From freezing cold coolstores to hot asphalt car parks, we know which products work and which don't.
-        </p>
+      <p className="text-gray-600 mb-6 leading-relaxed">
+        With vast experience with resin and composites, also with health and safety in the construction sector including warehouses, manufacturing and transport.
+      </p>
 
-        <h3 className="text-xl font-bold text-secondary mt-6">We Are Committed To:</h3>
-        <ul className="space-y-3 mt-4">
-          <ListItem text="Using only NZTA-approved road marking paints and industrial-grade resins." />
-          <ListItem text="Strict adherence to Health & Safety protocols on every site." />
-          <ListItem text="Providing clear, honest advice and accurate quotes." />
-          <ListItem text="Delivering projects on time and within budget." />
-          <ListItem text="Flexible scheduling to minimize operational downtime." />
-        </ul>
+      <p className="text-gray-600 mb-8 leading-relaxed">
+        We not only help to keep your site safe, but can also help your company to avoid future incidents by bringing it up to compliance levels.
+      </p>
 
-        <div className="mt-8 p-6 bg-slate-100 rounded-lg border border-slate-200">
-          <h3 className="text-lg font-bold font-display uppercase text-secondary mb-2">Service Areas</h3>
-          <p className="text-sm">
-            Based in Christchurch, we service the entire Canterbury region including Rolleston, Rangiora, Ashburton, and Timaru. We also travel to the West Coast (Greymouth, Westport) and Nelson for larger projects.
-          </p>
-        </div>
+      <div className="flex flex-wrap gap-4 mb-8">
+        <Link href="/Our-Services/Line-Marking/">
+          <span className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition-colors cursor-pointer" data-testid="button-view-services">
+            View Our Services
+          </span>
+        </Link>
+        <Link href="/Contact/">
+          <span className="inline-block bg-gray-600 text-white px-6 py-3 rounded-md font-medium hover:bg-gray-700 transition-colors cursor-pointer" data-testid="button-get-quote">
+            Get a Free Quote
+          </span>
+        </Link>
       </div>
-    </ServiceLayout>
-  );
-}
-
-function ListItem({ text }: { text: string }) {
-  return (
-    <li className="flex items-start gap-3">
-      <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-      <span>{text}</span>
-    </li>
+    </div>
   );
 }

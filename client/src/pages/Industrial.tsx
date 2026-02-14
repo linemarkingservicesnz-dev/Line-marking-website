@@ -1,56 +1,79 @@
-import { ServiceLayout } from "@/components/ServiceLayout";
+import { Link } from "wouter";
 
 export default function Industrial() {
   return (
-    <ServiceLayout
-      title="Industrial Safety Markings"
-      subtitle="Warehouse, Factory & Distribution Center Solutions"
-      heroImage="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80" // warehouse
-    >
-      <div className="space-y-6 text-slate-600">
-        <p className="lead text-xl font-medium text-slate-800">
-          In busy industrial environments, clear visual communication is critical for Health & Safety compliance. We specialize in creating logical, high-visibility floor marking systems that separate pedestrians from forklifts and identify hazards.
-        </p>
+    <div className="max-w-4xl mx-auto px-4 py-10" data-testid="page-industrial">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+        Industrial Line Marking &ndash; Christchurch &amp; Canterbury
+      </h1>
 
-        <h2 className="text-2xl font-bold text-secondary font-display uppercase mt-8">Warehouse Safety Solutions</h2>
-        <p>
-          We design and install comprehensive safety marking schemes tailored to your operational workflow.
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-          <div className="border border-border p-4 rounded bg-white">
-            <h4 className="font-bold text-lg mb-2 text-secondary">Walkways</h4>
-            <p>clearly defined safe paths for staff and visitors, often marked in safety green or with yellow borders.</p>
-          </div>
-          <div className="border border-border p-4 rounded bg-white">
-            <h4 className="font-bold text-lg mb-2 text-secondary">Forklift Lanes</h4>
-            <p>Designated travel routes for machinery to minimize collision risks.</p>
-          </div>
-          <div className="border border-border p-4 rounded bg-white">
-            <h4 className="font-bold text-lg mb-2 text-secondary">Exclusion Zones</h4>
-            <p>Hatched markings around electrical panels, fire exits, and machinery.</p>
-          </div>
-          <div className="border border-border p-4 rounded bg-white">
-            <h4 className="font-bold text-lg mb-2 text-secondary">Staging Areas</h4>
-            <p>Marked zones for inbound/outbound goods, pallets, and quality control.</p>
-          </div>
+      <p className="text-lg text-gray-700 font-medium mb-8">
+        Industrial Line Marking - Christchurch &amp; Canterbury
+      </p>
+
+      <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">What We Offer</h2>
+      <div className="space-y-4 mb-8">
+        <div>
+          <h3 className="font-semibold text-gray-800">Forklift lanes &amp; pedestrian zones</h3>
+          <p className="text-gray-600">Clear separation for safety and efficiency</p>
         </div>
-
-        <h2 className="text-2xl font-bold text-secondary font-display uppercase mt-8">Custom Stenciling</h2>
-        <p>
-          We can create custom stencils for any requirement, including safety messages ("STOP", "SLOW", "LOOK"), numbering, logos, or specific operational instructions directly on the floor.
-        </p>
-
-        <h2 className="text-2xl font-bold text-secondary font-display uppercase mt-8">Minimizing Downtime</h2>
-        <p>
-          We understand that you can't just shut down your warehouse for painting. We offer:
-        </p>
-        <ul className="list-disc pl-6 space-y-2 marker:text-primary">
-          <li><strong>Fast-drying paints:</strong> Walkable in as little as 30 minutes.</li>
-          <li><strong>After-hours service:</strong> We work nights and weekends at no extra penalty rate.</li>
-          <li><strong>Dust-free preparation:</strong> Using vacuum-attached grinding equipment to prepare the surface without contaminating your stock.</li>
-        </ul>
+        <div>
+          <h3 className="font-semibold text-gray-800">Hazard &amp; exclusion zones</h3>
+          <p className="text-gray-600">High-visibility markings for compliance and risk reduction</p>
+        </div>
+        <div>
+          <h3 className="font-semibold text-gray-800">Anti-skid coatings</h3>
+          <p className="text-gray-600">Durable, textured finishes for wet or high-traffic areas</p>
+        </div>
+        <div>
+          <h3 className="font-semibold text-gray-800">Custom stenciling &amp; directional arrows</h3>
+          <p className="text-gray-600">Tailored to your site layout and traffic flow</p>
+        </div>
+        <div>
+          <h3 className="font-semibold text-gray-800">NZTA-approved paints</h3>
+          <p className="text-gray-600">Fast-drying, long-lasting, and compliant with national standards</p>
+        </div>
       </div>
-    </ServiceLayout>
+
+      <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Areas We Serve</h2>
+      <p className="text-gray-600 mb-2">We specialize in industrial zones across:</p>
+      <ul className="space-y-2 mb-8 text-gray-600">
+        <li><strong className="text-gray-800">Hornby</strong> &ndash; Warehouses, logistics hubs, and distribution centers</li>
+        <li><strong className="text-gray-800">Wigram</strong> &ndash; Light industrial, trades, and commercial units</li>
+        <li><strong className="text-gray-800">Rolleston Izone</strong> &ndash; Heavy industry, manufacturing, and transport yards</li>
+        <li><strong className="text-gray-800">Islington</strong> Industrial Line marking</li>
+        <li><strong className="text-gray-800">Sockburn</strong> Warehouse Line marking</li>
+        <li><strong className="text-gray-800">Middleton</strong> Factory Safety Markings</li>
+      </ul>
+
+      <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Flexible Scheduling</h2>
+      <p className="text-gray-600 mb-8 leading-relaxed">
+        We offer night and weekend service at weekday rates to minimize disruption to your operations.
+      </p>
+
+      <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">What Clients Say</h2>
+      <div className="space-y-4 mb-8">
+        <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-600">
+          "Rogerio's team marked our forklift lanes and hazard zones in one night &mdash; clean, compliant, and professional."
+        </blockquote>
+        <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-600">
+          "The anti-skid finish is perfect for our wet loading area. Highly recommend."
+        </blockquote>
+      </div>
+
+      <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Book Your Free Site Visit</h2>
+      <p className="text-gray-600 mb-4 leading-relaxed">
+        Ready to upgrade your site safety and compliance? Call or message us today to lock in a quote.
+      </p>
+      <div className="space-y-2 text-gray-600 mb-4">
+        <p><a href="tel:0224393344" className="text-blue-600 hover:underline">022 439 3344</a></p>
+        <p><a href="mailto:info@workspacesafety.co.nz" className="text-blue-600 hover:underline">info@workspacesafety.co.nz</a></p>
+        <p>
+          <Link href="/Our-Services/Industrial/">
+            <span className="text-blue-600 hover:underline cursor-pointer">www.line-marking.co.nz/industrial</span>
+          </Link>
+        </p>
+      </div>
+    </div>
   );
 }
