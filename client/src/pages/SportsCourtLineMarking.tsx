@@ -24,8 +24,8 @@ export default function SportsCourtLineMarking() {
         </p>
 
         <div className="my-8 rounded-md overflow-hidden shadow-sm">
-          <img src={heroImage} alt="Indoor basketball and netball court lined by Line-Marking.co.nz" className="w-full" data-testid="img-showcase" />
-          <p className="text-sm text-gray-500 mt-2 italic" data-testid="text-showcase-caption">Indoor multi-sport court with basketball and netball line markings completed by our team.</p>
+          <img src={heroImage} alt="Indoor basketball and volleyball court lined by Line-Marking.co.nz" className="w-full" data-testid="img-showcase" />
+          <p className="text-sm text-gray-500 mt-2 italic" data-testid="text-showcase-caption">Indoor multi-sport court with basketball and volleyball line markings completed by our team.</p>
         </div>
 
         <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Our Sports Court Services Include:</h3>
@@ -43,8 +43,8 @@ export default function SportsCourtLineMarking() {
             <p className="text-gray-600">Professional line marking for tennis courts, enhancing playability and aesthetics.</p>
           </div>
           <div>
-            <h4 className="font-semibold text-gray-800 mb-1">Netball Court Line Marking</h4>
-            <p className="text-gray-600">Clear and compliant markings to support safe and enjoyable netball games.</p>
+            <h4 className="font-semibold text-gray-800 mb-1">Volleyball Court Line Marking</h4>
+            <p className="text-gray-600">Clear and compliant markings to support safe and enjoyable volleyball games.</p>
           </div>
         </div>
 
