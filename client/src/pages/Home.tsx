@@ -1,4 +1,8 @@
 import { Link } from "wouter";
+import heroImage from "../assets/images/hero-carpark.png";
+import warehouseImage from "../assets/images/warehouse-safety.png";
+import epoxyImage from "../assets/images/epoxy-floor.png";
+import sportsImage from "../assets/images/sports-court.png";
 
 const regionLinks = [
   { href: "/line-marking-ashburton/", label: "Ashburton" },
@@ -16,13 +20,41 @@ const regionLinks = [
 export default function Home() {
   return (
     <div data-testid="page-home">
+      <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
+        <img
+          src={heroImage}
+          alt="Professional car park line marking in Christchurch"
+          className="w-full h-full object-cover"
+          data-testid="img-hero"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+        <div className="absolute inset-0 flex items-center">
+          <div className="max-w-4xl mx-auto px-4 w-full">
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4" data-testid="text-hero-title">
+              Welcome to Line-Marking Christchurch
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-6">
+              Your premier provider of precision line marking services in Christchurch.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/Contact/">
+                <span className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition-colors cursor-pointer" data-testid="button-hero-contact">
+                  Get a Free Quote
+                </span>
+              </Link>
+              <Link href="/Our-Services/Line-Marking/">
+                <span className="inline-block bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 py-3 rounded-md font-medium hover:bg-white/30 transition-colors cursor-pointer" data-testid="button-hero-services">
+                  Our Services
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-4xl mx-auto px-4 py-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6" data-testid="text-hero-title">
-          Welcome to Line-Marking Christchurch
-        </h1>
-        
         <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-          Your premier provider of precision line marking services in Christchurch. We specialise in delivering bespoke, compliant, and clear line marking solutions tailored to enhance safety and efficiency across various workplaces and sports venues.
+          We specialise in delivering bespoke, compliant, and clear line marking solutions tailored to enhance safety and efficiency across various workplaces and sports venues.
         </p>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Why Choose Line-Marking.co.nz?</h2>
@@ -34,9 +66,15 @@ export default function Home() {
         </p>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Our Comprehensive Line Marking Services</h2>
-        
-        <div className="space-y-6 mb-10">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           <div>
+            <img
+              src={warehouseImage}
+              alt="Warehouse safety floor markings with pedestrian walkways"
+              className="w-full h-48 object-cover rounded-md mb-4"
+              data-testid="img-warehouse"
+            />
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Expert Line Marking</h3>
             <p className="text-gray-600 leading-relaxed">
               We offer professional line marking for car parks in Christchurch, catering to both new markings and updates to existing ones using high-quality, NZTA-approved paints for durability and visibility.
@@ -44,16 +82,24 @@ export default function Home() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">Directional and Safety Markings</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Enhance on-site safety with our directional arrows, zebra crossings, and safety line markings, crucial for factories, warehouses, and other industrial settings.
-            </p>
-          </div>
-
-          <div>
+            <img
+              src={epoxyImage}
+              alt="Epoxy coated concrete floor in modern workshop"
+              className="w-full h-48 object-cover rounded-md mb-4"
+              data-testid="img-epoxy"
+            />
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Resilient Flooring Solutions</h3>
             <p className="text-gray-600 leading-relaxed">
               Choose from epoxy and polyurethane resins, non-slip aggregates, and non-skid paints to improve wear resistance and prolong the lifespan of floor markings.
+            </p>
+          </div>
+        </div>
+
+        <div className="space-y-6 mb-10">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">Directional and Safety Markings</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Enhance on-site safety with our directional arrows, zebra crossings, and safety line markings, crucial for factories, warehouses, and other industrial settings.
             </p>
           </div>
 
@@ -66,30 +112,30 @@ export default function Home() {
         </div>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">New: Sports Court Line Marking Services</h2>
-        <p className="text-gray-600 mb-4 leading-relaxed">
-          We are excited to announce the addition of{" "}
-          <Link href="/Our-Services/sports-court-line-marking/">
-            <span className="text-blue-600 hover:underline cursor-pointer">sports court line marking</span>
-          </Link>{" "}
-          to our services, available for schools, clubs, and private homes. Our offerings include:
-        </p>
 
-        <div className="space-y-4 mb-10">
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-1">Basketball Court Line Marking</h3>
-            <p className="text-gray-600">Accurate and durable markings to meet official standards, ensuring optimal play conditions.</p>
+        <div className="md:flex gap-6 mb-6">
+          <div className="md:w-1/2 mb-4 md:mb-0">
+            <img
+              src={sportsImage}
+              alt="Sports court with fresh line markings"
+              className="w-full h-56 object-cover rounded-md"
+              data-testid="img-sports"
+            />
           </div>
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-1">Pickleball Court Line Marking</h3>
-            <p className="text-gray-600">Precise line marking for this rapidly growing sport, tailored to your specific requirements.</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-1">Tennis Court Line Marking</h3>
-            <p className="text-gray-600">Professional line marking for tennis courts, enhancing playability and aesthetics.</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-1">Netball Court Line Marking</h3>
-            <p className="text-gray-600">Clear and compliant markings to support safe and enjoyable netball games.</p>
+          <div className="md:w-1/2">
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              We are excited to announce the addition of{" "}
+              <Link href="/Our-Services/sports-court-line-marking/">
+                <span className="text-blue-600 hover:underline cursor-pointer">sports court line marking</span>
+              </Link>{" "}
+              to our services, available for schools, clubs, and private homes.
+            </p>
+            <ul className="space-y-2 text-gray-600">
+              <li><strong className="text-gray-800">Basketball</strong> - Accurate markings to meet official standards</li>
+              <li><strong className="text-gray-800">Pickleball</strong> - Precise marking for this growing sport</li>
+              <li><strong className="text-gray-800">Tennis</strong> - Professional markings enhancing playability</li>
+              <li><strong className="text-gray-800">Netball</strong> - Clear, compliant court markings</li>
+            </ul>
           </div>
         </div>
 
