@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import heroImage from "../assets/images/real-space-track.jpg";
+import heroImage from "../assets/images/real-hero-playground.jpg";
 import hopscotchImage from "../assets/images/real-hopscotch.jpg";
 import snakesLaddersImage from "../assets/images/real-snakes-ladders.jpg";
 import numberGridImage from "../assets/images/real-number-grid.jpg";
