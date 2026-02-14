@@ -1,12 +1,12 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import heroImage from "../assets/images/real-hero-playground.jpg";
-import hopscotchImage from "../assets/images/real-hopscotch.jpg";
-import snakesLaddersImage from "../assets/images/real-snakes-ladders.jpg";
-import numberGridImage from "../assets/images/real-number-grid.jpg";
-import compassImage from "../assets/images/real-compass.jpg";
-import spaceTrackImage from "../assets/images/real-space-track.jpg";
-import targetImage from "../assets/images/real-target.jpg";
+import heroImage from "../assets/images/enhanced-hero-playground.png";
+import hopscotchImage from "../assets/images/enhanced-hopscotch.png";
+import snakesLaddersImage from "../assets/images/enhanced-snakes-ladders.png";
+import numberGridImage from "../assets/images/enhanced-number-grid.png";
+import compassImage from "../assets/images/enhanced-compass.png";
+import spaceTrackImage from "../assets/images/enhanced-space-track.png";
+import targetImage from "../assets/images/enhanced-target.png";
 
 const games = [
   {
