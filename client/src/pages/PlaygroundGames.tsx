@@ -1,37 +1,43 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import heroImage from "../assets/images/playground-hero.png";
-import hopscotchImage from "../assets/images/playground-hopscotch.png";
-import snakesLaddersImage from "../assets/images/playground-snakes-ladders.png";
-import numberGridImage from "../assets/images/playground-number-grid.png";
-import compassImage from "../assets/images/playground-compass.png";
+import heroImage from "../assets/images/real-space-track.jpg";
+import hopscotchImage from "../assets/images/real-hopscotch.jpg";
+import snakesLaddersImage from "../assets/images/real-snakes-ladders.jpg";
+import numberGridImage from "../assets/images/real-number-grid.jpg";
+import compassImage from "../assets/images/real-compass.jpg";
+import spaceTrackImage from "../assets/images/real-space-track.jpg";
 import targetImage from "../assets/images/playground-target.png";
-import spaceTrackImage from "../assets/images/playground-space-track.png";
 
 const games = [
   {
+    title: "Space Track",
+    image: spaceTrackImage,
+    alt: "Painted space track with colourful stars, aliens, and balance trail on school playground",
+    description: "One of our most popular designs, the Space Track is a colourful fitness trail painted directly onto the playground surface. Featuring bright painted stars, planets, aliens, a moon, and a balance trail, children follow the winding path completing activities at each station. Great for PE lessons, break-time fun, and encouraging active play.",
+  },
+  {
     title: "Hopscotch",
     image: hopscotchImage,
-    alt: "Painted hopscotch game on school playground concrete",
-    description: "A timeless playground favourite, our painted hopscotch designs are bright, durable, and perfectly sized for children of all ages. We paint directly onto concrete or asphalt using hard-wearing floor paint that lasts through years of play and weather.",
+    alt: "Rainbow hopscotch with clouds and stars painted on school playground",
+    description: "Our rainbow hopscotch designs are bright, durable, and perfectly sized for children of all ages. This design features colourful numbered squares with rainbow arches, painted clouds, and stars - turning a classic playground game into a work of art. Painted directly onto concrete or asphalt using hard-wearing floor paint that lasts through years of play and weather.",
   },
   {
     title: "Snakes & Ladders",
     image: snakesLaddersImage,
-    alt: "Painted snakes and ladders board game on school playground",
-    description: "Bring the classic board game to life on your playground surface. Our hand-painted snakes and ladders games feature vibrant colours and clear numbering, encouraging interactive play and early maths skills during break times.",
+    alt: "Colourful snakes and ladders hopscotch painted on school playground with number grid in background",
+    description: "Bring classic games to life on your playground surface. Our hand-painted designs feature vibrant colours and clear numbering, encouraging interactive play and early maths skills during break times. We can paint multiple games across your playground to create a full activity zone.",
   },
   {
     title: "Number Grids (1-100)",
     image: numberGridImage,
-    alt: "Painted number grid on school playground concrete",
-    description: "Our painted number grids are a fantastic educational resource, helping children with counting, number recognition, and basic maths. Each square is clearly numbered and painted in alternating colours for easy visibility on the playground surface.",
+    alt: "Rainbow coloured number grid 1 to 100 painted on school playground",
+    description: "Our painted number grids are a fantastic educational resource, helping children with counting, number recognition, and basic maths. Each square is clearly numbered and painted in vibrant rainbow colours for easy visibility. This stunning 10x10 grid is one of our most popular school playground markings.",
   },
   {
-    title: "Compass Rose",
+    title: "Compass Rose & Clock",
     image: compassImage,
-    alt: "Painted compass rose design on school playground",
-    description: "Teach children about directions and geography with a beautifully painted compass rose. Our designs include clear cardinal and intermediate directions, perfect for outdoor learning activities and orienteering exercises.",
+    alt: "Pink green and yellow compass rose with clock face painted on school playground",
+    description: "Teach children about directions, geography, and telling time with our beautifully painted compass rose and clock face design. Featuring bright pink, green, and yellow points with cardinal and intermediate directions, plus a central clock face - perfect for outdoor learning activities and cross-curricular lessons.",
   },
   {
     title: "Target & Bullseye Games",
@@ -39,19 +45,13 @@ const games = [
     alt: "Painted target circle game on school playground",
     description: "Painted target circles with scoring zones make excellent additions to any playground. Great for throwing games, coordination activities, and PE lessons. Our concentric ring designs are painted with bright, contrasting colours for maximum fun.",
   },
-  {
-    title: "Space Track",
-    image: spaceTrackImage,
-    alt: "Painted space track fitness game on school playground",
-    description: "A favourite with schools, the Space Track is a painted fitness trail with a space and solar system theme. Planets are painted at stations around the track where children perform activities like star jumps, lunges, or balancing. The colourful orbit path encourages running, skipping, and active play while learning about the solar system. Perfect for PE lessons and break-time fun.",
-  },
 ];
 
 export default function PlaygroundGames() {
   return (
     <div data-testid="page-playground-games">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">
-        <img src={heroImage} alt="School playground with painted floor games" className="w-full h-full object-cover" data-testid="img-hero" />
+        <img src={heroImage} alt="School playground with painted floor games by Line-Marking.co.nz" className="w-full h-full object-cover" data-testid="img-hero" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
