@@ -6,6 +6,7 @@ import snakesLaddersImage from "../assets/images/playground-snakes-ladders.png";
 import numberGridImage from "../assets/images/playground-number-grid.png";
 import compassImage from "../assets/images/playground-compass.png";
 import targetImage from "../assets/images/playground-target.png";
+import spaceTrackImage from "../assets/images/playground-space-track.png";
 
 const games = [
   {
@@ -37,6 +38,12 @@ const games = [
     image: targetImage,
     alt: "Painted target circle game on school playground",
     description: "Painted target circles with scoring zones make excellent additions to any playground. Great for throwing games, coordination activities, and PE lessons. Our concentric ring designs are painted with bright, contrasting colours for maximum fun.",
+  },
+  {
+    title: "Space Track",
+    image: spaceTrackImage,
+    alt: "Painted space track fitness game on school playground",
+    description: "A favourite with schools, the Space Track is a painted fitness trail with a space and solar system theme. Planets are painted at stations around the track where children perform activities like star jumps, lunges, or balancing. The colourful orbit path encourages running, skipping, and active play while learning about the solar system. Perfect for PE lessons and break-time fun.",
   },
 ];
 
