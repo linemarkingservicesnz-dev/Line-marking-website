@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a business website for **Line-Marking.co.nz** (Workspace Safety), a New Zealand-based line marking and industrial flooring services company operating in Christchurch and Canterbury. The site is a multi-page marketing website with service pages, regional landing pages, and a contact form that stores inquiries in a PostgreSQL database. It's built as a full-stack TypeScript application with a React frontend and Express backend.
+This is a business website for **Line-Marking.co.nz** (Workspace Safety), a New Zealand-based line marking and industrial flooring services company operating in Christchurch, Canterbury, and now expanding to Auckland and Waikato. The site is a multi-page marketing website with service pages, regional landing pages, and a contact form that stores inquiries in a PostgreSQL database. It's built as a full-stack TypeScript application with a React frontend and Express backend.
 
 ## User Preferences
 
@@ -22,9 +22,9 @@ Preferred communication style: Simple, everyday language.
 
 ### Page Structure
 The site has multiple static content pages for SEO purposes:
-- Home page with regional links (Rolleston, Rangiora, Ashburton, etc.)
-- Service pages (Line Marking, Industrial, Non-Slip Flooring, Protective Coatings, Epoxy Flooring, Pedestrian Walkways, Line Removals, Sports Court)
-- Regional landing pages using a shared `RegionalLanding` component with per-region content
+- Home page with regional links for Canterbury (Rolleston, Rangiora, Ashburton, etc.) and Auckland/Waikato (Auckland, North Shore, South Auckland, Hamilton)
+- Service pages (Line Marking, Industrial, Non-Slip Flooring, Protective Coatings, Epoxy Flooring, Pedestrian Walkways, Line Removals, Sports Court, Playground Games)
+- Regional landing pages using a shared `RegionalLanding` component with per-region content and region-specific hero images (Canterbury vs Auckland)
 - About and Contact pages
 - The Contact page includes a `ContactForm` component that submits inquiries to the API
 

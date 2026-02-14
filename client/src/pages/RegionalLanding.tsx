@@ -1,8 +1,10 @@
 import { Link } from "wouter";
 import heroImage from "../assets/images/regional-nz.png";
+import aucklandHeroImage from "../assets/images/auckland-skyline.png";
 
 interface RegionalProps {
   location: string;
+  region?: "canterbury" | "auckland";
 }
 
 const regionContent: Record<string, { intro: string; whyChoose: string[]; services: string[] }> = {
@@ -34,9 +36,76 @@ const regionContent: Record<string, { intro: string; whyChoose: string[]; servic
       "Sports Court Marking: Accurate and vibrant line markings for sports courts.",
     ],
   },
+  Auckland: {
+    intro: "Line-marking.co.nz is now proudly serving the greater Auckland region with professional line marking and industrial flooring services. From the CBD to the suburbs, our experienced team delivers precision line marking solutions for car parks, warehouses, factories, schools, and sports courts across Auckland.",
+    whyChoose: [
+      "Expanding to Auckland: We're bringing our proven Canterbury expertise to the Auckland market, offering the same high standard of workmanship.",
+      "Full-Service Provider: From car park markings to industrial flooring, epoxy coatings, and sports courts — we handle it all.",
+      "Competitive Pricing: We offer Auckland businesses great value without compromising on quality or materials.",
+      "Flexible Scheduling: Night and weekend work available at standard rates to minimise disruption to your business.",
+    ],
+    services: [
+      "Car Park Line Marking: Professional markings for commercial and retail car parks across Auckland.",
+      "Industrial Safety Markings: Warehouse and factory floor markings to meet health and safety compliance.",
+      "Sports Court Marking: Basketball, tennis, pickleball, netball, and multi-sport court markings for schools and clubs.",
+      "Playground & School Games: Painted educational games and activities for Auckland schools.",
+      "Epoxy & Protective Coatings: Durable flooring solutions for garages, warehouses, and commercial spaces.",
+      "Line Removals: Professional removal and updating of existing line markings.",
+    ],
+  },
+  "North Shore": {
+    intro: "Looking for professional line marking services on Auckland's North Shore? Line-marking.co.nz provides expert car park marking, warehouse safety markings, and sports court line marking across the North Shore — from Takapuna and Devonport to Albany and the Hibiscus Coast.",
+    whyChoose: [
+      "North Shore Coverage: We service all North Shore suburbs including Takapuna, Milford, Albany, Browns Bay, and surrounding areas.",
+      "Commercial Expertise: The North Shore has a thriving business district with plenty of car parks, offices, and retail centres — we keep them all clearly marked.",
+      "Quality Materials: NZTA-approved paints and durable epoxy coatings that withstand Auckland's weather conditions.",
+      "Fast Turnaround: We understand that businesses on the North Shore need minimal downtime — we work efficiently to get the job done.",
+    ],
+    services: [
+      "Car Park Line Marking: Clear, compliant markings for shopping centres, offices, and apartment complexes.",
+      "Warehouse & Factory Markings: Safety line marking for North Shore industrial and commercial spaces.",
+      "Sports Court Marking: Multi-sport court markings for schools, parks, and private facilities.",
+      "Non-Slip Flooring: Protective coatings for commercial kitchens, walkways, and wet areas.",
+    ],
+  },
+  "South Auckland": {
+    intro: "Line-marking.co.nz delivers professional line marking services across South Auckland's busy industrial and commercial zones. From Manukau and Otara to Papakura and Pukekohe, we provide high-quality car park markings, warehouse safety lines, and industrial flooring solutions tailored to South Auckland businesses.",
+    whyChoose: [
+      "Industrial Focus: South Auckland is home to some of New Zealand's busiest warehouses and distribution centres — we specialise in keeping these facilities safe and compliant.",
+      "Large-Scale Projects: Our team is equipped to handle major industrial line marking projects across Manukau, East Tamaki, and Wiri.",
+      "Health & Safety Compliance: We ensure your facility meets all New Zealand workplace safety standards with clear, durable markings.",
+      "Cost-Effective Solutions: Competitive pricing for South Auckland businesses, with no compromise on quality.",
+    ],
+    services: [
+      "Warehouse Safety Markings: Pedestrian walkways, forklift zones, and hazard markings for distribution centres.",
+      "Car Park Line Marking: Professional markings for retail centres, business parks, and public car parks.",
+      "Industrial Floor Coatings: Epoxy and polyurethane coatings for factory and warehouse floors.",
+      "Sports Court & Playground Markings: Line marking for schools and community sports facilities in South Auckland.",
+    ],
+  },
+  Hamilton: {
+    intro: "Line-marking.co.nz is extending our professional line marking services to Hamilton and the greater Waikato region. Whether you need car park markings, warehouse safety lines, or sports court markings, our experienced team delivers high-quality results throughout Hamilton, Cambridge, Te Awamutu, and surrounding areas.",
+    whyChoose: [
+      "Waikato Reach: We cover Hamilton city and surrounding towns including Cambridge, Te Awamutu, Huntly, and Matamata.",
+      "Proven Track Record: Our team brings years of experience from Canterbury's busiest commercial and industrial sites.",
+      "All-in-One Service: Line marking, industrial flooring, protective coatings, and sports court markings — all from one provider.",
+      "Weekend & After-Hours Service: We work around your schedule to avoid disrupting your business operations.",
+    ],
+    services: [
+      "Car Park Line Marking: Clear markings for Hamilton's commercial centres, retail parks, and public facilities.",
+      "Industrial Safety Markings: Compliant safety markings for factories, warehouses, and distribution centres in the Waikato.",
+      "Sports Court Marking: Professional markings for basketball, tennis, netball, and multi-sport courts.",
+      "Epoxy Flooring: Durable epoxy and polyurethane coatings for garages, workshops, and commercial floors.",
+    ],
+  },
 };
 
-export default function RegionalLanding({ location }: RegionalProps) {
+const aucklandLocations = ["Auckland", "North Shore", "South Auckland", "Hamilton"];
+
+export default function RegionalLanding({ location, region = "canterbury" }: RegionalProps) {
+  const isAuckland = region === "auckland" || aucklandLocations.includes(location);
+  const regionLabel = isAuckland ? "Auckland & Waikato" : "Canterbury";
+
   const content = regionContent[location] || {
     intro: `At line-marking.co.nz, we offer comprehensive line marking services in ${location}, ensuring top-quality results for every project. Our expert team is ready to meet your specific needs with precision and efficiency.`,
     whyChoose: [
@@ -53,24 +122,29 @@ export default function RegionalLanding({ location }: RegionalProps) {
   };
 
   return (
-    <div data-testid={`page-regional-${location.toLowerCase()}`}>
+    <div data-testid={`page-regional-${location.toLowerCase().replace(/\s+/g, '-')}`}>
       <div className="relative w-full h-[250px] md:h-[320px] overflow-hidden">
-        <img src={heroImage} alt={`Line marking services in ${location}`} className="w-full h-full object-cover" data-testid="img-hero" />
+        <img
+          src={isAuckland ? aucklandHeroImage : heroImage}
+          alt={`Line marking services in ${location}`}
+          className="w-full h-full object-cover"
+          data-testid="img-hero"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
-              {location === "Rangiora"
-                ? `Expert Line Marking Services in ${location}`
-                : `Line Marking Services in ${location}`}
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-3" data-testid="text-hero-title">
+              Line Marking Services in {location}
             </h1>
-            <p className="text-lg text-white/90 max-w-xl">Professional Line Marking Across Canterbury</p>
+            <p className="text-lg text-white/90 max-w-xl" data-testid="text-hero-subtitle">
+              Professional Line Marking Across {regionLabel}
+            </p>
           </div>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-10">
-        <p className="text-gray-600 mb-8 leading-relaxed">{content.intro}</p>
+        <p className="text-gray-600 mb-8 leading-relaxed" data-testid="text-intro">{content.intro}</p>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Why Choose Us?</h2>
         <div className="space-y-3 mb-8">
@@ -97,17 +171,37 @@ export default function RegionalLanding({ location }: RegionalProps) {
         </div>
 
         <p className="text-gray-600 mb-4 leading-relaxed">
-          {location === "Rangiora"
-            ? `Looking for dependable line marking services in ${location}?`
-            : `For top-tier line marking services in ${location}, contact us on`}
-          {" "}
-          <a href="tel:0224393344" className="text-blue-600 hover:underline">022 439 3344</a>
+          For top-tier line marking services in {location}, contact us on{" "}
+          <a href="tel:0224393344" className="text-blue-600 hover:underline" data-testid="link-phone">022 439 3344</a>
           {" "}or{" "}
           <Link href="/Contact/">
-            <span className="text-blue-600 hover:underline cursor-pointer">click here to submit an enquiry</span>
+            <span className="text-blue-600 hover:underline cursor-pointer" data-testid="link-contact">click here to submit an enquiry</span>
           </Link>
           . We're here to help!
         </p>
+
+        {isAuckland && (
+          <div className="border-t border-gray-200 pt-8 mt-8">
+            <p className="text-center text-gray-700 font-medium mb-4">Other Auckland & Waikato Areas We Serve:</p>
+            <div className="flex flex-wrap justify-center gap-2 text-sm" data-testid="region-links-auckland">
+              {[
+                { href: "/line-marking-auckland/", label: "Auckland" },
+                { href: "/line-marking-north-shore/", label: "North Shore" },
+                { href: "/line-marking-south-auckland/", label: "South Auckland" },
+                { href: "/line-marking-hamilton/", label: "Hamilton" },
+              ]
+                .filter((link) => link.label !== location)
+                .map((link, index, arr) => (
+                  <span key={link.href} className="flex items-center">
+                    <Link href={link.href}>
+                      <span className="text-blue-600 hover:underline cursor-pointer">{link.label}</span>
+                    </Link>
+                    {index < arr.length - 1 && <span className="mx-2 text-gray-400">|</span>}
+                  </span>
+                ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import warehouseImage from "../assets/images/warehouse-safety.png";
 import epoxyImage from "../assets/images/epoxy-floor.png";
 import sportsImage from "../assets/images/sports-court.png";
 
-const regionLinks = [
+const canterburyLinks = [
   { href: "/line-marking-ashburton/", label: "Ashburton" },
   { href: "/line-marking-blenheim/", label: "Blenheim" },
   { href: "/line-marking-greymouth/", label: "Greymouth" },
@@ -15,6 +15,13 @@ const regionLinks = [
   { href: "/line-marking-rolleston/", label: "Rolleston" },
   { href: "/line-marking-timaru/", label: "Timaru" },
   { href: "/line-marking-westport/", label: "Westport" },
+];
+
+const aucklandLinks = [
+  { href: "/line-marking-auckland/", label: "Auckland" },
+  { href: "/line-marking-north-shore/", label: "North Shore" },
+  { href: "/line-marking-south-auckland/", label: "South Auckland" },
+  { href: "/line-marking-hamilton/", label: "Hamilton" },
 ];
 
 export default function Home() {
@@ -197,13 +204,27 @@ export default function Home() {
 
         <div className="border-t border-gray-200 pt-8 mt-10">
           <p className="text-center text-gray-700 font-medium mb-4">We Serve All Of New Zealand, Including:</p>
-          <div className="flex flex-wrap justify-center gap-2 text-sm" data-testid="region-links">
-            {regionLinks.map((link, index) => (
+
+          <p className="text-center text-sm text-gray-500 font-medium mb-2">Canterbury & South Island</p>
+          <div className="flex flex-wrap justify-center gap-2 text-sm mb-6" data-testid="region-links-canterbury">
+            {canterburyLinks.map((link, index) => (
               <span key={link.href} className="flex items-center">
                 <Link href={link.href}>
                   <span className="text-blue-600 hover:underline cursor-pointer">{link.label}</span>
                 </Link>
-                {index < regionLinks.length - 1 && <span className="mx-2 text-gray-400">|</span>}
+                {index < canterburyLinks.length - 1 && <span className="mx-2 text-gray-400">|</span>}
+              </span>
+            ))}
+          </div>
+
+          <p className="text-center text-sm text-gray-500 font-medium mb-2">Auckland & Waikato</p>
+          <div className="flex flex-wrap justify-center gap-2 text-sm" data-testid="region-links-auckland">
+            {aucklandLinks.map((link, index) => (
+              <span key={link.href} className="flex items-center">
+                <Link href={link.href}>
+                  <span className="text-blue-600 hover:underline cursor-pointer">{link.label}</span>
+                </Link>
+                {index < aucklandLinks.length - 1 && <span className="mx-2 text-gray-400">|</span>}
               </span>
             ))}
           </div>

@@ -81,6 +81,19 @@ function Router() {
             {() => <RegionalLanding location="Westport" />}
           </Route>
 
+          <Route path="/line-marking-auckland/">
+            {() => <RegionalLanding location="Auckland" region="auckland" />}
+          </Route>
+          <Route path="/line-marking-north-shore/">
+            {() => <RegionalLanding location="North Shore" region="auckland" />}
+          </Route>
+          <Route path="/line-marking-south-auckland/">
+            {() => <RegionalLanding location="South Auckland" region="auckland" />}
+          </Route>
+          <Route path="/line-marking-hamilton/">
+            {() => <RegionalLanding location="Hamilton" region="auckland" />}
+          </Route>
+
           <Route path="/About-Us/" component={About} />
           <Route path="/Contact/" component={Contact} />
 
