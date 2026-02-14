@@ -6,7 +6,7 @@ import snakesLaddersImage from "../assets/images/real-snakes-ladders.jpg";
 import numberGridImage from "../assets/images/real-number-grid.jpg";
 import compassImage from "../assets/images/real-compass.jpg";
 import spaceTrackImage from "../assets/images/real-space-track.jpg";
-import targetImage from "../assets/images/playground-target.png";
+import targetImage from "../assets/images/real-target.jpg";
 
 const games = [
   {
@@ -42,8 +42,8 @@ const games = [
   {
     title: "Target & Bullseye Games",
     image: targetImage,
-    alt: "Painted target circle game on school playground",
-    description: "Painted target circles with scoring zones make excellent additions to any playground. Great for throwing games, coordination activities, and PE lessons. Our concentric ring designs are painted with bright, contrasting colours for maximum fun.",
+    alt: "Painted dartboard target game with scoring zones on school playground",
+    description: "Our painted dartboard target features numbered scoring zones from 1 to 20, with concentric rings in red, yellow, and orange. Perfect for throwing games, maths activities, and PE lessons. Children love the competitive element of aiming for the bullseye 20-point centre.",
   },
 ];
 
