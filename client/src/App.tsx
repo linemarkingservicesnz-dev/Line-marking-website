@@ -15,6 +15,7 @@ import EpoxyFlooring from "@/pages/EpoxyFlooring";
 import PedestrianWalkways from "@/pages/PedestrianWalkways";
 import LineAndMarkingRemovals from "@/pages/LineAndMarkingRemovals";
 import SportsCourtLineMarking from "@/pages/SportsCourtLineMarking";
+import PlaygroundGames from "@/pages/PlaygroundGames";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import RegionalLanding from "@/pages/RegionalLanding";
@@ -43,6 +44,8 @@ function Router() {
           <Route path="/Our-Services/Protective-Concrete-Coatings/" component={ProtectiveCoatings} />
           <Route path="/Our-Services/Line-And-Marking-Removals/" component={LineAndMarkingRemovals} />
           <Route path="/Our-Services/sports-court-line-marking/" component={SportsCourtLineMarking} />
+
+          <Route path="/Our-Services/playground-games/" component={PlaygroundGames} />
 
           <Route path="/line-marking-epoxy-flooring/" component={EpoxyFlooring} />
           <Route path="/line-marking-pedestrian-walkways/" component={PedestrianWalkways} />

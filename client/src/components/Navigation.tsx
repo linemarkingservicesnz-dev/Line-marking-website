@@ -9,6 +9,7 @@ const serviceLinks = [
   { href: "/Our-Services/Protective-Concrete-Coatings/", label: "Protective Concrete Coatings" },
   { href: "/Our-Services/Line-And-Marking-Removals/", label: "Line and Marking Removals" },
   { href: "/Our-Services/sports-court-line-marking/", label: "Sports Court Line Marking" },
+  { href: "/Our-Services/playground-games/", label: "Playground & School Games" },
 ];
 
 export function Navigation() {
