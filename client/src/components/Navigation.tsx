@@ -1,6 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { useState, useRef, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import logoImage from "../assets/images/logo.png";
 
 const serviceLinks = [
   { href: "/Our-Services/Line-Marking/", label: "Line Marking and Symbols" },
@@ -39,8 +40,9 @@ export function Navigation() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" data-testid="link-home">
-            <span className="text-xl font-bold text-gray-800 cursor-pointer">
-              Line-Marking.co.nz
+            <span className="flex items-center gap-2 cursor-pointer">
+              <img src={logoImage} alt="Line-Marking.co.nz logo" className="h-10 w-10" data-testid="img-logo" />
+              <span className="text-xl font-bold text-gray-800">Line-Marking.co.nz</span>
             </span>
           </Link>
 
