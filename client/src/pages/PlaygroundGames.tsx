@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/real-hero-playground.jpg";
 import hopscotchImage from "../assets/images/real-hopscotch.jpg";
 import snakesLaddersImage from "../assets/images/real-snakes-ladders.jpg";
@@ -48,6 +49,11 @@ const games = [
 ];
 
 export default function PlaygroundGames() {
+  usePageTitle({
+    title: "Playground & School Games | Line-Marking.co.nz",
+    description: "Painted playground games for schools including hopscotch, snakes and ladders, number grids, and more. Durable outdoor markings across New Zealand.",
+    path: "/Our-Services/playground-games/"
+  });
   return (
     <div data-testid="page-playground-games">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">

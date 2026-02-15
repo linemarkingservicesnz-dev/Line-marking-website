@@ -1,7 +1,13 @@
 import { Link } from "wouter";
+import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/industrial-marking.png";
 
 export default function Industrial() {
+  usePageTitle({
+    title: "Industrial Line Marking | Line-Marking.co.nz",
+    description: "Industrial line marking for warehouses, factories, and distribution centres. Safety walkways, forklift zones, and hazard markings across New Zealand.",
+    path: "/Our-Services/Industrial/"
+  });
   return (
     <div data-testid="page-industrial">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">

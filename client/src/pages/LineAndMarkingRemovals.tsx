@@ -1,7 +1,13 @@
 import { Link } from "wouter";
+import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/line-removal.png";
 
 export default function LineAndMarkingRemovals() {
+  usePageTitle({
+    title: "Line & Marking Removals | Line-Marking.co.nz",
+    description: "Professional line removal and remarking services. Water blasting, grinding, and blackout services for car parks and industrial floors across NZ.",
+    path: "/Our-Services/Line-And-Marking-Removals/"
+  });
   return (
     <div data-testid="page-line-removals">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">

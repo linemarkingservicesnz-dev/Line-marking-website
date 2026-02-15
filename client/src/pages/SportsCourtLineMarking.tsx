@@ -1,8 +1,14 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/sports-court-real.jpg";
 
 export default function SportsCourtLineMarking() {
+  usePageTitle({
+    title: "Sports Court Line Marking | Line-Marking.co.nz",
+    description: "Sports court line marking for basketball, tennis, pickleball, netball and volleyball. Professional markings for schools, clubs, and homes across NZ.",
+    path: "/Our-Services/sports-court-line-marking/"
+  });
   return (
     <div data-testid="page-sports-court">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">

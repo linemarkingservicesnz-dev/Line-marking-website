@@ -1,7 +1,13 @@
 import { Link } from "wouter";
+import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/line-marking-service.png";
 
 export default function LineMarking() {
+  usePageTitle({
+    title: "Line Marking & Symbols | Line-Marking.co.nz",
+    description: "Professional line marking and symbol painting for car parks, roads, and commercial premises across Christchurch and Auckland. NZTA-approved materials.",
+    path: "/Our-Services/Line-Marking/"
+  });
   return (
     <div data-testid="page-line-marking">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">

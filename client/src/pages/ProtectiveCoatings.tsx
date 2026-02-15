@@ -1,7 +1,13 @@
 import { Link } from "wouter";
+import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/protective-coatings.png";
 
 export default function ProtectiveCoatings() {
+  usePageTitle({
+    title: "Protective Concrete Coatings | Line-Marking.co.nz",
+    description: "Protective concrete coatings and sealers for commercial and industrial floors. Epoxy and polyurethane solutions across New Zealand.",
+    path: "/Our-Services/Protective-Concrete-Coatings/"
+  });
   return (
     <div data-testid="page-protective-coatings">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">

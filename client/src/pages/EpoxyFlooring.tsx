@@ -1,7 +1,13 @@
 import { Link } from "wouter";
+import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/epoxy-flooring-page.png";
 
 export default function EpoxyFlooring() {
+  usePageTitle({
+    title: "Epoxy Flooring | Line-Marking.co.nz",
+    description: "Professional epoxy flooring for garages, workshops, and commercial spaces. Durable, chemical-resistant floor coatings in Christchurch and Auckland.",
+    path: "/line-marking-epoxy-flooring/"
+  });
   return (
     <div data-testid="page-epoxy-flooring">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">

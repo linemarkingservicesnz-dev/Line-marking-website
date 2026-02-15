@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/hero-carpark.png";
 import warehouseImage from "../assets/images/warehouse-safety.png";
 import epoxyImage from "../assets/images/epoxy-floor.png";
@@ -25,6 +26,11 @@ const aucklandLinks = [
 ];
 
 export default function Home() {
+  usePageTitle({
+    title: "Line-Marking.co.nz | Professional Line Marking Services NZ",
+    description: "Professional line marking services across Christchurch, Auckland and New Zealand. Car park marking, industrial safety lines, sports courts, playground games, epoxy flooring. Call 022 439 3344.",
+    path: "/"
+  });
   return (
     <div data-testid="page-home">
       <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden">

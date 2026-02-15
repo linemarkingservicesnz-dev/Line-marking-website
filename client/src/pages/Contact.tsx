@@ -1,6 +1,12 @@
 import { ContactForm } from "@/components/ContactForm";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 export default function Contact() {
+  usePageTitle({
+    title: "Contact Us | Line-Marking.co.nz",
+    description: "Get a free quote for line marking services. Contact Line-Marking.co.nz on 022 439 3344 or submit an enquiry online. Serving Christchurch and Auckland.",
+    path: "/Contact/"
+  });
   return (
     <div className="max-w-4xl mx-auto px-4 py-10" data-testid="page-contact">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Contact Work Space Safety</h1>

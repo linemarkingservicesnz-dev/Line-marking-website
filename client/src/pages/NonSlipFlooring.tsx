@@ -1,7 +1,13 @@
 import { Link } from "wouter";
+import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/non-slip-flooring.png";
 
 export default function NonSlipFlooring() {
+  usePageTitle({
+    title: "Non-Slip Flooring | Line-Marking.co.nz",
+    description: "Non-slip flooring solutions for commercial kitchens, walkways, and wet areas. Durable anti-slip coatings across Christchurch and Auckland.",
+    path: "/Our-Services/Non-Slip-Flooring/"
+  });
   return (
     <div data-testid="page-non-slip-flooring">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">

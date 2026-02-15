@@ -1,7 +1,13 @@
 import { Link } from "wouter";
+import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/pedestrian-walkway.png";
 
 export default function PedestrianWalkways() {
+  usePageTitle({
+    title: "Pedestrian Walkways | Line-Marking.co.nz",
+    description: "Pedestrian walkway markings for warehouses, factories, and commercial buildings. Clear safety lines to separate foot and vehicle traffic.",
+    path: "/line-marking-pedestrian-walkways/"
+  });
   return (
     <div data-testid="page-pedestrian-walkways">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">

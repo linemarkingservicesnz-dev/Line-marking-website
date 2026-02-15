@@ -1,7 +1,13 @@
 import { Link } from "wouter";
+import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/about-team.png";
 
 export default function About() {
+  usePageTitle({
+    title: "About Us | Line-Marking.co.nz",
+    description: "Learn about Line-Marking.co.nz - professional line marking and industrial flooring services based in Christchurch, now serving Auckland and all of New Zealand.",
+    path: "/About-Us/"
+  });
   return (
     <div data-testid="page-about">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">
