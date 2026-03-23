@@ -17,6 +17,7 @@ interface RegionData {
   operationsNote?: string;
   projectsNote?: string;
   customFaqs?: Array<{ q: string; a: string }>;
+  serviceSchema?: object;
 }
 
 const regionContent: Record<string, RegionData> = {
@@ -90,6 +91,19 @@ const regionContent: Record<string, RegionData> = {
       { q: "Do you subcontract the work?", a: "Yes, we use trusted Auckland operators under our supervision to ensure consistent quality." },
       { q: "How long do markings last?", a: "Typically 18–24 months depending on traffic and surface preparation." },
     ],
+    serviceSchema: {
+      "@type": "Service",
+      "name": "Line Marking Auckland",
+      "areaServed": "Auckland, New Zealand",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Line Marking NZ",
+        "url": "https://line-marking.co.nz",
+        "telephone": "+64224393344",
+      },
+      "serviceType": "Line Marking",
+      "url": "https://line-marking.co.nz/auckland-line-marking/",
+    },
   },
   "North Shore": {
     intro: "Looking for professional line marking services on Auckland's North Shore? Line-marking.co.nz provides expert car park marking, warehouse safety markings, and sports court line marking across the North Shore — from Takapuna and Devonport to Albany and the Hibiscus Coast.",
@@ -170,15 +184,30 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
     title: content.seo?.title ?? `Professional Line Marking in ${location} | Line-Marking.co.nz`,
     description: content.seo?.description ?? `Professional line marking services in ${location}. Car park marking, industrial safety lines, sports courts, and more across ${regionLabel}. Call 022 439 3344.`,
     path: `/${location.toLowerCase().replace(/\s+/g, '-')}-line-marking/`,
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-      })),
-    }
+    schema: content.serviceSchema
+      ? {
+          "@context": "https://schema.org",
+          "@graph": [
+            content.serviceSchema,
+            {
+              "@type": "FAQPage",
+              "mainEntity": faqs.map(faq => ({
+                "@type": "Question",
+                "name": faq.q,
+                "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+              })),
+            },
+          ],
+        }
+      : {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.q,
+            "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+          })),
+        }
   });
 
   return (
