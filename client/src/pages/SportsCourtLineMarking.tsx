@@ -2,13 +2,20 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
+import { servicePageSchema } from "@/lib/schemas";
 import heroImage from "../assets/images/sports-court-real.jpg";
 
 export default function SportsCourtLineMarking() {
   usePageTitle({
     title: "Sports Court Line Marking NZ | Basketball, Tennis, Pickleball",
     description: "Professional sports court line marking for schools, clubs and homes. Basketball, tennis, pickleball, netball and multi-sport courts. UV-resistant paints.",
-    path: "/sports-court-line-marking/"
+    path: "/sports-court-line-marking/",
+    schema: servicePageSchema(
+      "Sports Court Line Marking",
+      "Professional sports court line marking for schools, clubs and homes. Basketball, tennis, pickleball, netball and multi-sport courts. UV-resistant paints.",
+      "/sports-court-line-marking/",
+      [{ question: "Can you mark multiple sports on the same court?", answer: "Yes — we specialise in multi-sport court layouts using different colours for each sport, clearly defined on a single surface." }]
+    )
   });
   return (
     <div data-testid="page-sports-court">

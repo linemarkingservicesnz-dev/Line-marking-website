@@ -1,13 +1,20 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
+import { servicePageSchema } from "@/lib/schemas";
 import heroImage from "../assets/images/line-removal.png";
 
 export default function LineAndMarkingRemovals() {
   usePageTitle({
     title: "Line & Marking Removals | Line-Marking.co.nz",
     description: "Fast, clean line and marking removal for layout changes or upgrades. Blackout, total removal, concrete grinding, and surface preparation across New Zealand.",
-    path: "/line-removal/"
+    path: "/line-removal/",
+    schema: servicePageSchema(
+      "Line & Marking Removal",
+      "Fast, clean line and marking removal for layout changes or upgrades. Blackout, total removal, concrete grinding, and surface preparation across New Zealand.",
+      "/line-removal/",
+      [{ question: "Can old line markings be fully removed?", answer: "Yes. We offer blackout overpainting, abrasive blasting, and concrete grinding depending on the surface and coating type." }]
+    )
   });
   return (
     <div data-testid="page-line-removals">

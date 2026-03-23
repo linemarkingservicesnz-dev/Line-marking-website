@@ -1,13 +1,20 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
+import { servicePageSchema } from "@/lib/schemas";
 import heroImage from "../assets/images/protective-coatings.png";
 
 export default function ProtectiveCoatings() {
   usePageTitle({
     title: "Protective Concrete Coatings | Line-Marking.co.nz",
     description: "Extend the life of your concrete with epoxy flooring, polyurethane coatings, resin flooring, concrete sealing, and driveway sealing. Christchurch and Auckland.",
-    path: "/protective-concrete-coatings/"
+    path: "/protective-concrete-coatings/",
+    schema: servicePageSchema(
+      "Protective Concrete Coatings",
+      "Extend the life of your concrete with epoxy flooring, polyurethane coatings, resin flooring, concrete sealing, and driveway sealing. Christchurch and Auckland.",
+      "/protective-concrete-coatings/",
+      [{ question: "How long does a concrete coating last?", answer: "Properly applied epoxy or polyurethane coatings typically last 5–10 years depending on traffic, UV exposure, and surface preparation." }]
+    )
   });
   return (
     <div data-testid="page-protective-coatings">

@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
+import { servicePageSchema } from "@/lib/schemas";
 import heroImage from "../assets/images/line-marking-service.png";
 
 export default function LineMarking() {
@@ -8,36 +9,12 @@ export default function LineMarking() {
     title: "Car Park Line Marking NZ | NZTA-Approved, Fast & Durable",
     description: "Professional car park line marking across NZ. Parking bays, EV bays, arrows, loading zones, accessible parking. NZTA-approved paints. Christchurch & Auckland.",
     path: "/car-park-line-marking/",
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How long do line markings last?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Typically 18–24 months depending on traffic volume and surface preparation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you work after hours?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we offer night and weekend scheduling at standard rates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which resin is best for car park durability?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Epoxy resin is ideal for concrete and indoor areas. Polyurethane is UV-resistant and best for outdoor car parks exposed to sunlight."
-          }
-        }
-      ]
-    }
+    schema: servicePageSchema(
+      "Car Park Line Marking",
+      "Professional car park line marking across NZ. Parking bays, EV bays, arrows, loading zones, accessible parking. NZTA-approved paints. Christchurch & Auckland.",
+      "/car-park-line-marking/",
+      [{ question: "Which resin is best for car park durability?", answer: "Epoxy resin is ideal for concrete and indoor areas. Polyurethane is UV-resistant and best for outdoor car parks exposed to sunlight." }]
+    )
   });
   return (
     <div data-testid="page-line-marking">

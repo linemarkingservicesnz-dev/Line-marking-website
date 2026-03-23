@@ -1,13 +1,20 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
+import { servicePageSchema } from "@/lib/schemas";
 import heroImage from "../assets/images/industrial-marking.png";
 
 export default function Industrial() {
   usePageTitle({
     title: "Warehouse Line Marking NZ | Safety Walkways & Forklift Lanes",
     description: "Warehouse & factory line marking. Pedestrian walkways, forklift lanes, hazard zones, emergency exits. Epoxy & polyurethane coatings. WorkSafe compliant.",
-    path: "/warehouse-line-marking/"
+    path: "/warehouse-line-marking/",
+    schema: servicePageSchema(
+      "Warehouse Line Marking",
+      "Warehouse & factory line marking. Pedestrian walkways, forklift lanes, hazard zones, emergency exits. Epoxy & polyurethane coatings. WorkSafe compliant.",
+      "/warehouse-line-marking/",
+      [{ question: "What colour are pedestrian walkways in NZ warehouses?", answer: "Yellow is the standard colour for pedestrian walkways in NZ workplaces, as recommended by WorkSafe NZ." }]
+    )
   });
   return (
     <div data-testid="page-industrial">

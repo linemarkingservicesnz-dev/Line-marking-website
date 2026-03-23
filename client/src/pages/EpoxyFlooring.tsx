@@ -1,13 +1,20 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
+import { servicePageSchema } from "@/lib/schemas";
 import heroImage from "../assets/images/epoxy-flooring-page.png";
 
 export default function EpoxyFlooring() {
   usePageTitle({
     title: "Epoxy Flooring | Line-Marking.co.nz",
     description: "Professional epoxy flooring for garages, workshops, and commercial spaces. Durable, chemical-resistant floor coatings in Christchurch and Auckland.",
-    path: "/epoxy-flooring/"
+    path: "/epoxy-flooring/",
+    schema: servicePageSchema(
+      "Epoxy Flooring",
+      "Professional epoxy flooring for garages, workshops, and commercial spaces. Durable, chemical-resistant floor coatings in Christchurch and Auckland.",
+      "/epoxy-flooring/",
+      [{ question: "Is epoxy flooring suitable for garages?", answer: "Yes — epoxy is one of the most popular choices for garage floors. It resists oil, chemicals, and heavy loads, and is easy to clean." }]
+    )
   });
   return (
     <div data-testid="page-epoxy-flooring">

@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
+import { servicePageSchema } from "@/lib/schemas";
 import heroImage from "../assets/images/real-hero-playground.jpg";
 import hopscotchImage from "../assets/images/real-hopscotch.jpg";
 import snakesLaddersImage from "../assets/images/real-snakes-ladders.jpg";
@@ -53,7 +54,13 @@ export default function PlaygroundGames() {
   usePageTitle({
     title: "Playground Markings NZ | Painted School Games & Learning Trails",
     description: "Durable painted playground markings for schools: hopscotch, snakes & ladders, number grids, space tracks, mazes, fitness trails and custom designs.",
-    path: "/playground-markings/"
+    path: "/playground-markings/",
+    schema: servicePageSchema(
+      "Playground Markings",
+      "Durable painted playground markings for schools: hopscotch, snakes & ladders, number grids, space tracks, mazes, fitness trails and custom designs.",
+      "/playground-markings/",
+      [{ question: "Are painted playground markings safe for children?", answer: "Yes — we use child-safe, non-toxic paints that are UV-resistant and slip-resistant, designed specifically for school playground surfaces." }]
+    )
   });
   return (
     <div data-testid="page-playground-games">
@@ -95,6 +102,7 @@ export default function PlaygroundGames() {
                 <img
                   src={game.image}
                   alt={game.alt}
+                  loading="lazy"
                   className="w-full rounded-md shadow-sm"
                   data-testid={`img-game-${game.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                 />

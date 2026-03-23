@@ -1,13 +1,20 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
+import { servicePageSchema } from "@/lib/schemas";
 import heroImage from "../assets/images/non-slip-flooring.png";
 
 export default function NonSlipFlooring() {
   usePageTitle({
     title: "Non-Slip Flooring Solutions | Line-Marking.co.nz",
     description: "Industrial-grade non-slip flooring coatings for workshops, warehouses, loading areas, and walkways. Epoxy, polyurethane, and acrylic solutions across New Zealand.",
-    path: "/non-slip-flooring/"
+    path: "/non-slip-flooring/",
+    schema: servicePageSchema(
+      "Non-Slip Flooring",
+      "Industrial-grade non-slip flooring coatings for workshops, warehouses, loading areas, and walkways. Epoxy, polyurethane, and acrylic solutions across New Zealand.",
+      "/non-slip-flooring/",
+      [{ question: "What surfaces can non-slip coatings be applied to?", answer: "We apply non-slip coatings to concrete, asphalt, timber, and tile surfaces — both indoors and outdoors." }]
+    )
   });
   return (
     <div data-testid="page-non-slip-flooring">

@@ -1,13 +1,20 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
+import { servicePageSchema } from "@/lib/schemas";
 import heroImage from "../assets/images/pedestrian-walkway.png";
 
 export default function PedestrianWalkways() {
   usePageTitle({
     title: "Pedestrian Walkways | Line-Marking.co.nz",
     description: "Pedestrian walkway markings for warehouses, factories, and commercial buildings. Clear safety lines to separate foot and vehicle traffic.",
-    path: "/pedestrian-walkways/"
+    path: "/pedestrian-walkways/",
+    schema: servicePageSchema(
+      "Pedestrian Walkway Marking",
+      "Pedestrian walkway markings for warehouses, factories, and commercial buildings. Clear safety lines to separate foot and vehicle traffic.",
+      "/pedestrian-walkways/",
+      [{ question: "What width should pedestrian walkways be?", answer: "WorkSafe NZ recommends a minimum 900mm width for pedestrian walkways, though 1200mm is preferred for high-traffic areas." }]
+    )
   });
   return (
     <div data-testid="page-pedestrian-walkways">
