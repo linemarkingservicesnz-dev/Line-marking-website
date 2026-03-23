@@ -4,8 +4,8 @@ import heroImage from "../assets/images/industrial-marking.png";
 
 export default function Industrial() {
   usePageTitle({
-    title: "Warehouse & Factory Safety Markings | Line-Marking.co.nz",
-    description: "Industrial line marking for warehouses, factories, and distribution centres. Pedestrian walkways, forklift lanes, hazard zones, and emergency exit markings across New Zealand.",
+    title: "Warehouse Line Marking NZ | Safety Walkways & Forklift Lanes",
+    description: "Warehouse & factory line marking. Pedestrian walkways, forklift lanes, hazard zones, emergency exits. Epoxy & polyurethane coatings. WorkSafe compliant.",
     path: "/warehouse-line-marking/"
   });
   return (
