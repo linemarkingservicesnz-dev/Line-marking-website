@@ -5,7 +5,7 @@ import heroImage from "../assets/images/protective-coatings.png";
 export default function ProtectiveCoatings() {
   usePageTitle({
     title: "Protective Concrete Coatings | Line-Marking.co.nz",
-    description: "Protective concrete coatings and sealers for commercial and industrial floors. Epoxy and polyurethane solutions across New Zealand.",
+    description: "Extend the life of your concrete with epoxy flooring, polyurethane coatings, resin flooring, concrete sealing, and driveway sealing. Christchurch and Auckland.",
     path: "/Our-Services/Protective-Concrete-Coatings/"
   });
   return (
@@ -18,68 +18,71 @@ export default function ProtectiveCoatings() {
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
               Protective Concrete Coatings
             </h1>
-            <p className="text-lg text-white/90 max-w-xl">Enhance and Protect Your Concrete Surfaces</p>
+            <p className="text-lg text-white/90 max-w-xl">Extend the life of your concrete with premium protective systems</p>
           </div>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-10">
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          At Line-Marking.co.nz, we specialise in providing high-quality protective concrete coatings to enhance and extend the life of your concrete surfaces. Our expert team applies advanced coatings that offer superior protection and durability.
+        <p className="text-gray-600 mb-8 leading-relaxed">
+          At Line-Marking.co.nz, we specialise in high-quality protective concrete coatings that enhance and extend the life of your floors. Our expert team applies advanced systems that offer superior protection, durability, and appearance.
         </p>
 
-        <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Our Protective Concrete Coating Services Include:</h3>
-        <div className="space-y-4 mb-8">
-          <p className="text-gray-600">
-            <Link href="/line-marking-epoxy-flooring/">
-              <strong className="text-blue-600 hover:underline cursor-pointer">Epoxy Flooring:</strong>
-            </Link>{" "}
-            Durable concrete epoxy solutions for high-traffic areas.
-          </p>
-          <p className="text-gray-600">
-            <strong className="text-gray-800">Residential Epoxy Flooring:</strong> Perfect for homes, offering a seamless and stylish finish.
-          </p>
-          <p className="text-gray-600">
-            <strong className="text-gray-800">Garage Floor Epoxy:</strong> Provides a tough, long-lasting surface for garage floors.
-          </p>
-          <p className="text-gray-600">
-            <strong className="text-gray-800">Commercial Kitchen Flooring:</strong> Hygienic and slip-resistant resin flooring for commercial kitchens.
-          </p>
-          <p className="text-gray-600">
-            <strong className="text-gray-800">Resin Flooring:</strong> Versatile and durable, ideal for various applications.
-          </p>
-          <p className="text-gray-600">
-            <strong className="text-gray-800">Concrete Sealing:</strong> Protects and extends the life of your concrete surfaces.
-          </p>
-          <p className="text-gray-600">
-            <strong className="text-gray-800">Driveway Sealing:</strong> Enhances the appearance and durability of driveways.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div className="bg-gray-50 border border-gray-100 rounded-md p-5">
+            <h2 className="text-lg font-bold text-gray-800 mb-3">We Provide:</h2>
+            <ul className="space-y-2 text-gray-600 text-sm">
+              <li>• <Link href="/line-marking-epoxy-flooring/"><span className="text-blue-600 hover:underline cursor-pointer">Epoxy flooring</span></Link></li>
+              <li>• Polyurethane coatings</li>
+              <li>• Resin flooring</li>
+              <li>• Garage floor epoxy</li>
+              <li>• Commercial kitchen flooring</li>
+              <li>• Concrete sealing</li>
+              <li>• Driveway sealing</li>
+            </ul>
+          </div>
+
+          <div className="bg-gray-50 border border-gray-100 rounded-md p-5">
+            <h2 className="text-lg font-bold text-gray-800 mb-3">Why It Matters:</h2>
+            <ul className="space-y-2 text-gray-600 text-sm">
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Prevents wear and damage</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Improves hygiene</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Enhances appearance</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Increases durability</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Chemical-resistant surfaces</li>
+            </ul>
+          </div>
         </div>
 
-        <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Why Choose Line-Marking.co.nz?</h3>
-        <div className="space-y-3 mb-8">
-          <p className="text-gray-600">
-            <strong className="text-gray-800">Premium Materials:</strong> We use top-quality materials for long-lasting results.
-          </p>
-          <p className="text-gray-600">
-            <strong className="text-gray-800">Expert Application:</strong> Our skilled team ensures precise and effective application.
-          </p>
-          <p className="text-gray-600">
-            <strong className="text-gray-800">Custom Solutions:</strong> Tailored to meet your specific needs and conditions.
-          </p>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Why Choose Line-Marking.co.nz?</h2>
+        <div className="space-y-3 mb-10">
+          <div className="flex items-start gap-3 text-gray-600">
+            <span className="text-blue-600 font-bold mt-0.5">✓</span>
+            <div><strong className="text-gray-800">Premium Materials</strong> — We use top-quality coatings for long-lasting, professional results.</div>
+          </div>
+          <div className="flex items-start gap-3 text-gray-600">
+            <span className="text-blue-600 font-bold mt-0.5">✓</span>
+            <div><strong className="text-gray-800">Expert Application</strong> — Our skilled team ensures precise and effective surface preparation and coating.</div>
+          </div>
+          <div className="flex items-start gap-3 text-gray-600">
+            <span className="text-blue-600 font-bold mt-0.5">✓</span>
+            <div><strong className="text-gray-800">Custom Solutions</strong> — Tailored to meet your specific environment, traffic levels, and requirements.</div>
+          </div>
         </div>
 
-        <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Contact Us for Expert Protective Concrete Coatings</h3>
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          For professional protective concrete coatings, trust Line-Marking.co.nz. Contact us today for more information and a free quote, and protect your concrete surfaces with our durable and reliable coatings.
-        </p>
-
-        <div className="mt-8">
-          <Link href="/Contact/">
-            <span className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition-colors cursor-pointer" data-testid="button-contact-us">
-              CONTACT US NOW
-            </span>
-          </Link>
+        <div className="bg-blue-600 rounded-md p-6 text-white text-center">
+          <h3 className="text-xl font-bold mb-2">Protect Your Concrete Today</h3>
+          <p className="text-white/90 mb-4">Contact us for a free quote and expert advice on the best coating solution for your project.</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href="tel:0224393344" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-md font-bold hover:bg-blue-50 transition-colors" data-testid="link-phone">
+              Call 022 439 3344
+            </a>
+            <Link href="/Contact/">
+              <span className="inline-block bg-blue-700 text-white border border-white/30 px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-colors cursor-pointer" data-testid="button-contact-us">
+                Submit an Enquiry
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

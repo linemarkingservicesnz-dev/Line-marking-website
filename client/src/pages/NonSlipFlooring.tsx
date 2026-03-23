@@ -4,8 +4,8 @@ import heroImage from "../assets/images/non-slip-flooring.png";
 
 export default function NonSlipFlooring() {
   usePageTitle({
-    title: "Non-Slip Flooring | Line-Marking.co.nz",
-    description: "Non-slip flooring solutions for commercial kitchens, walkways, and wet areas. Durable anti-slip coatings across Christchurch and Auckland.",
+    title: "Non-Slip Flooring Solutions | Line-Marking.co.nz",
+    description: "Industrial-grade non-slip flooring coatings for workshops, warehouses, loading areas, and walkways. Epoxy, polyurethane, and acrylic solutions across New Zealand.",
     path: "/Our-Services/Non-Slip-Flooring/"
   });
   return (
@@ -18,59 +18,74 @@ export default function NonSlipFlooring() {
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
               Non-Slip Flooring Solutions
             </h1>
-            <p className="text-lg text-white/90 max-w-xl">Safe and Durable Surfaces for Every Environment</p>
+            <p className="text-lg text-white/90 max-w-xl">Industrial-grade coatings designed to improve safety and durability</p>
           </div>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-10">
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          At Line-Marking.co.nz, we offer a wide range of non-slip flooring products designed to enhance safety and durability for various surfaces. Whether you're looking to improve the safety of walkways, concrete floors, or asphalt areas, we have the perfect solution for you.
+        <p className="text-gray-600 mb-8 leading-relaxed">
+          At Line-Marking.co.nz, we offer a wide range of non-slip flooring products designed to enhance safety and durability across various surfaces. Whether you're improving walkways, concrete floors, or asphalt areas, we have the right solution for your environment.
         </p>
 
-        <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Our Non-Slip Flooring Products Include:</h3>
-        <div className="space-y-4 mb-8">
-          <p className="text-gray-600">
-            <Link href="/line-marking-epoxy-flooring/">
-              <strong className="text-blue-600 hover:underline cursor-pointer">Concrete Epoxy Floor Paint:</strong>
-            </Link>{" "}
-            Ideal for creating a durable and slip-resistant surface on concrete floors.
-          </p>
-          <p className="text-gray-600">
-            <strong className="text-gray-800">Epoxy Concrete Sealer:</strong> Provides a strong seal and enhances the longevity of concrete surfaces while offering non-slip properties.
-          </p>
-          <p className="text-gray-600">
-            <strong className="text-gray-800">Acrylic Concrete Paint:</strong> Perfect for asphalt walkways, providing a non-slip, durable finish.
-          </p>
-          <p className="text-gray-600">
-            <strong className="text-gray-800">Polyurethane Floor Coating:</strong> Excellent for high-traffic concrete floors, offering a resilient and non-slip surface.
-          </p>
-          <p className="text-gray-600">
-            <strong className="text-gray-800">Asphalt Sealer:</strong> Protects and extends the life of asphalt surfaces while providing a non-slip finish.
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div className="bg-gray-50 border border-gray-100 rounded-md p-5">
+            <h2 className="text-lg font-bold text-gray-800 mb-3">Our Products:</h2>
+            <ul className="space-y-2 text-gray-600 text-sm">
+              <li>• <Link href="/line-marking-epoxy-flooring/"><span className="text-blue-600 hover:underline cursor-pointer">Concrete epoxy floor paint</span></Link></li>
+              <li>• Epoxy concrete sealer</li>
+              <li>• Acrylic concrete paint</li>
+              <li>• Polyurethane floor coating</li>
+              <li>• Asphalt sealer</li>
+            </ul>
+          </div>
+
+          <div className="bg-gray-50 border border-gray-100 rounded-md p-5">
+            <h2 className="text-lg font-bold text-gray-800 mb-3">Ideal For:</h2>
+            <ul className="space-y-2 text-gray-600 text-sm">
+              <li>• Workshops</li>
+              <li>• Warehouses</li>
+              <li>• Loading areas</li>
+              <li>• Walkways</li>
+              <li>• Car parks</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Benefits</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+          {["Slip-resistant", "Chemical-resistant", "Easy to clean", "Long-lasting"].map((benefit) => (
+            <div key={benefit} className="bg-blue-50 border border-blue-100 rounded-md p-3 text-gray-700 text-sm font-medium text-center">
+              {benefit}
+            </div>
+          ))}
+        </div>
+
+        <div className="bg-gray-50 border border-gray-200 rounded-md p-6 mb-8">
+          <h2 className="text-xl font-bold text-gray-800 mb-3">Specialist MMA Resin</h2>
+          <p className="text-gray-600 leading-relaxed">
+            Line-Marking.co.nz collaborates with Civil Works Construction Ltd, the only licensed MMA resin applicators in the South Island. Approved across the UK and Europe, MMA resin is known for its versatility and durability in all conditions — widely used on public roads, cycleways, bus lanes, and decorative footpaths.
           </p>
         </div>
 
-        <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Why Choose Line-Marking.co.nz for Non-Slip Flooring?</h3>
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          Line-Marking.co.nz collaborates with Civil Works Construction Ltd, the only licensed applicators in the South Island of New Zealand for a specific type of MMA resin. Approved in the U.K and other European countries, MMA resin is known for its versatility and durability, even in low temperatures. It has been widely used on public roads, cycleways, bus lanes, and decorative footpaths across Europe, proving to be a long-lasting and high-quality product.
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Tailored Solutions</h2>
+        <p className="text-gray-600 mb-8 leading-relaxed">
+          Our non-slip acrylic concrete paint is excellent for asphalt walkways, while our concrete epoxy floor paint and polyurethane floor coating are ideal for concrete floors. Our team will help you choose the best product for your specific project.
         </p>
 
-        <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Tailored Solutions for Your Non-Slip Flooring Needs</h3>
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          Your requirements will vary depending on your specific situation. Our non-slip acrylic concrete paint is excellent for asphalt walkways, while our concrete epoxy floor paint and polyurethane floor coating are perfect for concrete floors. Our team is here to help you choose the best product for your non-slip floor project.
-        </p>
-
-        <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Contact Us for Expert Advice and Solutions</h3>
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          For professional non-slip flooring solutions, including concrete epoxy floor paint, epoxy concrete sealer, acrylic concrete paint, polyurethane floor coating, and asphalt sealer, trust Line-Marking.co.nz. Get in touch with us today to discuss your needs and receive expert advice on the best non-slip floor options for your project.
-        </p>
-
-        <div className="mt-8">
-          <Link href="/Contact/">
-            <span className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition-colors cursor-pointer" data-testid="button-contact-us">
-              CONTACT US NOW
-            </span>
-          </Link>
+        <div className="bg-blue-600 rounded-md p-6 text-white text-center">
+          <h3 className="text-xl font-bold mb-2">Get Expert Advice & a Free Quote</h3>
+          <p className="text-white/90 mb-4">Contact us today to discuss your non-slip flooring needs.</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href="tel:0224393344" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-md font-bold hover:bg-blue-50 transition-colors" data-testid="link-phone">
+              Call 022 439 3344
+            </a>
+            <Link href="/Contact/">
+              <span className="inline-block bg-blue-700 text-white border border-white/30 px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-colors cursor-pointer" data-testid="button-contact-us">
+                Submit an Enquiry
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

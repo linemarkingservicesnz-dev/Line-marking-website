@@ -6,83 +6,96 @@ import heroImage from "../assets/images/sports-court-real.jpg";
 export default function SportsCourtLineMarking() {
   usePageTitle({
     title: "Sports Court Line Marking | Line-Marking.co.nz",
-    description: "Sports court line marking for basketball, tennis, pickleball, netball and volleyball. Professional markings for schools, clubs, and homes across NZ.",
+    description: "Durable, accurate sports court markings for basketball, pickleball, tennis, netball, and multi-sport courts. Schools, clubs, and homes across New Zealand.",
     path: "/Our-Services/sports-court-line-marking/"
   });
   return (
     <div data-testid="page-sports-court">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">
-        <img src={heroImage} alt="Indoor sports court with professional line markings by Line-Marking.co.nz" className="w-full h-full object-cover" data-testid="img-hero" />
+        <img src={heroImage} alt="Indoor sports court with professional line markings" className="w-full h-full object-cover" data-testid="img-hero" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-3" data-testid="text-hero-title">
               Sports Court Line Marking
             </h1>
-            <p className="text-lg text-white/90 max-w-xl" data-testid="text-hero-subtitle">Professional Markings for Schools, Clubs &amp; Homes</p>
+            <p className="text-lg text-white/90 max-w-xl" data-testid="text-hero-subtitle">For Schools, Clubs &amp; Homes — Durable, Accurate &amp; Vibrant</p>
           </div>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-10">
         <p className="text-gray-600 mb-6 leading-relaxed">
-          Line-Marking.co.nz provides professional sports court line marking services for schools, clubs, and private homes across Christchurch and the wider Canterbury region. Our experienced team delivers precise, durable markings that meet official standards.
+          Line-Marking.co.nz provides professional sports court line marking for schools, clubs, and private homes across New Zealand. Our experienced team delivers precise, durable markings that meet official standards — indoors and outdoors.
         </p>
 
-        <div className="my-8 rounded-md overflow-hidden shadow-sm">
+        <div className="my-6 rounded-md overflow-hidden shadow-sm">
           <img src={heroImage} alt="Indoor basketball and volleyball court lined by Line-Marking.co.nz" className="w-full" data-testid="img-showcase" />
-          <p className="text-sm text-gray-500 mt-2 italic" data-testid="text-showcase-caption">Indoor multi-sport court with basketball and volleyball line markings completed by our team.</p>
+          <p className="text-sm text-gray-500 mt-2 italic px-1" data-testid="text-showcase-caption">Indoor multi-sport court with basketball and volleyball line markings completed by our team.</p>
         </div>
 
-        <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Our Sports Court Services Include:</h3>
-        <div className="space-y-4 mb-8">
-          <div>
-            <h4 className="font-semibold text-gray-800 mb-1">Basketball Court Line Marking</h4>
-            <p className="text-gray-600">Accurate and durable markings to meet official standards, ensuring optimal play conditions.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div className="bg-gray-50 border border-gray-100 rounded-md p-5">
+            <h2 className="text-lg font-bold text-gray-800 mb-3">We Mark:</h2>
+            <ul className="space-y-2 text-gray-600 text-sm">
+              <li>• Basketball courts</li>
+              <li>• Pickleball courts</li>
+              <li>• Tennis courts</li>
+              <li>• Netball courts</li>
+              <li>• Multi-sport courts</li>
+            </ul>
           </div>
-          <div>
-            <h4 className="font-semibold text-gray-800 mb-1">Pickleball Court Line Marking</h4>
-            <p className="text-gray-600">Precise line marking for this rapidly growing sport, tailored to your specific requirements.</p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gray-800 mb-1">Tennis Court Line Marking</h4>
-            <p className="text-gray-600">Professional line marking for tennis courts, enhancing playability and aesthetics.</p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gray-800 mb-1">Volleyball Court Line Marking</h4>
-            <p className="text-gray-600">Clear and compliant markings to support safe and enjoyable volleyball games.</p>
+
+          <div className="bg-gray-50 border border-gray-100 rounded-md p-5">
+            <h2 className="text-lg font-bold text-gray-800 mb-3">Why Our Courts Last Longer:</h2>
+            <ul className="space-y-2 text-gray-600 text-sm">
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Non-slip sports paints</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> UV-resistant colours</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Accurate measurements</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Professional equipment</li>
+            </ul>
           </div>
         </div>
 
-        <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Why Choose Line-Marking.co.nz for Sports Courts?</h3>
-        <ul className="space-y-3 mb-8">
-          <li className="text-gray-600">
-            <strong className="text-gray-800">Precision:</strong> We use professional equipment to ensure accurate, straight lines that meet official court dimensions.
-          </li>
-          <li className="text-gray-600">
-            <strong className="text-gray-800">Durability:</strong> Our specialised sports paints are designed to withstand heavy use and weather conditions.
-          </li>
-          <li className="text-gray-600">
-            <strong className="text-gray-800">Non-Slip:</strong> Safety is paramount &mdash; our paints include non-slip properties suitable for sports surfaces.
-          </li>
-        </ul>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Sports Court Services</h2>
+        <div className="space-y-4 mb-10">
+          <div>
+            <h3 className="font-semibold text-gray-800 mb-1">Basketball Court Line Marking</h3>
+            <p className="text-gray-600">Accurate and durable markings to meet official standards, ensuring optimal play conditions for schools and clubs.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-800 mb-1">Pickleball Court Line Marking</h3>
+            <p className="text-gray-600">Precise line marking for this rapidly growing sport, tailored to your specific indoor or outdoor surface.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-800 mb-1">Tennis Court Line Marking</h3>
+            <p className="text-gray-600">Professional tennis court markings that enhance both playability and the appearance of your court.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-800 mb-1">Netball Court Line Marking</h3>
+            <p className="text-gray-600">Clear and compliant markings to support safe and enjoyable netball games for schools and clubs.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-800 mb-1">Multi-Sport Courts</h3>
+            <p className="text-gray-600">Combined court layouts for shared spaces — multiple sports, one surface, clearly marked for each.</p>
+          </div>
+        </div>
 
-        <h3 className="text-xl font-bold text-gray-800 mt-8 mb-3">Get a Free Quote</h3>
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          Contact us today to discuss your sports court line marking project. We offer free on-site assessments and competitive pricing.
-        </p>
-
-        <div className="flex flex-wrap gap-4 mt-8">
-          <Link href="/Contact/">
-            <Button data-testid="button-contact-us">
-              CONTACT US NOW
-            </Button>
-          </Link>
-          <a href="tel:0224393344">
-            <Button variant="outline" data-testid="button-call-us">
-              CALL 022 439 3344
-            </Button>
-          </a>
+        <div className="bg-blue-600 rounded-md p-6 text-white text-center">
+          <h3 className="text-xl font-bold mb-2">Get a Free Quote</h3>
+          <p className="text-white/90 mb-4">Contact us today to discuss your sports court project. Free on-site assessments and competitive pricing.</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href="tel:0224393344">
+              <Button variant="outline" className="bg-white text-blue-600 border-white hover:bg-blue-50" data-testid="button-call-us">
+                Call 022 439 3344
+              </Button>
+            </a>
+            <Link href="/Contact/">
+              <Button className="bg-blue-700 hover:bg-blue-800 border border-white/30" data-testid="button-contact-us">
+                Submit an Enquiry
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

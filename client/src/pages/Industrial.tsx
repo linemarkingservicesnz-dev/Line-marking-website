@@ -4,8 +4,8 @@ import heroImage from "../assets/images/industrial-marking.png";
 
 export default function Industrial() {
   usePageTitle({
-    title: "Industrial Line Marking | Line-Marking.co.nz",
-    description: "Industrial line marking for warehouses, factories, and distribution centres. Safety walkways, forklift zones, and hazard markings across New Zealand.",
+    title: "Warehouse & Factory Safety Markings | Line-Marking.co.nz",
+    description: "Industrial line marking for warehouses, factories, and distribution centres. Pedestrian walkways, forklift lanes, hazard zones, and emergency exit markings across New Zealand.",
     path: "/Our-Services/Industrial/"
   });
   return (
@@ -16,76 +16,93 @@ export default function Industrial() {
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
-              Industrial Line Marking
+              Warehouse &amp; Factory Line Marking
             </h1>
-            <p className="text-lg text-white/90 max-w-xl">Christchurch &amp; Canterbury</p>
+            <p className="text-lg text-white/90 max-w-xl">Clear, compliant markings that improve safety and streamline workflow</p>
           </div>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-10">
-        <h2 className="text-2xl font-bold text-gray-800 mt-4 mb-4">What We Offer</h2>
-        <div className="space-y-4 mb-8">
-          <div>
-            <h3 className="font-semibold text-gray-800">Forklift lanes &amp; pedestrian zones</h3>
-            <p className="text-gray-600">Clear separation for safety and efficiency</p>
+        <p className="text-gray-600 mb-8 leading-relaxed">
+          We deliver industrial line marking solutions for warehouses, factories, distribution centres, and transport yards across New Zealand. Every marking is designed to reduce accidents, improve traffic flow, and keep your site compliant.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div className="bg-gray-50 border border-gray-100 rounded-md p-5">
+            <h2 className="text-lg font-bold text-gray-800 mb-3">We Mark:</h2>
+            <ul className="space-y-2 text-gray-600 text-sm">
+              <li>• Pedestrian walkways</li>
+              <li>• Forklift lanes</li>
+              <li>• Hazard zones</li>
+              <li>• No-go areas</li>
+              <li>• Emergency exits</li>
+              <li>• Fire extinguisher zones</li>
+              <li>• Storage bays</li>
+              <li>• Racking boundaries</li>
+            </ul>
           </div>
-          <div>
-            <h3 className="font-semibold text-gray-800">Hazard &amp; exclusion zones</h3>
-            <p className="text-gray-600">High-visibility markings for compliance and risk reduction</p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-800">Anti-skid coatings</h3>
-            <p className="text-gray-600">Durable, textured finishes for wet or high-traffic areas</p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-800">Custom stenciling &amp; directional arrows</h3>
-            <p className="text-gray-600">Tailored to your site layout and traffic flow</p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-800">NZTA-approved paints</h3>
-            <p className="text-gray-600">Fast-drying, long-lasting, and compliant with national standards</p>
+
+          <div className="bg-gray-50 border border-gray-100 rounded-md p-5">
+            <h2 className="text-lg font-bold text-gray-800 mb-3">Materials Available:</h2>
+            <ul className="space-y-2 text-gray-600 text-sm">
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Epoxy</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Polyurethane</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Non-slip coatings</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> High-visibility paints</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> NZTA-approved materials</li>
+            </ul>
           </div>
         </div>
 
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Benefits</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+          {["Reduced accidents", "Improved traffic flow", "Better compliance", "Clear separation of people and machinery"].map((benefit) => (
+            <div key={benefit} className="bg-blue-50 border border-blue-100 rounded-md p-3 text-gray-700 text-sm font-medium text-center">
+              {benefit}
+            </div>
+          ))}
+        </div>
+
         <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Areas We Serve</h2>
-        <p className="text-gray-600 mb-2">We specialize in industrial zones across:</p>
+        <p className="text-gray-600 mb-4">We specialise in industrial zones across:</p>
         <ul className="space-y-2 mb-8 text-gray-600">
-          <li><strong className="text-gray-800">Hornby</strong> &ndash; Warehouses, logistics hubs, and distribution centers</li>
-          <li><strong className="text-gray-800">Wigram</strong> &ndash; Light industrial, trades, and commercial units</li>
-          <li><strong className="text-gray-800">Rolleston Izone</strong> &ndash; Heavy industry, manufacturing, and transport yards</li>
-          <li><strong className="text-gray-800">Islington</strong> Industrial Line marking</li>
-          <li><strong className="text-gray-800">Sockburn</strong> Warehouse Line marking</li>
-          <li><strong className="text-gray-800">Middleton</strong> Factory Safety Markings</li>
+          <li><strong className="text-gray-800">Hornby</strong> — Warehouses, logistics hubs, and distribution centres</li>
+          <li><strong className="text-gray-800">Wigram</strong> — Light industrial, trades, and commercial units</li>
+          <li><strong className="text-gray-800">Rolleston iZone</strong> — Heavy industry, manufacturing, and transport yards</li>
+          <li><strong className="text-gray-800">Islington</strong> — Industrial line marking</li>
+          <li><strong className="text-gray-800">Sockburn</strong> — Warehouse line marking</li>
+          <li><strong className="text-gray-800">Middleton</strong> — Factory safety markings</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Flexible Scheduling</h2>
-        <p className="text-gray-600 mb-8 leading-relaxed">
-          We offer night and weekend service at weekday rates to minimize disruption to your operations.
-        </p>
+        <div className="bg-gray-800 rounded-md p-5 mb-8 text-white">
+          <h2 className="text-lg font-bold mb-2">Flexible Scheduling</h2>
+          <p className="text-white/90">Night and weekend service available at standard weekday rates — minimal disruption to your operations.</p>
+        </div>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">What Clients Say</h2>
         <div className="space-y-4 mb-8">
-          <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-600">
-            "Rogerio's team marked our forklift lanes and hazard zones in one night &mdash; clean, compliant, and professional."
+          <blockquote className="border-l-4 border-blue-400 pl-4 italic text-gray-600">
+            "Rogerio's team marked our forklift lanes and hazard zones in one night — clean, compliant, and professional."
           </blockquote>
-          <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-600">
+          <blockquote className="border-l-4 border-blue-400 pl-4 italic text-gray-600">
             "The anti-skid finish is perfect for our wet loading area. Highly recommend."
           </blockquote>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Book Your Free Site Visit</h2>
-        <p className="text-gray-600 mb-4 leading-relaxed">
-          Ready to upgrade your site safety and compliance? Call or message us today to lock in a quote.
-        </p>
-        <div className="space-y-2 text-gray-600 mb-4">
-          <p><a href="tel:0224393344" className="text-blue-600 hover:underline">022 439 3344</a></p>
-          <p><a href="mailto:info@workspacesafety.co.nz" className="text-blue-600 hover:underline">info@workspacesafety.co.nz</a></p>
-          <p>
-            <Link href="/Our-Services/Industrial/">
-              <span className="text-blue-600 hover:underline cursor-pointer">www.line-marking.co.nz/industrial</span>
+        <div className="bg-blue-600 rounded-md p-6 text-white text-center">
+          <h3 className="text-xl font-bold mb-2">Book Your Free Site Visit</h3>
+          <p className="text-white/90 mb-4">Ready to upgrade your site safety and compliance? Call or message us today.</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href="tel:0224393344" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-md font-bold hover:bg-blue-50 transition-colors" data-testid="link-phone">
+              Call 022 439 3344
+            </a>
+            <Link href="/Contact/">
+              <span className="inline-block bg-blue-700 text-white border border-white/30 px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-colors cursor-pointer" data-testid="button-contact-us">
+                Submit an Enquiry
+              </span>
             </Link>
-          </p>
+          </div>
         </div>
       </div>
     </div>
