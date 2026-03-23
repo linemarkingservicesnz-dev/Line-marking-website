@@ -1,11 +1,15 @@
 import { Link } from "wouter";
 
 const serviceLinks = [
-  { href: "/Our-Services/Non-Slip-Flooring/", label: "Non-Slip Flooring" },
-  { href: "/Our-Services/Protective-Concrete-Coatings/", label: "Protective Concrete Coatings" },
-  { href: "/Our-Services/Line-Marking/", label: "Line Marking and Symbols" },
-  { href: "/Our-Services/Line-And-Marking-Removals/", label: "Line and Marking Removals" },
-  { href: "/Our-Services/sports-court-line-marking/", label: "Sports Court Line Marking" },
+  { href: "/car-park-line-marking/", label: "Car Park Line Marking" },
+  { href: "/warehouse-line-marking/", label: "Warehouse Line Marking" },
+  { href: "/non-slip-flooring/", label: "Non-Slip Flooring" },
+  { href: "/epoxy-flooring/", label: "Epoxy Flooring" },
+  { href: "/protective-concrete-coatings/", label: "Protective Concrete Coatings" },
+  { href: "/pedestrian-walkways/", label: "Pedestrian Walkways" },
+  { href: "/line-removal/", label: "Line Removal" },
+  { href: "/sports-court-line-marking/", label: "Sports Court Line Marking" },
+  { href: "/playground-markings/", label: "Playground & School Games" },
 ];
 
 export function Footer() {

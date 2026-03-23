@@ -72,7 +72,7 @@ export default function About() {
         </div>
 
         <div className="flex flex-wrap gap-4">
-          <Link href="/Our-Services/Line-Marking/">
+          <Link href="/car-park-line-marking/">
             <span className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition-colors cursor-pointer" data-testid="button-view-services">
               View Our Services
             </span>

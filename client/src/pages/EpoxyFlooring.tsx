@@ -6,7 +6,7 @@ export default function EpoxyFlooring() {
   usePageTitle({
     title: "Epoxy Flooring | Line-Marking.co.nz",
     description: "Professional epoxy flooring for garages, workshops, and commercial spaces. Durable, chemical-resistant floor coatings in Christchurch and Auckland.",
-    path: "/line-marking-epoxy-flooring/"
+    path: "/epoxy-flooring/"
   });
   return (
     <div data-testid="page-epoxy-flooring">

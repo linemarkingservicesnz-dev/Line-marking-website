@@ -6,23 +6,23 @@ import epoxyImage from "../assets/images/epoxy-floor.png";
 import sportsImage from "../assets/images/sports-court.png";
 
 const canterburyLinks = [
-  { href: "/line-marking-ashburton/", label: "Ashburton" },
-  { href: "/line-marking-blenheim/", label: "Blenheim" },
-  { href: "/line-marking-greymouth/", label: "Greymouth" },
-  { href: "/line-marking-kaiapoi/", label: "Kaiapoi" },
-  { href: "/line-marking-nelson/", label: "Nelson" },
-  { href: "/line-marking-rangiora/", label: "Rangiora" },
-  { href: "/line-marking-richmond/", label: "Richmond" },
-  { href: "/line-marking-rolleston/", label: "Rolleston" },
-  { href: "/line-marking-timaru/", label: "Timaru" },
-  { href: "/line-marking-westport/", label: "Westport" },
+  { href: "/ashburton-line-marking/", label: "Ashburton" },
+  { href: "/blenheim-line-marking/", label: "Blenheim" },
+  { href: "/greymouth-line-marking/", label: "Greymouth" },
+  { href: "/kaiapoi-line-marking/", label: "Kaiapoi" },
+  { href: "/nelson-line-marking/", label: "Nelson" },
+  { href: "/rangiora-line-marking/", label: "Rangiora" },
+  { href: "/richmond-line-marking/", label: "Richmond" },
+  { href: "/rolleston-line-marking/", label: "Rolleston" },
+  { href: "/timaru-line-marking/", label: "Timaru" },
+  { href: "/westport-line-marking/", label: "Westport" },
 ];
 
 const aucklandLinks = [
-  { href: "/line-marking-auckland/", label: "Auckland" },
-  { href: "/line-marking-north-shore/", label: "North Shore" },
-  { href: "/line-marking-south-auckland/", label: "South Auckland" },
-  { href: "/line-marking-hamilton/", label: "Hamilton" },
+  { href: "/auckland-line-marking/", label: "Auckland" },
+  { href: "/north-shore-line-marking/", label: "North Shore" },
+  { href: "/south-auckland-line-marking/", label: "South Auckland" },
+  { href: "/hamilton-line-marking/", label: "Hamilton" },
 ];
 
 export default function Home() {
@@ -165,7 +165,7 @@ export default function Home() {
           <div className="md:w-1/2">
             <p className="text-gray-600 mb-4 leading-relaxed">
               We provide accurate, durable, and non-slip{" "}
-              <Link href="/Our-Services/sports-court-line-marking/">
+              <Link href="/sports-court-line-marking/">
                 <span className="text-blue-600 hover:underline cursor-pointer">sports court line markings</span>
               </Link>{" "}
               for schools, clubs, and private homes. Our specialist sports paints ensure long-lasting performance indoors and outdoors.

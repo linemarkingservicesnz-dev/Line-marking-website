@@ -6,7 +6,7 @@ export default function ProtectiveCoatings() {
   usePageTitle({
     title: "Protective Concrete Coatings | Line-Marking.co.nz",
     description: "Extend the life of your concrete with epoxy flooring, polyurethane coatings, resin flooring, concrete sealing, and driveway sealing. Christchurch and Auckland.",
-    path: "/Our-Services/Protective-Concrete-Coatings/"
+    path: "/protective-concrete-coatings/"
   });
   return (
     <div data-testid="page-protective-coatings">
@@ -32,7 +32,7 @@ export default function ProtectiveCoatings() {
           <div className="bg-gray-50 border border-gray-100 rounded-md p-5">
             <h2 className="text-lg font-bold text-gray-800 mb-3">We Provide:</h2>
             <ul className="space-y-2 text-gray-600 text-sm">
-              <li>• <Link href="/line-marking-epoxy-flooring/"><span className="text-blue-600 hover:underline cursor-pointer">Epoxy flooring</span></Link></li>
+              <li>• <Link href="/epoxy-flooring/"><span className="text-blue-600 hover:underline cursor-pointer">Epoxy flooring</span></Link></li>
               <li>• Polyurethane coatings</li>
               <li>• Resin flooring</li>
               <li>• Garage floor epoxy</li>

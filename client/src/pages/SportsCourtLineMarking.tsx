@@ -7,7 +7,7 @@ export default function SportsCourtLineMarking() {
   usePageTitle({
     title: "Sports Court Line Marking | Line-Marking.co.nz",
     description: "Durable, accurate sports court markings for basketball, pickleball, tennis, netball, and multi-sport courts. Schools, clubs, and homes across New Zealand.",
-    path: "/Our-Services/sports-court-line-marking/"
+    path: "/sports-court-line-marking/"
   });
   return (
     <div data-testid="page-sports-court">

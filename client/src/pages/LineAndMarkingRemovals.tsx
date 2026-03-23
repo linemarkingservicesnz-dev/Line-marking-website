@@ -6,7 +6,7 @@ export default function LineAndMarkingRemovals() {
   usePageTitle({
     title: "Line & Marking Removals | Line-Marking.co.nz",
     description: "Fast, clean line and marking removal for layout changes or upgrades. Blackout, total removal, concrete grinding, and surface preparation across New Zealand.",
-    path: "/Our-Services/Line-And-Marking-Removals/"
+    path: "/line-removal/"
   });
   return (
     <div data-testid="page-line-removals">

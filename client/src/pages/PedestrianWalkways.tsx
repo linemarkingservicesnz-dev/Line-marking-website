@@ -6,7 +6,7 @@ export default function PedestrianWalkways() {
   usePageTitle({
     title: "Pedestrian Walkways | Line-Marking.co.nz",
     description: "Pedestrian walkway markings for warehouses, factories, and commercial buildings. Clear safety lines to separate foot and vehicle traffic.",
-    path: "/line-marking-pedestrian-walkways/"
+    path: "/pedestrian-walkways/"
   });
   return (
     <div data-testid="page-pedestrian-walkways">

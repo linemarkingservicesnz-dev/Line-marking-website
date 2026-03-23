@@ -52,7 +52,7 @@ export default function PlaygroundGames() {
   usePageTitle({
     title: "Playground & School Games | Line-Marking.co.nz",
     description: "Painted playground games for schools including hopscotch, snakes and ladders, number grids, and more. Durable outdoor markings across New Zealand.",
-    path: "/Our-Services/playground-games/"
+    path: "/playground-markings/"
   });
   return (
     <div data-testid="page-playground-games">

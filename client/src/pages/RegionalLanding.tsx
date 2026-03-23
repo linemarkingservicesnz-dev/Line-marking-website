@@ -109,7 +109,7 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
   usePageTitle({
     title: `Line Marking in ${location} | Line-Marking.co.nz`,
     description: `Professional line marking services in ${location}. Car park marking, industrial safety lines, sports courts, and more across ${regionLabel}. Call 022 439 3344.`,
-    path: `/line-marking-${location.toLowerCase().replace(/\s+/g, '-')}/`
+    path: `/${location.toLowerCase().replace(/\s+/g, '-')}-line-marking/`
   });
 
   const content = regionContent[location] || {
@@ -191,10 +191,10 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
             <p className="text-center text-gray-700 font-medium mb-4">Other Auckland & Waikato Areas We Serve:</p>
             <div className="flex flex-wrap justify-center gap-2 text-sm" data-testid="region-links-auckland">
               {[
-                { href: "/line-marking-auckland/", label: "Auckland" },
-                { href: "/line-marking-north-shore/", label: "North Shore" },
-                { href: "/line-marking-south-auckland/", label: "South Auckland" },
-                { href: "/line-marking-hamilton/", label: "Hamilton" },
+                { href: "/auckland-line-marking/", label: "Auckland" },
+                { href: "/north-shore-line-marking/", label: "North Shore" },
+                { href: "/south-auckland-line-marking/", label: "South Auckland" },
+                { href: "/hamilton-line-marking/", label: "Hamilton" },
               ]
                 .filter((link) => link.label !== location)
                 .map((link, index, arr) => (

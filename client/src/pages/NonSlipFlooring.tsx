@@ -6,7 +6,7 @@ export default function NonSlipFlooring() {
   usePageTitle({
     title: "Non-Slip Flooring Solutions | Line-Marking.co.nz",
     description: "Industrial-grade non-slip flooring coatings for workshops, warehouses, loading areas, and walkways. Epoxy, polyurethane, and acrylic solutions across New Zealand.",
-    path: "/Our-Services/Non-Slip-Flooring/"
+    path: "/non-slip-flooring/"
   });
   return (
     <div data-testid="page-non-slip-flooring">
@@ -32,7 +32,7 @@ export default function NonSlipFlooring() {
           <div className="bg-gray-50 border border-gray-100 rounded-md p-5">
             <h2 className="text-lg font-bold text-gray-800 mb-3">Our Products:</h2>
             <ul className="space-y-2 text-gray-600 text-sm">
-              <li>• <Link href="/line-marking-epoxy-flooring/"><span className="text-blue-600 hover:underline cursor-pointer">Concrete epoxy floor paint</span></Link></li>
+              <li>• <Link href="/epoxy-flooring/"><span className="text-blue-600 hover:underline cursor-pointer">Concrete epoxy floor paint</span></Link></li>
               <li>• Epoxy concrete sealer</li>
               <li>• Acrylic concrete paint</li>
               <li>• Polyurethane floor coating</li>

@@ -40,59 +40,57 @@ function Router() {
         <Switch>
           <Route path="/" component={Home} />
 
-          <Route path="/Our-Services/Line-Marking/" component={LineMarking} />
-          <Route path="/Our-Services/Industrial/" component={Industrial} />
-          <Route path="/Our-Services/Non-Slip-Flooring/" component={NonSlipFlooring} />
-          <Route path="/Our-Services/Protective-Concrete-Coatings/" component={ProtectiveCoatings} />
-          <Route path="/Our-Services/Line-And-Marking-Removals/" component={LineAndMarkingRemovals} />
-          <Route path="/Our-Services/sports-court-line-marking/" component={SportsCourtLineMarking} />
+          <Route path="/car-park-line-marking/" component={LineMarking} />
+          <Route path="/warehouse-line-marking/" component={Industrial} />
+          <Route path="/non-slip-flooring/" component={NonSlipFlooring} />
+          <Route path="/protective-concrete-coatings/" component={ProtectiveCoatings} />
+          <Route path="/line-removal/" component={LineAndMarkingRemovals} />
+          <Route path="/sports-court-line-marking/" component={SportsCourtLineMarking} />
+          <Route path="/playground-markings/" component={PlaygroundGames} />
+          <Route path="/epoxy-flooring/" component={EpoxyFlooring} />
+          <Route path="/pedestrian-walkways/" component={PedestrianWalkways} />
 
-          <Route path="/Our-Services/playground-games/" component={PlaygroundGames} />
-
-          <Route path="/line-marking-epoxy-flooring/" component={EpoxyFlooring} />
-          <Route path="/line-marking-pedestrian-walkways/" component={PedestrianWalkways} />
-
-          <Route path="/line-marking-rolleston/">
+          <Route path="/rolleston-line-marking/">
             {() => <RegionalLanding location="Rolleston" />}
           </Route>
-          <Route path="/line-marking-greymouth/">
+          <Route path="/greymouth-line-marking/">
             {() => <RegionalLanding location="Greymouth" />}
           </Route>
-          <Route path="/line-marking-rangiora/">
+          <Route path="/rangiora-line-marking/">
             {() => <RegionalLanding location="Rangiora" />}
           </Route>
-          <Route path="/line-marking-ashburton/">
+          <Route path="/ashburton-line-marking/">
             {() => <RegionalLanding location="Ashburton" />}
           </Route>
-          <Route path="/line-marking-blenheim/">
+          <Route path="/blenheim-line-marking/">
             {() => <RegionalLanding location="Blenheim" />}
           </Route>
-          <Route path="/line-marking-kaiapoi/">
+          <Route path="/kaiapoi-line-marking/">
             {() => <RegionalLanding location="Kaiapoi" />}
           </Route>
-          <Route path="/line-marking-nelson/">
+          <Route path="/nelson-line-marking/">
             {() => <RegionalLanding location="Nelson" />}
           </Route>
-          <Route path="/line-marking-richmond/">
+          <Route path="/richmond-line-marking/">
             {() => <RegionalLanding location="Richmond" />}
           </Route>
-          <Route path="/line-marking-timaru/">
+          <Route path="/timaru-line-marking/">
             {() => <RegionalLanding location="Timaru" />}
           </Route>
-          <Route path="/line-marking-westport/">
+          <Route path="/westport-line-marking/">
             {() => <RegionalLanding location="Westport" />}
           </Route>
 
-          <Route path="/line-marking-auckland/">
+          <Route path="/auckland-line-marking/">
             {() => <RegionalLanding location="Auckland" region="auckland" />}
           </Route>
-          <Route path="/line-marking-north-shore/">
+          <Route path="/north-shore-line-marking/">
             {() => <RegionalLanding location="North Shore" region="auckland" />}
           </Route>
-          <Route path="/line-marking-south-auckland/">
+          <Route path="/south-auckland-line-marking/">
             {() => <RegionalLanding location="South Auckland" region="auckland" />}
           </Route>
-          <Route path="/line-marking-hamilton/">
+          <Route path="/hamilton-line-marking/">
             {() => <RegionalLanding location="Hamilton" region="auckland" />}
           </Route>
 

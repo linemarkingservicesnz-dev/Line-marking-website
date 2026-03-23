@@ -6,7 +6,7 @@ export default function LineMarking() {
   usePageTitle({
     title: "Car Park Line Marking NZ | Line-Marking.co.nz",
     description: "Professional car park line marking across New Zealand. NZTA-approved paints, accessible parking, directional arrows, EV bays, and more. Christchurch and Auckland.",
-    path: "/Our-Services/Line-Marking/"
+    path: "/car-park-line-marking/"
   });
   return (
     <div data-testid="page-line-marking">
