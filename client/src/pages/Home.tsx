@@ -28,7 +28,7 @@ const aucklandLinks = [
 export default function Home() {
   usePageTitle({
     title: "Line-Marking.co.nz | Professional Line Marking Services NZ",
-    description: "Professional line marking services across Christchurch, Auckland and New Zealand. Car park marking, industrial safety lines, sports courts, playground games, epoxy flooring. Call 022 439 3344.",
+    description: "Professional car park and industrial line marking across New Zealand. NZTA-approved paints, epoxy flooring, sports courts, safety markings. Christchurch and Auckland. Call 022 439 3344.",
     path: "/"
   });
   return (
@@ -43,11 +43,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4" data-testid="text-hero-title">
-              Welcome to Line-Marking.co.nz
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-2" data-testid="text-hero-title">
+              Professional Car Park & Industrial Line Marking Across New Zealand
             </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-6">
-              Your premier provider of precision line marking services across New Zealand.
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-2">
+              Welcome to Line-Marking.co.nz — your nationwide specialists in precision line marking, safety markings, and durable industrial flooring solutions.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/Contact/">
@@ -55,30 +55,38 @@ export default function Home() {
                   Get a Free Quote
                 </span>
               </Link>
-              <Link href="/Our-Services/Line-Marking/">
-                <span className="inline-block bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 py-3 rounded-md font-medium hover:bg-white/30 transition-colors cursor-pointer" data-testid="button-hero-services">
-                  Our Services
+              <a href="tel:0224393344">
+                <span className="inline-block bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 py-3 rounded-md font-medium hover:bg-white/30 transition-colors cursor-pointer" data-testid="button-hero-phone">
+                  Call 022 439 3344
                 </span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-10">
-        <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-          We specialise in delivering bespoke, compliant, and clear line marking solutions tailored to enhance safety and efficiency across various workplaces and sports venues.
-        </p>
 
-        <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Why Choose Line-Marking.co.nz?</h2>
+        <h2 className="text-2xl font-bold text-gray-800 mt-2 mb-4">Why Choose Line-Marking.co.nz?</h2>
         <p className="text-gray-600 mb-4 leading-relaxed">
-          Based in Christchurch and now serving Auckland, our team ensures your workplace communicates with absolute clarity through expertly applied line markings. We help everyone on-site navigate safely, effectively integrating pedestrian and machinery traffic.
+          Based in Christchurch and now serving Auckland, we deliver high-quality, compliant, and long-lasting line marking solutions for industrial, commercial, and public environments.
         </p>
-        <p className="text-gray-600 mb-8 leading-relaxed">
-          Our flexible scheduling includes night and weekend services at standard weekday rates to ensure minimal disruption to your operations.
+        <p className="text-gray-600 mb-6 leading-relaxed">
+          Our team helps your workplace communicate clearly — ensuring pedestrians, vehicles, and machinery move safely and efficiently through your site.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Our Comprehensive Line Marking Services</h2>
+        <div className="bg-blue-50 border border-blue-100 rounded-md p-6 mb-10">
+          <h3 className="text-lg font-semibold text-gray-800 mb-3">What Sets Us Apart</h3>
+          <ul className="space-y-2 text-gray-700">
+            <li className="flex items-start gap-2"><span className="text-blue-600 font-bold mt-0.5">✓</span><span><strong>NZTA-approved paints and premium resins</strong></span></li>
+            <li className="flex items-start gap-2"><span className="text-blue-600 font-bold mt-0.5">✓</span><span><strong>Industrial-grade durability</strong> for warehouses, factories, and car parks</span></li>
+            <li className="flex items-start gap-2"><span className="text-blue-600 font-bold mt-0.5">✓</span><span><strong>Flexible scheduling</strong>, including nights and weekends at standard rates</span></li>
+            <li className="flex items-start gap-2"><span className="text-blue-600 font-bold mt-0.5">✓</span><span><strong>Clear, compliant markings</strong> that meet safety and accessibility standards</span></li>
+            <li className="flex items-start gap-2"><span className="text-blue-600 font-bold mt-0.5">✓</span><span><strong>Trusted by logistics hubs, manufacturing plants, schools, and councils</strong></span></li>
+          </ul>
+        </div>
+
+        <h2 className="text-2xl font-bold text-gray-800 mb-6">Our Core Services</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           <div>
@@ -90,7 +98,7 @@ export default function Home() {
             />
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Expert Line Marking</h3>
             <p className="text-gray-600 leading-relaxed">
-              We offer professional line marking for car parks across Christchurch and Auckland, catering to both new markings and updates to existing ones using high-quality, NZTA-approved paints for durability and visibility.
+              Professional line marking for car parks, warehouses, factories, and commercial sites across Christchurch, Auckland, and the wider regions. We use <strong>NZTA-approved paints</strong>, epoxies, and polyurethane resins for maximum visibility and durability.
             </p>
           </div>
 
@@ -102,29 +110,48 @@ export default function Home() {
               data-testid="img-epoxy"
             />
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Resilient Flooring Solutions</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Choose from epoxy and polyurethane resins, non-slip aggregates, and non-skid paints to improve wear resistance and prolong the lifespan of floor markings.
+            <p className="text-gray-600 leading-relaxed mb-3">
+              Enhance the lifespan and safety of your floors with industrial-grade coatings:
             </p>
+            <ul className="text-gray-600 space-y-1 text-sm">
+              <li>• Epoxy flooring</li>
+              <li>• Polyurethane coatings</li>
+              <li>• Non-slip aggregates</li>
+              <li>• Anti-skid paints</li>
+              <li>• Protective concrete sealers</li>
+            </ul>
           </div>
         </div>
 
-        <div className="space-y-6 mb-10">
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">Directional and Safety Markings</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Enhance on-site safety with our directional arrows, zebra crossings, and safety line markings, crucial for factories, warehouses, and other industrial settings.
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div className="bg-gray-50 rounded-md p-5 border border-gray-100">
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">Directional & Safety Markings</h3>
+            <p className="text-gray-600 leading-relaxed mb-3">Clear, compliant markings for safer workplaces:</p>
+            <ul className="text-gray-600 space-y-1 text-sm">
+              <li>• Pedestrian walkways</li>
+              <li>• Zebra crossings</li>
+              <li>• Forklift lanes</li>
+              <li>• Hazard zones</li>
+              <li>• Keep-clear areas</li>
+              <li>• Emergency exit markings</li>
+            </ul>
           </div>
 
-          <div>
+          <div className="bg-gray-50 rounded-md p-5 border border-gray-100">
             <h3 className="text-lg font-semibold text-gray-800 mb-2">Site Safety Enhancements</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Our range of safety enhancements, including Walk Safe handrails and robust car park systems with wheel stops, speed humps, and bollards, are designed to manage traffic flow and increase safety across all our service areas.
-            </p>
+            <p className="text-gray-600 leading-relaxed mb-3">We supply and install:</p>
+            <ul className="text-gray-600 space-y-1 text-sm">
+              <li>• Walk Safe handrails</li>
+              <li>• Wheel stops</li>
+              <li>• Speed humps</li>
+              <li>• Bollards</li>
+              <li>• Car park safety systems</li>
+            </ul>
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">New: Sports Court Line Marking Services</h2>
+        <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">New: Sports Court Line Marking</h2>
+        <p className="text-gray-600 mb-4">Now available for schools, clubs, and private homes.</p>
 
         <div className="md:flex gap-6 mb-6">
           <div className="md:w-1/2 mb-4 md:mb-0">
@@ -137,79 +164,79 @@ export default function Home() {
           </div>
           <div className="md:w-1/2">
             <p className="text-gray-600 mb-4 leading-relaxed">
-              We are excited to announce the addition of{" "}
+              We provide accurate, durable, and non-slip{" "}
               <Link href="/Our-Services/sports-court-line-marking/">
-                <span className="text-blue-600 hover:underline cursor-pointer">sports court line marking</span>
+                <span className="text-blue-600 hover:underline cursor-pointer">sports court line markings</span>
               </Link>{" "}
-              to our services, available for schools, clubs, and private homes.
+              for schools, clubs, and private homes. Our specialist sports paints ensure long-lasting performance indoors and outdoors.
             </p>
             <ul className="space-y-2 text-gray-600">
-              <li><strong className="text-gray-800">Basketball</strong> - Accurate markings to meet official standards</li>
-              <li><strong className="text-gray-800">Pickleball</strong> - Precise marking for this growing sport</li>
-              <li><strong className="text-gray-800">Tennis</strong> - Professional markings enhancing playability</li>
-              <li><strong className="text-gray-800">Netball</strong> - Clear, compliant court markings</li>
+              <li><strong className="text-gray-800">Basketball</strong> — Accurate markings to meet official standards</li>
+              <li><strong className="text-gray-800">Pickleball</strong> — Precise marking for this growing sport</li>
+              <li><strong className="text-gray-800">Tennis</strong> — Professional markings enhancing playability</li>
+              <li><strong className="text-gray-800">Netball</strong> — Clear, compliant court markings</li>
+              <li><strong className="text-gray-800">Multi-sport courts</strong> — Combined layouts for shared spaces</li>
             </ul>
           </div>
         </div>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Additional Services</h2>
-        <div className="space-y-4 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-1">Maintenance and Removals</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-1">Maintenance & Line Removals</h3>
             <p className="text-gray-600 leading-relaxed">
-              We provide services like blacking out obsolete lines, total line removal, concrete grinding, and protective coatings to keep your facility compliant and up-to-date.
+              Keep your facility compliant and up-to-date with blacking out obsolete lines, total line removal, concrete grinding, surface preparation, and protective coatings. Perfect for layout changes, refurbishments, and safety upgrades.
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-1">Customised Colour and Material Options</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-1">Custom Colours & Materials</h3>
             <p className="text-gray-600 leading-relaxed">
-              Our material and colour choices are tailored to meet specific needs, ensuring clear markings for various traffic types &mdash; from pedestrian-only zones to mixed-use paths and vehicle-only areas.
+              We tailor every project to your environment with high-visibility colours, UV-resistant outdoor coatings, non-slip finishes, and heavy-duty industrial resins. Suitable for pedestrian zones, mixed-use areas, and vehicle-only routes.
             </p>
           </div>
         </div>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Frequently Asked Questions</h2>
-        <div className="space-y-4 mb-10">
+        <div className="space-y-5 mb-10">
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-1">Durability of Line Markings</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-1">How long do line markings last?</h3>
             <p className="text-gray-600 leading-relaxed">
-              Typically, our line markings last from 18 to 24 months, depending on traffic volumes, with areas subjected to heavy traffic requiring more frequent maintenance.
+              Typically <strong>18–24 months</strong>, depending on traffic volume. High-traffic areas may require maintenance every <strong>4–8 months</strong>.
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-1">Choice of Resins for Durability</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-1">Which resin is best for durability?</h3>
             <p className="text-gray-600 leading-relaxed">
-              We offer both epoxy and polyurethane resins. Epoxies are suited for concrete and indoor use, while polyurethanes are UV resistant, keeping colours vibrant outdoors.
+              <strong>Epoxy</strong> is ideal for concrete and indoor areas. <strong>Polyurethane</strong> is UV-resistant and perfect for outdoor use, keeping colours vibrant in all weather.
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-1">Use of MMA Resin</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-1">Can MMA resin be used indoors?</h3>
             <p className="text-gray-600 leading-relaxed">
-              We recommend applying MMA resin outdoors due to its strong odour, ensuring it is used in well-ventilated areas only.
+              We recommend <strong>outdoor use only</strong> due to strong odour and ventilation requirements.
             </p>
           </div>
         </div>
 
-        <p className="text-gray-600 mb-4 leading-relaxed">
-          Contact Us: For a free quote and tailored advice, contact our team at Line-Marking.co.nz. We are dedicated to helping you maintain a safe, compliant, and clearly marked environment.
-        </p>
-
-        <div className="bg-gray-50 border border-gray-200 rounded-md p-6 my-8">
-          <p className="text-gray-700 font-medium mb-2">
-            Choose Line-Marking.co.nz as your trusted line marking partner, dedicated to enhancing workplace safety and efficiency with high-quality solutions across Christchurch and Auckland.
+        <div className="bg-blue-600 rounded-md p-6 my-8 text-white text-center">
+          <h3 className="text-xl font-bold mb-2">Get a Free Quote Today</h3>
+          <p className="mb-4 text-white/90">
+            For expert advice, free quotes, and fast turnaround times, contact our team today.
           </p>
-          <p className="text-gray-700 font-medium">
-            Call Rogerio now on{" "}
-            <a href="tel:0224393344" className="text-blue-600 hover:underline" data-testid="link-phone">022 439 3344</a>
-            {" "}or{" "}
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href="tel:0224393344" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-md font-bold hover:bg-blue-50 transition-colors" data-testid="link-phone">
+              Call Rogerio: 022 439 3344
+            </a>
             <Link href="/Contact/">
-              <span className="text-blue-600 hover:underline cursor-pointer" data-testid="link-contact-cta">click here to submit an enquiry</span>
+              <span className="inline-block bg-blue-700 text-white border border-white/30 px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-colors cursor-pointer" data-testid="link-contact-cta">
+                Submit an Enquiry
+              </span>
             </Link>
-          </p>
+          </div>
         </div>
 
         <div className="border-t border-gray-200 pt-8 mt-10">
-          <p className="text-center text-gray-700 font-medium mb-4">We Serve All Of New Zealand, Including:</p>
+          <p className="text-center text-gray-700 font-medium mb-4">We Serve All of New Zealand, Including:</p>
 
           <p className="text-center text-sm text-gray-500 font-medium mb-2">Canterbury & South Island</p>
           <div className="flex flex-wrap justify-center gap-2 text-sm mb-6" data-testid="region-links-canterbury">
