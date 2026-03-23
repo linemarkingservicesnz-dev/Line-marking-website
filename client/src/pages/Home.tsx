@@ -27,8 +27,8 @@ const aucklandLinks = [
 
 export default function Home() {
   usePageTitle({
-    title: "Line-Marking.co.nz | Professional Line Marking Services NZ",
-    description: "Professional car park and industrial line marking across New Zealand. NZTA-approved paints, epoxy flooring, sports courts, safety markings. Christchurch and Auckland. Call 022 439 3344.",
+    title: "Line Marking NZ | Car Parks, Warehouses, Sports Courts & Safety Markings",
+    description: "Professional line marking across New Zealand. Car parks, warehouses, sports courts, playgrounds, epoxy flooring and safety markings. NZTA-approved materials. Nationwide service.",
     path: "/"
   });
   return (
