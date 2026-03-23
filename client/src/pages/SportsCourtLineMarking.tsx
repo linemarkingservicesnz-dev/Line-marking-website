@@ -5,8 +5,8 @@ import heroImage from "../assets/images/sports-court-real.jpg";
 
 export default function SportsCourtLineMarking() {
   usePageTitle({
-    title: "Sports Court Line Marking | Line-Marking.co.nz",
-    description: "Durable, accurate sports court markings for basketball, pickleball, tennis, netball, and multi-sport courts. Schools, clubs, and homes across New Zealand.",
+    title: "Sports Court Line Marking NZ | Basketball, Tennis, Pickleball",
+    description: "Professional sports court line marking for schools, clubs and homes. Basketball, tennis, pickleball, netball and multi-sport courts. UV-resistant paints.",
     path: "/sports-court-line-marking/"
   });
   return (
