@@ -7,7 +7,37 @@ export default function LineMarking() {
   usePageTitle({
     title: "Car Park Line Marking NZ | NZTA-Approved, Fast & Durable",
     description: "Professional car park line marking across NZ. Parking bays, EV bays, arrows, loading zones, accessible parking. NZTA-approved paints. Christchurch & Auckland.",
-    path: "/car-park-line-marking/"
+    path: "/car-park-line-marking/",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long do line markings last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typically 18–24 months depending on traffic volume and surface preparation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work after hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer night and weekend scheduling at standard rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which resin is best for car park durability?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Epoxy resin is ideal for concrete and indoor areas. Polyurethane is UV-resistant and best for outdoor car parks exposed to sunlight."
+          }
+        }
+      ]
+    }
   });
   return (
     <div data-testid="page-line-marking">

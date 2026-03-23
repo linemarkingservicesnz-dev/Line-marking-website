@@ -29,7 +29,66 @@ export default function Home() {
   usePageTitle({
     title: "Line Marking NZ | Car Parks, Warehouses, Sports Courts & Safety Markings",
     description: "Professional line marking across New Zealand. Car parks, warehouses, sports courts, playgrounds, epoxy flooring and safety markings. NZTA-approved materials. Nationwide service.",
-    path: "/"
+    path: "/",
+    schema: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "Line-Marking.co.nz",
+          "url": "https://line-marking.co.nz",
+          "telephone": "+64224393344",
+          "email": "rogeriotc2@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Halswell",
+            "addressRegion": "Canterbury",
+            "addressCountry": "NZ"
+          },
+          "areaServed": ["Christchurch", "Auckland", "Hamilton", "New Zealand"],
+          "description": "Professional line marking services across New Zealand. Car parks, warehouses, sports courts, playgrounds, epoxy flooring and safety markings.",
+          "priceRange": "$$",
+          "openingHours": "Mo-Su 06:00-22:00"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How long do line markings last?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Typically 18–24 months depending on traffic volume and surface preparation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you work after hours?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we offer night and weekend scheduling at standard rates."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What areas do you service?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We are based in Christchurch and service all of Canterbury, Auckland, Waikato, and the wider New Zealand region."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What paints and materials do you use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We use NZTA-approved paints, premium epoxy resins, and polyurethane coatings suited to both indoor and outdoor surfaces."
+              }
+            }
+          ]
+        }
+      ]
+    }
   });
   return (
     <div data-testid="page-home">
