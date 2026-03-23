@@ -8,7 +8,18 @@ interface RegionalProps {
   region?: "canterbury" | "auckland";
 }
 
-const regionContent: Record<string, { intro: string; whyChoose: string[]; services: string[]; seo?: { title: string; description: string } }> = {
+interface RegionData {
+  intro: string;
+  whyChoose: string[];
+  services: string[];
+  seo?: { title: string; description: string };
+  customWhyChoose?: string[];
+  operationsNote?: string;
+  projectsNote?: string;
+  customFaqs?: Array<{ q: string; a: string }>;
+}
+
+const regionContent: Record<string, RegionData> = {
   Rolleston: {
     seo: {
       title: "Line Marking Rolleston | Car Parks, Warehouses & Safety Markings",
@@ -42,20 +53,42 @@ const regionContent: Record<string, { intro: string; whyChoose: string[]; servic
     ],
   },
   Auckland: {
-    intro: "Line-marking.co.nz is now proudly serving the greater Auckland region with professional line marking and industrial flooring services. From the CBD to the suburbs, our experienced team delivers precision line marking solutions for car parks, warehouses, factories, schools, and sports courts across Auckland.",
+    seo: {
+      title: "Line Marking Auckland | Car Parks, Warehouses & Safety Markings",
+      description: "Professional line marking across Auckland, North Shore, South Auckland and West Auckland. Car parks, warehouses, factories, schools and commercial sites. NZTA-approved materials, fast turnaround. Call 022 439 3344.",
+    },
+    intro: "Professional line marking services across Auckland, North Shore, South Auckland and West Auckland. We deliver clear, durable and compliant markings for car parks, warehouses, factories, schools and commercial sites. Fast turnaround, NZTA-approved materials, and night/weekend work available.",
     whyChoose: [
-      "Expanding to Auckland: We're bringing our proven Canterbury expertise to the Auckland market, offering the same high standard of workmanship.",
-      "Full-Service Provider: From car park markings to industrial flooring, epoxy coatings, and sports courts — we handle it all.",
-      "Competitive Pricing: We offer Auckland businesses great value without compromising on quality or materials.",
-      "Flexible Scheduling: Night and weekend work available at standard rates to minimise disruption to your business.",
+      "NZTA-approved paints & coatings",
+      "Fast turnaround with minimal disruption",
+      "Night & weekend work at standard rates",
+      "Industrial-grade durability",
+      "Clear, compliant markings for safety",
+      "Trusted subcontractor network across Auckland",
+    ],
+    customWhyChoose: [
+      "NZTA-approved paints & coatings",
+      "Fast turnaround with minimal disruption",
+      "Night & weekend work at standard rates",
+      "Industrial-grade durability",
+      "Clear, compliant markings for safety",
+      "Trusted subcontractor network across Auckland",
     ],
     services: [
       "Car Park Line Marking: Professional markings for commercial and retail car parks across Auckland.",
-      "Industrial Safety Markings: Warehouse and factory floor markings to meet health and safety compliance.",
-      "Sports Court Marking: Basketball, tennis, pickleball, netball, and multi-sport court markings for schools and clubs.",
-      "Playground & School Games: Painted educational games and activities for Auckland schools.",
-      "Epoxy & Protective Coatings: Durable flooring solutions for garages, warehouses, and commercial spaces.",
-      "Line Removals: Professional removal and updating of existing line markings.",
+      "Warehouse & Factory Line Marking: Pedestrian walkways, forklift lanes, and hazard zone markings.",
+      "Forklift Lanes & Pedestrian Walkways: Clear separation of foot and vehicle traffic.",
+      "Safety & Hazard Zone Markings: Compliant markings to meet WorkSafe NZ requirements.",
+      "Sports Court Line Marking: Basketball, tennis, pickleball, netball, and multi-sport courts.",
+      "Playground Markings: Painted educational games and activities for Auckland schools.",
+      "Line Removal & Repainting: Professional removal and replacement of existing markings.",
+    ],
+    operationsNote: "We service Auckland through our trusted network of professional subcontractors. All work is completed to our strict quality standards, ensuring consistent results across Christchurch and Auckland.",
+    projectsNote: "We complete line marking for car parks, warehouses, logistics hubs and commercial sites across Auckland. Contact us for examples of recent work.",
+    customFaqs: [
+      { q: "Do you service all of Auckland?", a: "Yes — including North Shore, South Auckland, West Auckland and East Auckland." },
+      { q: "Do you subcontract the work?", a: "Yes, we use trusted Auckland operators under our supervision to ensure consistent quality." },
+      { q: "How long do markings last?", a: "Typically 18–24 months depending on traffic and surface preparation." },
     ],
   },
   "North Shore": {
@@ -126,6 +159,13 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
     ],
   };
 
+  const displayWhyChoose = content.customWhyChoose ?? null;
+  const faqs = content.customFaqs ?? [
+    { q: "How long does it last?", a: "18–24 months depending on traffic volume and surface preparation." },
+    { q: "Do you work after hours?", a: "Yes — night and weekend scheduling is available at standard rates, so your operations stay uninterrupted." },
+    { q: `Do you service ${location}?`, a: `Yes. We provide professional line marking throughout ${location} and the surrounding ${regionLabel} region.` },
+  ];
+
   usePageTitle({
     title: content.seo?.title ?? `Professional Line Marking in ${location} | Line-Marking.co.nz`,
     description: content.seo?.description ?? `Professional line marking services in ${location}. Car park marking, industrial safety lines, sports courts, and more across ${regionLabel}. Call 022 439 3344.`,
@@ -133,32 +173,11 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
     schema: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How long does line marking last?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "18–24 months depending on traffic volume and surface preparation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you work after hours?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — night and weekend scheduling is available at standard rates, so your operations stay uninterrupted."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": `Do you service ${location}?`,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": `Yes. We provide professional line marking throughout ${location} and the surrounding ${regionLabel} region.`
-          }
-        }
-      ]
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+      })),
     }
   });
 
@@ -193,46 +212,80 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
       <div className="max-w-4xl mx-auto px-4 py-10">
         <p className="text-gray-600 mb-8 leading-relaxed" data-testid="text-intro">{content.intro}</p>
 
-        <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Why Choose Us?</h2>
+        <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+          {location === "Auckland" ? "Our Auckland Line Marking Services" : "Services We Offer:"}
+        </h2>
         <ul className="list-disc list-inside space-y-2 mb-8 text-gray-600">
-          <li>NZTA-approved paints</li>
-          <li>Night &amp; weekend work at standard rates</li>
-          <li>Industrial-grade durability</li>
-          <li>Clear, compliant markings</li>
-        </ul>
-
-        <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Services We Offer:</h2>
-        <div className="space-y-3 mb-8">
           {content.services.map((item, i) => {
             const [label, ...rest] = item.split(": ");
             return (
-              <p key={i} className="text-gray-600">
-                <strong className="text-gray-800">{label}:</strong> {rest.join(": ")}
-              </p>
+              <li key={i}>
+                <strong className="text-gray-800">{label}</strong>
+                {rest.length > 0 && <>: {rest.join(": ")}</>}
+              </li>
             );
           })}
-        </div>
+        </ul>
 
-        <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Our Process</h2>
-        <ol className="list-decimal list-inside space-y-2 mb-8 text-gray-600">
-          <li>Site assessment &amp; layout planning</li>
-          <li>Surface preparation</li>
-          <li>Professional line marking application</li>
-        </ol>
+        <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+          {location === "Auckland" ? "Why Auckland Clients Choose Us" : "Why Choose Us?"}
+        </h2>
+        {displayWhyChoose ? (
+          <ul className="list-disc list-inside space-y-2 mb-8 text-gray-600">
+            {displayWhyChoose.map((item, i) => <li key={i}>{item}</li>)}
+          </ul>
+        ) : (
+          <ul className="list-disc list-inside space-y-2 mb-8 text-gray-600">
+            <li>NZTA-approved paints</li>
+            <li>Night &amp; weekend work at standard rates</li>
+            <li>Industrial-grade durability</li>
+            <li>Clear, compliant markings</li>
+          </ul>
+        )}
+
+        {content.operationsNote && (
+          <>
+            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">How We Operate in {location}</h2>
+            <p className="text-gray-600 mb-8 leading-relaxed">{content.operationsNote}</p>
+          </>
+        )}
+
+        {content.projectsNote && (
+          <>
+            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Recent {location} Projects</h2>
+            <p className="text-gray-600 mb-8 leading-relaxed">{content.projectsNote}</p>
+          </>
+        )}
+
+        {!content.customFaqs && (
+          <>
+            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Our Process</h2>
+            <ol className="list-decimal list-inside space-y-2 mb-8 text-gray-600">
+              <li>Site assessment &amp; layout planning</li>
+              <li>Surface preparation</li>
+              <li>Professional line marking application</li>
+            </ol>
+          </>
+        )}
 
         <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">FAQs</h2>
         <div className="space-y-4 mb-8">
-          <div>
-            <p className="font-semibold text-gray-800">How long does it last?</p>
-            <p className="text-gray-600">18–24 months depending on traffic volume and surface preparation.</p>
-          </div>
-          <div>
-            <p className="font-semibold text-gray-800">Do you work after hours?</p>
-            <p className="text-gray-600">Yes — night and weekend scheduling is available at standard rates, so your operations stay uninterrupted.</p>
-          </div>
-          <div>
-            <p className="font-semibold text-gray-800">Do you service {location}?</p>
-            <p className="text-gray-600">Yes. We provide professional line marking throughout {location} and the surrounding {isAuckland ? "Auckland & Waikato" : "Canterbury"} region.</p>
+          {faqs.map((faq, i) => (
+            <div key={i}>
+              <p className="font-semibold text-gray-800">{faq.q}</p>
+              <p className="text-gray-600">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="bg-blue-600 rounded-md p-6 text-white text-center mb-8">
+          <h2 className="text-xl font-bold mb-2">Get a Free {location} Quote</h2>
+          <p className="text-white/90 mb-4">Contact us today for fast, professional line marking anywhere in {location}.</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link href="/Contact/">
+              <span className="inline-block bg-white text-blue-600 px-6 py-3 rounded-md font-bold hover:bg-blue-50 transition-colors cursor-pointer" data-testid="button-cta-quote">Get a Free Quote</span>
+            </Link>
+            <a href="tel:0224393344" className="inline-block border-2 border-white text-white px-6 py-3 rounded-md font-bold hover:bg-blue-700 transition-colors" data-testid="link-cta-phone">Call: 022 439 3344</a>
           </div>
         </div>
 
