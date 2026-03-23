@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
+import { RelatedServices } from "@/components/RelatedServices";
 import heroImage from "../assets/images/industrial-marking.png";
 
 export default function Industrial() {
@@ -121,6 +122,8 @@ export default function Industrial() {
             </li>
           </ul>
         </div>
+
+        <RelatedServices />
 
         <div className="bg-blue-600 rounded-md p-6 text-white text-center">
           <h3 className="text-xl font-bold mb-2">Book Your Free Site Visit</h3>

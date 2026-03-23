@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
+import { RelatedServices } from "@/components/RelatedServices";
 import heroImage from "../assets/images/line-removal.png";
 
 export default function LineAndMarkingRemovals() {
@@ -68,6 +69,8 @@ export default function LineAndMarkingRemovals() {
             </ul>
           </div>
         </div>
+
+        <RelatedServices />
 
         <div className="bg-blue-600 rounded-md p-6 text-white text-center">
           <h3 className="text-xl font-bold mb-2">Get a Free Quote</h3>

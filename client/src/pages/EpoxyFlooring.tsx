@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
+import { RelatedServices } from "@/components/RelatedServices";
 import heroImage from "../assets/images/epoxy-flooring-page.png";
 
 export default function EpoxyFlooring() {
@@ -67,6 +68,8 @@ export default function EpoxyFlooring() {
         <p className="text-gray-600 mb-6 leading-relaxed">
           For professional epoxy flooring solutions that enhance both durability and style, trust Line-Marking.co.nz. Contact us today for more information and a free quote, and transform your space with our high-quality epoxy flooring.
         </p>
+
+        <RelatedServices />
 
         <div className="mt-8">
           <Link href="/Contact/">

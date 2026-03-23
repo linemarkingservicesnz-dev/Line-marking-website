@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
+import { RelatedServices } from "@/components/RelatedServices";
 import heroImage from "../assets/images/protective-coatings.png";
 
 export default function ProtectiveCoatings() {
@@ -75,6 +76,8 @@ export default function ProtectiveCoatings() {
             <div><strong className="text-gray-800">Custom Solutions</strong> — Tailored to meet your specific environment, traffic levels, and requirements.</div>
           </div>
         </div>
+
+        <RelatedServices />
 
         <div className="bg-blue-600 rounded-md p-6 text-white text-center">
           <h3 className="text-xl font-bold mb-2">Protect Your Concrete Today</h3>

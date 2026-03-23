@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { usePageTitle } from "@/hooks/use-page-title";
+import { RelatedServices } from "@/components/RelatedServices";
 import heroImage from "../assets/images/real-hero-playground.jpg";
 import hopscotchImage from "../assets/images/real-hopscotch.jpg";
 import snakesLaddersImage from "../assets/images/real-snakes-ladders.jpg";
@@ -155,6 +156,8 @@ export default function PlaygroundGames() {
         <p className="text-gray-600 mb-6 leading-relaxed">
           Whether you need a single hopscotch or a full playground makeover with multiple games, our team can design and paint a layout that works for your space and budget. If you can imagine it, we can paint it.
         </p>
+
+        <RelatedServices />
 
         <div className="bg-blue-600 rounded-md p-6 text-white text-center mt-10">
           <h3 className="text-xl font-bold mb-2">Get a Free Quote for Your School</h3>

@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
+import { RelatedServices } from "@/components/RelatedServices";
 import heroImage from "../assets/images/pedestrian-walkway.png";
 
 export default function PedestrianWalkways() {
@@ -67,6 +68,8 @@ export default function PedestrianWalkways() {
         <p className="text-gray-600 mb-6 leading-relaxed">
           For expert line marking and non-slip paint solutions for pedestrian walkways, trust Line-Marking.co.nz. Contact us today for more information and a free quote, and ensure your pedestrian areas are safe, visible, and compliant.
         </p>
+
+        <RelatedServices />
 
         <div className="mt-8">
           <Link href="/Contact/">

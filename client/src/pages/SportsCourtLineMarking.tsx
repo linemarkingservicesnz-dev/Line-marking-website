@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { usePageTitle } from "@/hooks/use-page-title";
+import { RelatedServices } from "@/components/RelatedServices";
 import heroImage from "../assets/images/sports-court-real.jpg";
 
 export default function SportsCourtLineMarking() {
@@ -86,6 +87,8 @@ export default function SportsCourtLineMarking() {
             <p className="text-gray-600">Combined court layouts for shared spaces — multiple sports, one surface, clearly marked for each.</p>
           </div>
         </div>
+
+        <RelatedServices />
 
         <div className="bg-blue-600 rounded-md p-6 text-white text-center">
           <h3 className="text-xl font-bold mb-2">Get a Free Quote</h3>

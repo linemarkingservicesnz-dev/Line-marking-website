@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
+import { RelatedServices } from "@/components/RelatedServices";
 import heroImage from "../assets/images/non-slip-flooring.png";
 
 export default function NonSlipFlooring() {
@@ -78,6 +79,8 @@ export default function NonSlipFlooring() {
         <p className="text-gray-600 mb-8 leading-relaxed">
           Our non-slip acrylic concrete paint is excellent for asphalt walkways, while our concrete epoxy floor paint and polyurethane floor coating are ideal for concrete floors. Our team will help you choose the best product for your specific project.
         </p>
+
+        <RelatedServices />
 
         <div className="bg-blue-600 rounded-md p-6 text-white text-center">
           <h3 className="text-xl font-bold mb-2">Get Expert Advice & a Free Quote</h3>
