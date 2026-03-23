@@ -4,8 +4,8 @@ import heroImage from "../assets/images/line-marking-service.png";
 
 export default function LineMarking() {
   usePageTitle({
-    title: "Car Park Line Marking NZ | Line-Marking.co.nz",
-    description: "Professional car park line marking across New Zealand. NZTA-approved paints, accessible parking, directional arrows, EV bays, and more. Christchurch and Auckland.",
+    title: "Car Park Line Marking NZ | NZTA-Approved, Fast & Durable",
+    description: "Professional car park line marking across NZ. Parking bays, EV bays, arrows, loading zones, accessible parking. NZTA-approved paints. Christchurch & Auckland.",
     path: "/car-park-line-marking/"
   });
   return (
