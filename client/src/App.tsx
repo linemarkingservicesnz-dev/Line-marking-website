@@ -19,6 +19,8 @@ import PlaygroundGames from "@/pages/PlaygroundGames";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import RegionalLanding from "@/pages/RegionalLanding";
+import Blog from "@/pages/Blog";
+import BlogPostPage from "@/pages/BlogPost";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -96,6 +98,11 @@ function Router() {
 
           <Route path="/About-Us/" component={About} />
           <Route path="/Contact/" component={Contact} />
+
+          <Route path="/blog/" component={Blog} />
+          <Route path="/blog/:slug/">
+            {(params) => <BlogPostPage slug={params.slug} />}
+          </Route>
 
           <Route component={NotFound} />
         </Switch>

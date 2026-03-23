@@ -135,4 +135,35 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+
+  <url>
+    <loc>https://line-marking.co.nz/blog/</loc>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://line-marking.co.nz/blog/how-long-does-line-marking-last/</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://line-marking.co.nz/blog/epoxy-vs-polyurethane-floor-coatings/</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://line-marking.co.nz/blog/warehouse-pedestrian-walkway-markings/</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://line-marking.co.nz/blog/painted-vs-thermoplastic-playground-markings/</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://line-marking.co.nz/blog/how-to-prepare-for-line-marking/</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
