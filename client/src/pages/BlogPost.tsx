@@ -83,6 +83,33 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
           ))}
         </div>
 
+        {post.resources && post.resources.length > 0 && (
+          <div className="bg-gray-50 border border-gray-200 rounded-md p-6 mt-10">
+            <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
+              <span>📋</span> Official NZ Resources
+            </h3>
+            <ul className="space-y-3">
+              {post.resources.map((resource) => (
+                <li key={resource.url} className="flex items-start gap-3">
+                  <span className="text-blue-600 mt-0.5 flex-shrink-0">→</span>
+                  <div>
+                    <a
+                      href={resource.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 font-semibold hover:underline text-sm"
+                      data-testid={`link-resource-${resource.label.toLowerCase().replace(/\s+/g, '-').slice(0, 20)}`}
+                    >
+                      {resource.label}
+                    </a>
+                    <p className="text-gray-500 text-sm mt-0.5">{resource.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         <div className="bg-blue-600 rounded-md p-6 text-white text-center mt-10">
           <p className="text-lg font-medium mb-1">{post.conclusion}</p>
           <div className="flex flex-wrap justify-center gap-3 mt-4">

@@ -90,6 +90,32 @@ export default function Industrial() {
           </blockquote>
         </div>
 
+        <div className="bg-gray-50 border border-gray-200 rounded-md p-6 mb-8">
+          <h2 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">
+            <span>📋</span> Official NZ Workplace Safety Resources
+          </h2>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <span className="text-blue-600 mt-0.5 flex-shrink-0">→</span>
+              <div>
+                <a href="https://www.worksafe.govt.nz/topic-and-industry/vehicles-and-mobile-plant/traffic-management/" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold hover:underline text-sm" data-testid="link-worksafe-traffic">
+                  WorkSafe NZ — Traffic Management in Workplaces
+                </a>
+                <p className="text-gray-500 text-sm mt-0.5">Official guidance on managing vehicle and pedestrian traffic safely in NZ workplaces.</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-blue-600 mt-0.5 flex-shrink-0">→</span>
+              <div>
+                <a href="https://www.worksafe.govt.nz/topic-and-industry/vehicles-and-mobile-plant/forklifts/" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold hover:underline text-sm" data-testid="link-worksafe-forklifts">
+                  WorkSafe NZ — Forklifts and Pedestrian Safety
+                </a>
+                <p className="text-gray-500 text-sm mt-0.5">WorkSafe guidance on managing the risk of forklift and pedestrian interaction in warehouses.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
         <div className="bg-blue-600 rounded-md p-6 text-white text-center">
           <h3 className="text-xl font-bold mb-2">Book Your Free Site Visit</h3>
           <p className="text-white/90 mb-4">Ready to upgrade your site safety and compliance? Call or message us today.</p>

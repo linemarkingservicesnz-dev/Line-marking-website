@@ -14,6 +14,11 @@ export interface BlogPost {
     list?: string[];
   }[];
   conclusion: string;
+  resources?: {
+    label: string;
+    url: string;
+    description: string;
+  }[];
 }
 
 import durabilityImg from "../assets/images/blog-line-marking-durability.png";
@@ -193,7 +198,24 @@ export const blogPosts: BlogPost[] = [
         ]
       }
     ],
-    conclusion: "Clear walkway markings are a straightforward, affordable way to reduce risk, meet your legal obligations, and protect your team. We offer night and weekend marking to minimise disruption to your operations. Get in touch for a free site assessment."
+    conclusion: "Clear walkway markings are a straightforward, affordable way to reduce risk, meet your legal obligations, and protect your team. We offer night and weekend marking to minimise disruption to your operations. Get in touch for a free site assessment.",
+    resources: [
+      {
+        label: "WorkSafe NZ — Traffic Management in Workplaces",
+        url: "https://www.worksafe.govt.nz/topic-and-industry/vehicles-and-mobile-plant/traffic-management/",
+        description: "Official WorkSafe New Zealand guidance on managing vehicle and pedestrian traffic in workplaces."
+      },
+      {
+        label: "Health and Safety at Work Act 2015 — NZ Legislation",
+        url: "https://www.legislation.govt.nz/act/public/2015/0070/latest/whole.html",
+        description: "The primary workplace health and safety legislation in New Zealand."
+      },
+      {
+        label: "WorkSafe NZ — Forklifts and Pedestrian Safety",
+        url: "https://www.worksafe.govt.nz/topic-and-industry/vehicles-and-mobile-plant/forklifts/",
+        description: "WorkSafe guidance on managing the risk of forklifts and pedestrian interaction."
+      }
+    ]
   },
   {
     slug: "painted-vs-thermoplastic-playground-markings",
