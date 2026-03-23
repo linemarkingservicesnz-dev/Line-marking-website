@@ -145,7 +145,7 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-3" data-testid="text-hero-title">
-              Line Marking Services in {location}
+              Line Marking in {location}
             </h1>
             <p className="text-lg text-white/90 max-w-xl" data-testid="text-hero-subtitle">
               Professional Line Marking Across {regionLabel}

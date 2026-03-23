@@ -16,7 +16,7 @@ export default function EpoxyFlooring() {
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
-              Epoxy Flooring
+              Epoxy Flooring Solutions
             </h1>
             <p className="text-lg text-white/90 max-w-xl">Durable and Stylish Epoxy Flooring Solutions</p>
           </div>
