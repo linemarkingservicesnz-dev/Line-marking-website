@@ -12,7 +12,7 @@ export default function Industrial() {
   return (
     <div data-testid="page-industrial">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">
-        <img src={heroImage} alt="Industrial warehouse floor markings" className="w-full h-full object-cover" data-testid="img-hero" />
+        <img src={heroImage} alt="Warehouse pedestrian walkway marking" className="w-full h-full object-cover" data-testid="img-hero" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">

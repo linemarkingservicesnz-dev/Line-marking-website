@@ -13,7 +13,7 @@ export default function SportsCourtLineMarking() {
   return (
     <div data-testid="page-sports-court">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">
-        <img src={heroImage} alt="Indoor sports court with professional line markings" className="w-full h-full object-cover" data-testid="img-hero" />
+        <img src={heroImage} alt="Basketball court line marking" className="w-full h-full object-cover" data-testid="img-hero" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
