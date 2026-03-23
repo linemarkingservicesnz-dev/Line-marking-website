@@ -147,9 +147,15 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-3" data-testid="text-hero-title">
               Line Marking in {location}
             </h1>
-            <p className="text-lg text-white/90 max-w-xl" data-testid="text-hero-subtitle">
-              Professional Line Marking Across {regionLabel}
+            <p className="text-lg text-white/90 max-w-xl mb-4" data-testid="text-hero-subtitle">
+              Professional, compliant and long-lasting line marking in {location} using NZTA-approved paints and premium industrial coatings.
             </p>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link href="/Contact/">
+                <span className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md font-bold hover:bg-blue-700 transition-colors cursor-pointer" data-testid="button-hero-quote">Get a Free Quote</span>
+              </Link>
+              <a href="tel:0224393344" className="text-white font-semibold hover:text-blue-200 transition-colors" data-testid="link-hero-phone">Call: 022 439 3344</a>
+            </div>
           </div>
         </div>
       </div>
