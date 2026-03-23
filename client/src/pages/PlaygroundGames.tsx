@@ -50,8 +50,8 @@ const games = [
 
 export default function PlaygroundGames() {
   usePageTitle({
-    title: "Playground & School Games | Line-Marking.co.nz",
-    description: "Painted playground games for schools including hopscotch, snakes and ladders, number grids, and more. Durable outdoor markings across New Zealand.",
+    title: "Playground Markings NZ | Painted School Games & Learning Trails",
+    description: "Durable painted playground markings for schools: hopscotch, snakes & ladders, number grids, space tracks, mazes, fitness trails and custom designs.",
     path: "/playground-markings/"
   });
   return (
