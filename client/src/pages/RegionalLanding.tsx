@@ -127,9 +127,39 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
   };
 
   usePageTitle({
-    title: content.seo?.title ?? `Line Marking in ${location} | Line-Marking.co.nz`,
+    title: content.seo?.title ?? `Professional Line Marking in ${location} | Line-Marking.co.nz`,
     description: content.seo?.description ?? `Professional line marking services in ${location}. Car park marking, industrial safety lines, sports courts, and more across ${regionLabel}. Call 022 439 3344.`,
-    path: `/${location.toLowerCase().replace(/\s+/g, '-')}-line-marking/`
+    path: `/${location.toLowerCase().replace(/\s+/g, '-')}-line-marking/`,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does line marking last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "18–24 months depending on traffic volume and surface preparation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work after hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — night and weekend scheduling is available at standard rates, so your operations stay uninterrupted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": `Do you service ${location}?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `Yes. We provide professional line marking throughout ${location} and the surrounding ${regionLabel} region.`
+          }
+        }
+      ]
+    }
   });
 
   return (
@@ -145,7 +175,7 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-3" data-testid="text-hero-title">
-              Line Marking in {location}
+              Professional Line Marking in {location}
             </h1>
             <p className="text-lg text-white/90 max-w-xl mb-4" data-testid="text-hero-subtitle">
               Professional, compliant and long-lasting line marking in {location} using NZTA-approved paints and premium industrial coatings.
@@ -164,16 +194,12 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
         <p className="text-gray-600 mb-8 leading-relaxed" data-testid="text-intro">{content.intro}</p>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Why Choose Us?</h2>
-        <div className="space-y-3 mb-8">
-          {content.whyChoose.map((item, i) => {
-            const [label, ...rest] = item.split(": ");
-            return (
-              <p key={i} className="text-gray-600">
-                <strong className="text-gray-800">{label}:</strong> {rest.join(": ")}
-              </p>
-            );
-          })}
-        </div>
+        <ul className="list-disc list-inside space-y-2 mb-8 text-gray-600">
+          <li>NZTA-approved paints</li>
+          <li>Night &amp; weekend work at standard rates</li>
+          <li>Industrial-grade durability</li>
+          <li>Clear, compliant markings</li>
+        </ul>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Services We Offer:</h2>
         <div className="space-y-3 mb-8">
@@ -185,6 +211,29 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
               </p>
             );
           })}
+        </div>
+
+        <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Our Process</h2>
+        <ol className="list-decimal list-inside space-y-2 mb-8 text-gray-600">
+          <li>Site assessment &amp; layout planning</li>
+          <li>Surface preparation</li>
+          <li>Professional line marking application</li>
+        </ol>
+
+        <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">FAQs</h2>
+        <div className="space-y-4 mb-8">
+          <div>
+            <p className="font-semibold text-gray-800">How long does it last?</p>
+            <p className="text-gray-600">18–24 months depending on traffic volume and surface preparation.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-800">Do you work after hours?</p>
+            <p className="text-gray-600">Yes — night and weekend scheduling is available at standard rates, so your operations stay uninterrupted.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-800">Do you service {location}?</p>
+            <p className="text-gray-600">Yes. We provide professional line marking throughout {location} and the surrounding {isAuckland ? "Auckland & Waikato" : "Canterbury"} region.</p>
+          </div>
         </div>
 
         <p className="text-gray-600 mb-4 leading-relaxed">
