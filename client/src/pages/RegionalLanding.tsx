@@ -55,7 +55,7 @@ const regionContent: Record<string, RegionData> = {
   Auckland: {
     seo: {
       title: "Line Marking Auckland | Car Parks, Warehouses & Safety Markings",
-      description: "Professional line marking across Auckland, North Shore, South Auckland and West Auckland. Car parks, warehouses, factories, schools and commercial sites. NZTA-approved materials, fast turnaround. Call 022 439 3344.",
+      description: "Professional line marking in Auckland. Car parks, warehouses, factories, sports courts and safety markings. NZTA-approved paints. Fast turnaround. Free quotes.",
     },
     intro: "Professional line marking services across Auckland, North Shore, South Auckland and West Auckland. We deliver clear, durable and compliant markings for car parks, warehouses, factories, schools and commercial sites. Fast turnaround, NZTA-approved materials, and night/weekend work available.",
     whyChoose: [
