@@ -23,6 +23,12 @@ import Blog from "@/pages/Blog";
 import BlogPostPage from "@/pages/BlogPost";
 import NotFound from "@/pages/not-found";
 
+function Redirect({ to }: { to: string }) {
+  const [, navigate] = useLocation();
+  useEffect(() => { navigate(to, { replace: true }); }, [to, navigate]);
+  return null;
+}
+
 function ScrollToTop() {
   const [pathname] = useLocation();
   useEffect(() => {
@@ -101,6 +107,35 @@ function Router() {
           <Route path="/blog/:slug/">
             {(params) => <BlogPostPage slug={params.slug} />}
           </Route>
+
+          {/* Legacy URL redirects — 301 handled server-side, these cover SPA navigation */}
+          <Route path="/Our-Services/Line-Marking/">{() => <Redirect to="/car-park-line-marking/" />}</Route>
+          <Route path="/Our-Services/Industrial/">{() => <Redirect to="/warehouse-line-marking/" />}</Route>
+          <Route path="/Our-Services/Non-Slip-Flooring/">{() => <Redirect to="/non-slip-flooring/" />}</Route>
+          <Route path="/Our-Services/Protective-Concrete-Coatings/">{() => <Redirect to="/protective-concrete-coatings/" />}</Route>
+          <Route path="/Our-Services/Line-And-Marking-Removals/">{() => <Redirect to="/line-removal/" />}</Route>
+          <Route path="/Our-Services/sports-court-line-marking/">{() => <Redirect to="/sports-court-line-marking/" />}</Route>
+          <Route path="/Our-Services/playground-games/">{() => <Redirect to="/playground-markings/" />}</Route>
+          <Route path="/line-marking-epoxy-flooring/">{() => <Redirect to="/epoxy-flooring/" />}</Route>
+          <Route path="/line-marking-pedestrian-walkways/">{() => <Redirect to="/pedestrian-walkways/" />}</Route>
+          <Route path="/line-marking-rolleston/">{() => <Redirect to="/rolleston-line-marking/" />}</Route>
+          <Route path="/line-marking-greymouth/">{() => <Redirect to="/greymouth-line-marking/" />}</Route>
+          <Route path="/line-marking-rangiora/">{() => <Redirect to="/rangiora-line-marking/" />}</Route>
+          <Route path="/line-marking-ashburton/">{() => <Redirect to="/ashburton-line-marking/" />}</Route>
+          <Route path="/line-marking-blenheim/">{() => <Redirect to="/blenheim-line-marking/" />}</Route>
+          <Route path="/line-marking-kaiapoi/">{() => <Redirect to="/kaiapoi-line-marking/" />}</Route>
+          <Route path="/line-marking-nelson/">{() => <Redirect to="/nelson-line-marking/" />}</Route>
+          <Route path="/line-marking-richmond/">{() => <Redirect to="/richmond-line-marking/" />}</Route>
+          <Route path="/line-marking-timaru/">{() => <Redirect to="/timaru-line-marking/" />}</Route>
+          <Route path="/line-marking-westport/">{() => <Redirect to="/westport-line-marking/" />}</Route>
+          <Route path="/line-marking-auckland/">{() => <Redirect to="/auckland-line-marking/" />}</Route>
+          <Route path="/line-marking-north-shore/">{() => <Redirect to="/north-shore-line-marking/" />}</Route>
+          <Route path="/line-marking-south-auckland/">{() => <Redirect to="/south-auckland-line-marking/" />}</Route>
+          <Route path="/line-marking-hamilton/">{() => <Redirect to="/hamilton-line-marking/" />}</Route>
+          <Route path="/about/">{() => <Redirect to="/About-Us/" />}</Route>
+          <Route path="/about-us/">{() => <Redirect to="/About-Us/" />}</Route>
+          <Route path="/contact/">{() => <Redirect to="/Contact/" />}</Route>
+          <Route path="/services/">{() => <Redirect to="/car-park-line-marking/" />}</Route>
 
           <Route component={NotFound} />
         </Switch>

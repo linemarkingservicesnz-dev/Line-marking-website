@@ -3,11 +3,13 @@ import type { Server } from "http";
 import { storage } from "./storage";
 import { api } from "@shared/routes";
 import { z } from "zod";
+import { registerRedirects } from "./redirects";
 
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  registerRedirects(app);
   
   app.post(api.inquiries.create.path, async (req, res) => {
     try {
