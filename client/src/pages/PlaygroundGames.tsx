@@ -70,13 +70,13 @@ export default function PlaygroundGames() {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-10">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">Painted Playground Games for Schools Across Canterbury</h2>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Painted Playground Games for Schools Across New Zealand</h2>
         <p className="text-gray-600 mb-6 leading-relaxed">
           At Line-Marking.co.nz, we specialise in painting colourful, durable playground games directly onto concrete and asphalt surfaces. Unlike thermoplastic stickers that can peel, crack, and fade, our painted games are applied using high-quality floor paints that bond to the surface and withstand years of play, foot traffic, and New Zealand weather.
         </p>
 
         <p className="text-gray-600 mb-8 leading-relaxed">
-          Our hand-painted playground markings bring colour, fun, and learning to school yards across Christchurch and Canterbury. From classic hopscotch to educational number grids, every design is carefully measured and painted on-site by our experienced team.
+          Our hand-painted playground markings bring colour, fun, and learning to school yards across Christchurch, Auckland, and all of New Zealand. From classic hopscotch to educational number grids, every design is carefully measured and painted on-site by our experienced team.
         </p>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-6">Our Painted Playground Games</h2>
@@ -132,25 +132,22 @@ export default function PlaygroundGames() {
 
         <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Schools &amp; Councils We Work With</h2>
         <p className="text-gray-600 mb-6 leading-relaxed">
-          We work with primary schools, intermediate schools, early childhood centres, and local councils across Christchurch and Canterbury. Whether you need a single hopscotch or a full playground makeover with multiple games, our team can design and paint a layout that works for your space and budget.
+          We work with primary schools, intermediate schools, early childhood centres, and local councils across Christchurch, Auckland, and New Zealand. Whether you need a single hopscotch or a full playground makeover with multiple games, our team can design and paint a layout that works for your space and budget.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Get a Free Quote for Your School</h2>
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          Ready to brighten up your playground with colourful painted games? Contact us today for a free on-site assessment and quote. We'll work with you to choose the best games and designs for your space.
-        </p>
-
-        <div className="flex flex-wrap gap-4 mt-8">
-          <Link href="/Contact/">
-            <Button data-testid="button-contact-us">
-              CONTACT US NOW
-            </Button>
-          </Link>
-          <a href="tel:0224393344">
-            <Button variant="outline" data-testid="button-call-us">
-              CALL 022 439 3344
-            </Button>
-          </a>
+        <div className="bg-blue-600 rounded-md p-6 text-white text-center mt-10">
+          <h3 className="text-xl font-bold mb-2">Get a Free Quote for Your School</h3>
+          <p className="text-white/90 mb-4">Ready to brighten up your playground with colourful painted games? Contact us today for a free on-site assessment and quote.</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href="tel:0224393344" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-md font-bold hover:bg-blue-50 transition-colors" data-testid="button-call-us">
+              Call 022 439 3344
+            </a>
+            <Link href="/Contact/">
+              <span className="inline-block bg-blue-700 text-white border border-white/30 px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-colors cursor-pointer" data-testid="button-contact-us">
+                Submit an Enquiry
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
