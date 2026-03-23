@@ -8,8 +8,12 @@ interface RegionalProps {
   region?: "canterbury" | "auckland";
 }
 
-const regionContent: Record<string, { intro: string; whyChoose: string[]; services: string[] }> = {
+const regionContent: Record<string, { intro: string; whyChoose: string[]; services: string[]; seo?: { title: string; description: string } }> = {
   Rolleston: {
+    seo: {
+      title: "Line Marking Rolleston | Car Parks, Warehouses & Safety Markings",
+      description: "Professional line marking in Rolleston. Car parks, warehouses, sports courts, playgrounds, epoxy flooring and safety markings. Local Canterbury service.",
+    },
     intro: "At line-marking.co.nz, we offer comprehensive line marking services in Rolleston, ensuring top-quality results for every project. Our expert team is ready to meet your specific needs with precision and efficiency.",
     whyChoose: [
       "Proven Expertise: With extensive experience in Rolleston, we understand local requirements and provide bespoke solutions.",
@@ -106,11 +110,6 @@ const aucklandLocations = ["Auckland", "North Shore", "South Auckland", "Hamilto
 export default function RegionalLanding({ location, region = "canterbury" }: RegionalProps) {
   const isAuckland = region === "auckland" || aucklandLocations.includes(location);
   const regionLabel = isAuckland ? "Auckland & Waikato" : "Canterbury";
-  usePageTitle({
-    title: `Line Marking in ${location} | Line-Marking.co.nz`,
-    description: `Professional line marking services in ${location}. Car park marking, industrial safety lines, sports courts, and more across ${regionLabel}. Call 022 439 3344.`,
-    path: `/${location.toLowerCase().replace(/\s+/g, '-')}-line-marking/`
-  });
 
   const content = regionContent[location] || {
     intro: `At line-marking.co.nz, we offer comprehensive line marking services in ${location}, ensuring top-quality results for every project. Our expert team is ready to meet your specific needs with precision and efficiency.`,
@@ -126,6 +125,12 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
       "Sports Court Marking: High-quality markings for all types of sports facilities.",
     ],
   };
+
+  usePageTitle({
+    title: content.seo?.title ?? `Line Marking in ${location} | Line-Marking.co.nz`,
+    description: content.seo?.description ?? `Professional line marking services in ${location}. Car park marking, industrial safety lines, sports courts, and more across ${regionLabel}. Call 022 439 3344.`,
+    path: `/${location.toLowerCase().replace(/\s+/g, '-')}-line-marking/`
+  });
 
   return (
     <div data-testid={`page-regional-${location.toLowerCase().replace(/\s+/g, '-')}`}>
