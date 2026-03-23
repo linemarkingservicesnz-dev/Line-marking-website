@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "SHSROwOHdZkP9EI7UiRCc"
+uri = "file://website-content.txt"
+type = "text"
+title = "Line-Marking.co.nz — Full Website Text Content"
