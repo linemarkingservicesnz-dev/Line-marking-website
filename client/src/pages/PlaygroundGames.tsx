@@ -117,6 +117,9 @@ export default function PlaygroundGames() {
           <p className="text-gray-600">
             <strong className="text-gray-800">Custom Designs:</strong> Paint allows for fully custom designs, colours, and sizes to suit any playground layout or school branding.
           </p>
+          <p className="text-gray-600">
+            <strong className="text-gray-800">Weather-Resistant:</strong> Our floor paints are designed to withstand New Zealand's climate — UV, rain, frost, and heavy foot traffic included.
+          </p>
         </div>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Additional Playground Markings We Offer</h2>
@@ -128,11 +131,23 @@ export default function PlaygroundGames() {
           <li><strong className="text-gray-800">Clock Faces</strong> &ndash; Large painted clocks for teaching time</li>
           <li><strong className="text-gray-800">Shapes &amp; Colour Wheels</strong> &ndash; Educational designs for younger children</li>
           <li><strong className="text-gray-800">Custom School Logos</strong> &ndash; Your school crest or mascot painted onto the playground</li>
+          <li><strong className="text-gray-800">Multi-Game Activity Zones</strong> &ndash; Multiple games combined into one connected playground layout</li>
+          <li><strong className="text-gray-800">PE Activity Stations</strong> &ndash; Painted instructions and zones for structured physical education</li>
         </ul>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Schools &amp; Councils We Work With</h2>
+        <p className="text-gray-600 mb-4 leading-relaxed">
+          We work with a wide range of clients across Christchurch, Auckland, and New Zealand:
+        </p>
+        <ul className="space-y-1 mb-6 text-gray-600">
+          <li>• Primary schools &amp; intermediate schools</li>
+          <li>• Early childhood centres &amp; kindergartens</li>
+          <li>• Local councils &amp; public playgrounds</li>
+          <li>• Community playgrounds &amp; parks</li>
+          <li>• Private homes with outdoor play areas</li>
+        </ul>
         <p className="text-gray-600 mb-6 leading-relaxed">
-          We work with primary schools, intermediate schools, early childhood centres, and local councils across Christchurch, Auckland, and New Zealand. Whether you need a single hopscotch or a full playground makeover with multiple games, our team can design and paint a layout that works for your space and budget.
+          Whether you need a single hopscotch or a full playground makeover with multiple games, our team can design and paint a layout that works for your space and budget. If you can imagine it, we can paint it.
         </p>
 
         <div className="bg-blue-600 rounded-md p-6 text-white text-center mt-10">
