@@ -69,12 +69,13 @@ const regionContent: Record<string, RegionData> = {
       "Trusted subcontractor network across Auckland",
     ],
     customWhyChoose: [
-      "NZTA-approved paints & coatings",
-      "Fast turnaround with minimal disruption",
-      "Night & weekend work at standard rates",
-      "Industrial-grade durability",
-      "Clear, compliant markings for safety",
-      "Trusted subcontractor network across Auckland",
+      "NZTA-approved paints: Durable, high-visibility markings built for Auckland weather and heavy traffic.",
+      "Fast turnaround: Most jobs completed within 24–48 hours, including after-hours and weekend work.",
+      "Industrial-grade accuracy: Clean, sharp lines using professional equipment and surface prep.",
+      "Full commercial capability: Warehouses, logistics hubs, factories, retail centres, schools and car parks.",
+      "Safety-focused: Walkways, forklift lanes, hazard zones, pedestrian crossings and compliance markings.",
+      "Minimal disruption: We work around your schedule — nights, early mornings, or weekends.",
+      "Local Auckland team: Fast response times across the entire region.",
     ],
     services: [
       "Car Park Line Marking: Professional markings for commercial and retail car parks across Auckland.",
@@ -300,7 +301,17 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
         </h2>
         {displayWhyChoose ? (
           <ul className="list-disc list-inside space-y-2 mb-8 text-gray-600">
-            {displayWhyChoose.map((item, i) => <li key={i}>{item}</li>)}
+            {displayWhyChoose.map((item, i) => {
+              const colonIdx = item.indexOf(": ");
+              if (colonIdx !== -1) {
+                return (
+                  <li key={i}>
+                    <strong className="text-gray-800">{item.slice(0, colonIdx)}</strong>: {item.slice(colonIdx + 2)}
+                  </li>
+                );
+              }
+              return <li key={i}>{item}</li>;
+            })}
           </ul>
         ) : (
           <ul className="list-disc list-inside space-y-2 mb-8 text-gray-600">
