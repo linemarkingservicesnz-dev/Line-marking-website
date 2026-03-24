@@ -1,0 +1,56 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does line marking last in Auckland conditions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With NZTA‑approved paints and proper surface preparation, line marking typically lasts 12–36 months depending on traffic volume, weather exposure and surface type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work after hours to avoid disrupting business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We regularly complete work overnight, early mornings and weekends to minimise disruption for warehouses, retail sites and car parks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas of Auckland do you service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We cover the entire Auckland region including Manukau, East Tamaki, Albany, Henderson, Onehunga, Penrose, Silverdale, Westgate and surrounding suburbs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you re-mark faded or damaged lines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We remove loose paint, clean the surface and re‑apply fresh, high‑visibility markings that meet safety and compliance standards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer safety and warehouse markings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We install walkways, forklift lanes, hazard zones, pedestrian crossings, loading bays, directional arrows and custom stencils for industrial sites."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can you complete a job?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most small to medium jobs are completed within 24–48 hours of booking. Larger commercial sites may require staged work over multiple days."
+      }
+    }
+  ]
+}
+</script>

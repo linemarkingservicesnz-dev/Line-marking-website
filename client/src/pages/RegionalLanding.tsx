@@ -87,9 +87,12 @@ const regionContent: Record<string, RegionData> = {
     operationsNote: "We service Auckland through our trusted network of professional subcontractors. All work is completed to our strict quality standards, ensuring consistent results across Christchurch and Auckland.",
     projectsNote: "We complete line marking for car parks, warehouses, logistics hubs and commercial sites across Auckland. Contact us for examples of recent work.",
     customFaqs: [
-      { q: "Do you service all of Auckland?", a: "Yes — including North Shore, South Auckland, West Auckland and East Auckland." },
-      { q: "Do you subcontract the work?", a: "Yes, we use trusted Auckland operators under our supervision to ensure consistent quality." },
-      { q: "How long do markings last?", a: "Typically 18–24 months depending on traffic and surface preparation." },
+      { q: "How long does line marking last in Auckland conditions?", a: "With NZTA-approved paints and proper surface preparation, line marking typically lasts 12–36 months depending on traffic volume, weather exposure and surface type." },
+      { q: "Do you work after hours to avoid disrupting business?", a: "Yes. We regularly complete work overnight, early mornings and weekends to minimise disruption for warehouses, retail sites and car parks." },
+      { q: "What areas of Auckland do you service?", a: "We cover the entire Auckland region including Manukau, East Tamaki, Albany, Henderson, Onehunga, Penrose, Silverdale, Westgate and surrounding suburbs." },
+      { q: "Can you re-mark faded or damaged lines?", a: "Absolutely. We remove loose paint, clean the surface and re-apply fresh, high-visibility markings that meet safety and compliance standards." },
+      { q: "Do you offer safety and warehouse markings?", a: "Yes. We install walkways, forklift lanes, hazard zones, pedestrian crossings, loading bays, directional arrows and custom stencils for industrial sites." },
+      { q: "How quickly can you complete a job?", a: "Most small to medium jobs are completed within 24–48 hours of booking. Larger commercial sites may require staged work over multiple days." },
     ],
     serviceSchema: {
       "@type": "Service",
