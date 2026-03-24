@@ -412,6 +412,28 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
           ))}
         </div>
 
+        {content.projects && (
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Related Line Marking Services</h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {[
+                { href: "/", label: "Home – Line Marking NZ" },
+                { href: "/car-park-line-marking/", label: "Car Park Line Marking" },
+                { href: "/warehouse-line-marking/", label: "Warehouse & Safety Markings" },
+                { href: "/warehouse-line-marking/", label: "Factory Floor Markings" },
+                { href: "/sports-court-line-marking/", label: "Sports Court Marking" },
+                { href: "/Contact/", label: "Contact Us" },
+              ].map((link, i) => (
+                <li key={i}>
+                  <Link href={link.href}>
+                    <span className="text-blue-600 hover:underline cursor-pointer text-sm">→ {link.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         <div className="bg-blue-600 rounded-md p-6 text-white text-center mb-8">
           <h2 className="text-xl font-bold mb-2">Get a Free {location} Quote</h2>
           <p className="text-white/90 mb-4">Contact us today for fast, professional line marking anywhere in {location}.</p>
