@@ -4,11 +4,15 @@ import heroImage from "../assets/images/regional-nz.png";
 import aucklandHeroImage from "../assets/images/auckland-carpark.jpg";
 import aucklandWarehouseImg from "../assets/images/auckland-warehouse.jpg";
 import aucklandCarparkNightImg from "../assets/images/auckland-carpark-night.jpg";
+import aucklandPedestrianImg from "../assets/images/auckland-pedestrian-crossing.jpg";
+import aucklandFactoryImg from "../assets/images/auckland-factory-safety.jpg";
 
 const aucklandProjectImages: Record<number, string> = {
   0: aucklandHeroImage,
   1: aucklandWarehouseImg,
   2: aucklandCarparkNightImg,
+  3: aucklandPedestrianImg,
+  4: aucklandFactoryImg,
 };
 
 interface RegionalProps {
