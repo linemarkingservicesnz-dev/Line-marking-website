@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/regional-nz.png";
-import aucklandHeroImage from "../assets/images/auckland-carpark.jpg";
+import aucklandHeroImage from "../assets/images/auckland-car-park-line-marking.webp";
 import aucklandWarehouseImg from "../assets/images/auckland-warehouse.jpg";
 import aucklandCarparkNightImg from "../assets/images/auckland-carpark-night.jpg";
 import aucklandPedestrianImg from "../assets/images/auckland-pedestrian-crossing.jpg";
