@@ -10,6 +10,7 @@ import aucklandArrowsImg from "../assets/images/auckland-arrows-mobility.jpg";
 import aucklandHazardImg from "../assets/images/auckland-hazard-zones.jpg";
 import aucklandLogisticsImg from "../assets/images/auckland-logistics-stencil.jpg";
 import aucklandStencilImg from "../assets/images/auckland-stencil-visitor.jpg";
+import aucklandSportsCourtImg from "../assets/images/auckland-sports-court.jpg";
 
 const aucklandProjectImages: Record<number, string> = {
   0: aucklandHeroImage,
@@ -20,6 +21,7 @@ const aucklandProjectImages: Record<number, string> = {
   5: aucklandArrowsImg,
   6: aucklandHazardImg,
   7: aucklandLogisticsImg,
+  8: aucklandSportsCourtImg,
   9: aucklandStencilImg,
 };
 
