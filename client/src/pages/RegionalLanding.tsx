@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/regional-nz.png";
-import aucklandHeroImage from "../assets/images/auckland-skyline.png";
+import aucklandHeroImage from "../assets/images/auckland-carpark.jpg";
 
 interface RegionalProps {
   location: string;
