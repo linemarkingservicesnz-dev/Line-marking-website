@@ -19,6 +19,7 @@ interface RegionData {
   customFaqs?: Array<{ q: string; a: string }>;
   serviceSchema?: object | object[];
   suburbs?: string[];
+  industries?: string[];
 }
 
 const regionContent: Record<string, RegionData> = {
@@ -100,6 +101,16 @@ const regionContent: Record<string, RegionData> = {
       "Manukau", "East Tamaki", "Albany", "Henderson", "Onehunga",
       "Penrose", "Silverdale", "Westgate", "Mt Wellington", "New Lynn",
       "Takapuna", "Pakuranga", "Botany", "Glenfield", "Avondale",
+    ],
+    industries: [
+      "Warehouses & Logistics Centres – forklift lanes, walkways, hazard zones, loading bays.",
+      "Retail & Shopping Centres – car parks, pedestrian crossings, directional arrows.",
+      "Factories & Manufacturing Sites – safety lines, machinery zones, exclusion areas.",
+      "Schools & Education Facilities – courts, play areas, drop-off zones.",
+      "Commercial Car Parks – re-marking, numbering, mobility bays, EV bays.",
+      "Transport & Distribution Hubs – traffic flow markings, staging lanes, safety routes.",
+      "Sports & Recreation Facilities – courts, fields, multi-use markings.",
+      "Construction Sites – temporary markings, safety zones, access routes.",
     ],
     serviceSchema: [
       {
@@ -320,6 +331,27 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
             <li>Industrial-grade durability</li>
             <li>Clear, compliant markings</li>
           </ul>
+        )}
+
+        {content.industries && (
+          <>
+            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-2">Industries We Serve Across {location}</h2>
+            <p className="text-gray-600 mb-4">We provide professional line marking for a wide range of commercial and industrial environments throughout {location}, including:</p>
+            <ul className="list-disc list-inside space-y-2 mb-4 text-gray-600">
+              {content.industries.map((item, i) => {
+                const dashIdx = item.indexOf(" – ");
+                if (dashIdx !== -1) {
+                  return (
+                    <li key={i}>
+                      <strong className="text-gray-800">{item.slice(0, dashIdx)}</strong> – {item.slice(dashIdx + 3)}
+                    </li>
+                  );
+                }
+                return <li key={i}>{item}</li>;
+              })}
+            </ul>
+            <p className="text-gray-600 mb-8">Our team works with businesses of all sizes — from small local operators to large national brands — delivering clean, accurate and compliant markings every time.</p>
+          </>
         )}
 
         {content.operationsNote && (
