@@ -9,6 +9,7 @@ import aucklandFactoryImg from "../assets/images/auckland-factory-safety.jpg";
 import aucklandArrowsImg from "../assets/images/auckland-arrows-mobility.jpg";
 import aucklandHazardImg from "../assets/images/auckland-hazard-zones.jpg";
 import aucklandLogisticsImg from "../assets/images/auckland-logistics-stencil.jpg";
+import aucklandStencilImg from "../assets/images/auckland-stencil-visitor.jpg";
 
 const aucklandProjectImages: Record<number, string> = {
   0: aucklandHeroImage,
@@ -19,6 +20,7 @@ const aucklandProjectImages: Record<number, string> = {
   5: aucklandArrowsImg,
   6: aucklandHazardImg,
   7: aucklandLogisticsImg,
+  9: aucklandStencilImg,
 };
 
 interface RegionalProps {
