@@ -3,10 +3,12 @@ import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/regional-nz.png";
 import aucklandHeroImage from "../assets/images/auckland-carpark.jpg";
 import aucklandWarehouseImg from "../assets/images/auckland-warehouse.jpg";
+import aucklandCarparkNightImg from "../assets/images/auckland-carpark-night.jpg";
 
 const aucklandProjectImages: Record<number, string> = {
   0: aucklandHeroImage,
   1: aucklandWarehouseImg,
+  2: aucklandCarparkNightImg,
 };
 
 interface RegionalProps {
