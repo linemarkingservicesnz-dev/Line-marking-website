@@ -2,6 +2,12 @@ import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/regional-nz.png";
 import aucklandHeroImage from "../assets/images/auckland-carpark.jpg";
+import aucklandWarehouseImg from "../assets/images/auckland-warehouse.jpg";
+
+const aucklandProjectImages: Record<number, string> = {
+  0: aucklandHeroImage,
+  1: aucklandWarehouseImg,
+};
 
 interface RegionalProps {
   location: string;
@@ -379,14 +385,24 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
           <>
             <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Recent Line Marking Projects in {location}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              {content.projects.map((project, i) => (
-                <div key={i} className="bg-gray-50 border border-gray-200 rounded-md p-4 flex items-start gap-3">
-                  <span className="mt-1 text-blue-600 shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  </span>
-                  <p className="text-gray-700 text-sm">{project}</p>
-                </div>
-              ))}
+              {content.projects.map((project, i) => {
+                const img = aucklandProjectImages[i];
+                return img ? (
+                  <div key={i} className="rounded-md overflow-hidden border border-gray-200">
+                    <img src={img} alt={project} className="w-full h-40 object-cover" loading="lazy" />
+                    <div className="bg-gray-50 p-3">
+                      <p className="text-gray-700 text-sm">{project}</p>
+                    </div>
+                  </div>
+                ) : (
+                  <div key={i} className="bg-gray-50 border border-gray-200 rounded-md p-4 flex items-start gap-3">
+                    <span className="mt-1 text-blue-600 shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                    <p className="text-gray-700 text-sm">{project}</p>
+                  </div>
+                );
+              })}
             </div>
           </>
         )}
