@@ -6,6 +6,9 @@ import aucklandWarehouseImg from "../assets/images/auckland-warehouse.jpg";
 import aucklandCarparkNightImg from "../assets/images/auckland-carpark-night.jpg";
 import aucklandPedestrianImg from "../assets/images/auckland-pedestrian-crossing.jpg";
 import aucklandFactoryImg from "../assets/images/auckland-factory-safety.jpg";
+import aucklandArrowsImg from "../assets/images/auckland-arrows-mobility.jpg";
+import aucklandHazardImg from "../assets/images/auckland-hazard-zones.jpg";
+import aucklandLogisticsImg from "../assets/images/auckland-logistics-stencil.jpg";
 
 const aucklandProjectImages: Record<number, string> = {
   0: aucklandHeroImage,
@@ -13,6 +16,9 @@ const aucklandProjectImages: Record<number, string> = {
   2: aucklandCarparkNightImg,
   3: aucklandPedestrianImg,
   4: aucklandFactoryImg,
+  5: aucklandArrowsImg,
+  6: aucklandHazardImg,
+  7: aucklandLogisticsImg,
 };
 
 interface RegionalProps {
@@ -107,6 +113,11 @@ const regionContent: Record<string, RegionData> = {
       "Directional arrows and loading bay markings refreshed for a logistics hub in Albany.",
       "Pedestrian crossings and hazard zones completed for a retail centre in Henderson.",
       "Factory floor safety markings and exclusion zones installed in Onehunga.",
+      "Directional arrows, mobility bays and disability symbols marked at a commercial car park.",
+      "Red exclusion and hazard zone markings installed at an industrial site.",
+      "Stencilled bay numbers and letters with safety lines completed at a logistics hub.",
+      "Sports court line marking for schools and recreation facilities across Auckland.",
+      "Custom stencilling, numbering and lettering for commercial car parks and industrial sites.",
     ],
     customFaqs: [
       { q: "How long does line marking last in Auckland conditions?", a: "With NZTA-approved paints and proper surface preparation, line marking typically lasts 12–36 months depending on traffic volume, weather exposure and surface type." },
