@@ -20,6 +20,7 @@ interface RegionData {
   serviceSchema?: object | object[];
   suburbs?: string[];
   industries?: string[];
+  projects?: string[];
 }
 
 const regionContent: Record<string, RegionData> = {
@@ -88,7 +89,13 @@ const regionContent: Record<string, RegionData> = {
       "Line Removal & Repainting: Professional removal and replacement of existing markings.",
     ],
     operationsNote: "We service Auckland through our trusted network of professional subcontractors. All work is completed to our strict quality standards, ensuring consistent results across Christchurch and Auckland.",
-    projectsNote: "We complete line marking for car parks, warehouses, logistics hubs and commercial sites across Auckland. Contact us for examples of recent work.",
+    projects: [
+      "Car park re-marking completed overnight in Manukau using NZTA-approved paints.",
+      "Warehouse safety walkways and forklift lanes installed in East Tamaki.",
+      "Directional arrows and loading bay markings refreshed for a logistics hub in Albany.",
+      "Pedestrian crossings and hazard zones completed for a retail centre in Henderson.",
+      "Factory floor safety markings and exclusion zones installed in Onehunga.",
+    ],
     customFaqs: [
       { q: "How long does line marking last in Auckland conditions?", a: "With NZTA-approved paints and proper surface preparation, line marking typically lasts 12–36 months depending on traffic volume, weather exposure and surface type." },
       { q: "Do you work after hours to avoid disrupting business?", a: "Yes. We regularly complete work overnight, early mornings and weekends to minimise disruption for warehouses, retail sites and car parks." },
@@ -365,6 +372,22 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
           <>
             <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Recent {location} Projects</h2>
             <p className="text-gray-600 mb-8 leading-relaxed">{content.projectsNote}</p>
+          </>
+        )}
+
+        {content.projects && (
+          <>
+            <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Recent Line Marking Projects in {location}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              {content.projects.map((project, i) => (
+                <div key={i} className="bg-gray-50 border border-gray-200 rounded-md p-4 flex items-start gap-3">
+                  <span className="mt-1 text-blue-600 shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <p className="text-gray-700 text-sm">{project}</p>
+                </div>
+              ))}
+            </div>
           </>
         )}
 
