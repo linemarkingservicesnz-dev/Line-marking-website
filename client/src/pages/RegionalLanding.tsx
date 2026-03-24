@@ -17,7 +17,7 @@ interface RegionData {
   operationsNote?: string;
   projectsNote?: string;
   customFaqs?: Array<{ q: string; a: string }>;
-  serviceSchema?: object;
+  serviceSchema?: object | object[];
 }
 
 const regionContent: Record<string, RegionData> = {
@@ -94,19 +94,34 @@ const regionContent: Record<string, RegionData> = {
       { q: "Do you offer safety and warehouse markings?", a: "Yes. We install walkways, forklift lanes, hazard zones, pedestrian crossings, loading bays, directional arrows and custom stencils for industrial sites." },
       { q: "How quickly can you complete a job?", a: "Most small to medium jobs are completed within 24–48 hours of booking. Larger commercial sites may require staged work over multiple days." },
     ],
-    serviceSchema: {
-      "@type": "Service",
-      "name": "Line Marking Auckland",
-      "areaServed": "Auckland, New Zealand",
-      "provider": {
+    serviceSchema: [
+      {
+        "@type": "Service",
+        "name": "Line Marking Auckland",
+        "areaServed": "Auckland, New Zealand",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Line Marking NZ",
+          "url": "https://line-marking.co.nz",
+          "telephone": "+64224393344",
+        },
+        "serviceType": "Line Marking",
+        "url": "https://line-marking.co.nz/auckland-line-marking/",
+      },
+      {
         "@type": "LocalBusiness",
         "name": "Line Marking NZ",
         "url": "https://line-marking.co.nz",
         "telephone": "+64224393344",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Auckland",
+          "addressCountry": "NZ",
+        },
+        "areaServed": "Auckland, New Zealand",
+        "priceRange": "$$",
       },
-      "serviceType": "Line Marking",
-      "url": "https://line-marking.co.nz/auckland-line-marking/",
-    },
+    ],
   },
   "North Shore": {
     intro: "Looking for professional line marking services on Auckland's North Shore? Line-marking.co.nz provides expert car park marking, warehouse safety markings, and sports court line marking across the North Shore — from Takapuna and Devonport to Albany and the Hibiscus Coast.",
@@ -191,7 +206,7 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
       ? {
           "@context": "https://schema.org",
           "@graph": [
-            content.serviceSchema,
+            ...(Array.isArray(content.serviceSchema) ? content.serviceSchema : [content.serviceSchema]),
             {
               "@type": "FAQPage",
               "mainEntity": faqs.map(faq => ({
