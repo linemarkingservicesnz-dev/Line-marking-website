@@ -58,7 +58,7 @@ const regionContent: Record<string, RegionData> = {
       title: "Line Marking Auckland | Car Parks, Warehouses & Safety Markings",
       description: "Professional line marking in Auckland. Car parks, warehouses, factories, sports courts and safety markings. NZTA-approved paints. Fast turnaround. Free quotes.",
     },
-    intro: "Professional line marking services across Auckland, North Shore, South Auckland and West Auckland. We deliver clear, durable and compliant markings for car parks, warehouses, factories, schools and commercial sites. Fast turnaround, NZTA-approved materials, and night/weekend work available.",
+    intro: "We provide professional line marking services across Auckland, delivering durable, high-visibility markings for car parks, warehouses, factories, schools, logistics hubs and commercial sites. Our team uses NZTA-approved paints and industry-standard equipment to ensure clean, accurate lines that improve safety, traffic flow and compliance. Whether you need new markings, re-marking, safety lines, walkways or custom stencilling, we offer fast turnaround, competitive pricing and reliable workmanship across the entire Auckland region.",
     whyChoose: [
       "NZTA-approved paints & coatings",
       "Fast turnaround with minimal disruption",
