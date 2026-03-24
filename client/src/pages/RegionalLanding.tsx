@@ -18,6 +18,7 @@ interface RegionData {
   projectsNote?: string;
   customFaqs?: Array<{ q: string; a: string }>;
   serviceSchema?: object | object[];
+  suburbs?: string[];
 }
 
 const regionContent: Record<string, RegionData> = {
@@ -93,6 +94,11 @@ const regionContent: Record<string, RegionData> = {
       { q: "Can you re-mark faded or damaged lines?", a: "Absolutely. We remove loose paint, clean the surface and re-apply fresh, high-visibility markings that meet safety and compliance standards." },
       { q: "Do you offer safety and warehouse markings?", a: "Yes. We install walkways, forklift lanes, hazard zones, pedestrian crossings, loading bays, directional arrows and custom stencils for industrial sites." },
       { q: "How quickly can you complete a job?", a: "Most small to medium jobs are completed within 24–48 hours of booking. Larger commercial sites may require staged work over multiple days." },
+    ],
+    suburbs: [
+      "Manukau", "East Tamaki", "Albany", "Henderson", "Onehunga",
+      "Penrose", "Silverdale", "Westgate", "Mt Wellington", "New Lynn",
+      "Takapuna", "Pakuranga", "Botany", "Glenfield", "Avondale",
     ],
     serviceSchema: [
       {
@@ -258,6 +264,21 @@ export default function RegionalLanding({ location, region = "canterbury" }: Reg
 
       <div className="max-w-4xl mx-auto px-4 py-10">
         <p className="text-gray-600 mb-8 leading-relaxed" data-testid="text-intro">{content.intro}</p>
+
+        {content.suburbs && (
+          <div className="bg-gray-50 border border-gray-200 rounded-md p-6 mb-8">
+            <h2 className="text-xl font-bold text-gray-800 mb-2">Areas We Service Across {location}</h2>
+            <p className="text-gray-600 mb-4">We provide professional line marking services across the entire {location} region, including:</p>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-1 text-gray-700 text-sm mb-4">
+              {content.suburbs.map((suburb, i) => (
+                <li key={i} className="flex items-center gap-1">
+                  <span className="text-blue-600 font-bold">·</span> {suburb}
+                </li>
+              ))}
+            </ul>
+            <p className="text-gray-500 text-sm">If your site is outside these areas, we can still help — just <a href="tel:0224393344" className="text-blue-600 hover:underline">contact us</a> for availability.</p>
+          </div>
+        )}
 
         <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
           {location === "Auckland" ? "Our Auckland Line Marking Services" : "Services We Offer:"}
