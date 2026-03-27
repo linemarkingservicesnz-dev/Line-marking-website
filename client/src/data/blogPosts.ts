@@ -201,8 +201,8 @@ export const blogPosts: BlogPost[] = [
     conclusion: "Clear walkway markings are a straightforward, affordable way to reduce risk, meet your legal obligations, and protect your team. We offer night and weekend marking to minimise disruption to your operations. Get in touch for a free site assessment.",
     resources: [
       {
-        label: "WorkSafe NZ — Traffic Management in Workplaces",
-        url: "https://www.worksafe.govt.nz/topic-and-industry/vehicles-and-mobile-plant/traffic-management/",
+        label: "WorkSafe NZ — Vehicles & Mobile Plant Safety",
+        url: "https://www.worksafe.govt.nz/topic-and-industry/vehicles-and-mobile-plant/",
         description: "Official WorkSafe New Zealand guidance on managing vehicle and pedestrian traffic in workplaces."
       },
       {

@@ -112,8 +112,8 @@ export default function Industrial() {
             <li className="flex items-start gap-3">
               <span className="text-blue-600 mt-0.5 flex-shrink-0">→</span>
               <div>
-                <a href="https://www.worksafe.govt.nz/topic-and-industry/vehicles-and-mobile-plant/traffic-management/" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold hover:underline text-sm" data-testid="link-worksafe-traffic">
-                  WorkSafe NZ — Traffic Management in Workplaces
+                <a href="https://www.worksafe.govt.nz/topic-and-industry/vehicles-and-mobile-plant/" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold hover:underline text-sm" data-testid="link-worksafe-traffic">
+                  WorkSafe NZ — Vehicles &amp; Mobile Plant Safety
                 </a>
                 <p className="text-gray-500 text-sm mt-0.5">Official guidance on managing vehicle and pedestrian traffic safely in NZ workplaces.</p>
               </div>
