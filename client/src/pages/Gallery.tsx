@@ -43,7 +43,7 @@ const images: GalleryImage[] = [
   { src: logisticsImg, alt: "Stencilled bay numbers and letters with safety lines at a logistics hub", category: "Stencilling & Signage" },
   { src: stencilImg, alt: "VISITOR PARKING stencilled in blue at a commercial car park", category: "Stencilling & Signage" },
   { src: sportsCourtAucklandImg, alt: "Multi-sport indoor court with blue floor and coloured line markings", category: "Sports Courts" },
-  { src: sportsCourtRealImg, alt: "Outdoor sports court line marking — freshly painted court lines", category: "Sports Courts" },
+  { src: sportsCourtRealImg, alt: "Indoor vinyl flooring multi-sport court with coloured line markings", category: "Sports Courts" },
   { src: sportsCourtImg, alt: "Sports court line marking project completed with high-visibility paint", category: "Sports Courts" },
   { src: hopscotchImg, alt: "Hopscotch playground markings painted on school court", category: "Playground Markings" },
   { src: snakesImg, alt: "Triple hopscotch playground marking painted on school grounds", category: "Playground Markings" },
