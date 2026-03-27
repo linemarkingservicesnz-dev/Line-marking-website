@@ -46,7 +46,7 @@ const images: GalleryImage[] = [
   { src: sportsCourtRealImg, alt: "Outdoor sports court line marking — freshly painted court lines", category: "Sports Courts" },
   { src: sportsCourtImg, alt: "Sports court line marking project completed with high-visibility paint", category: "Sports Courts" },
   { src: hopscotchImg, alt: "Hopscotch playground markings painted on school court", category: "Playground Markings" },
-  { src: snakesImg, alt: "Snakes and ladders playground game painted on school grounds", category: "Playground Markings" },
+  { src: snakesImg, alt: "Triple hopscotch playground marking painted on school grounds", category: "Playground Markings" },
   { src: compassImg, alt: "Compass rose playground marking painted at a New Zealand school", category: "Playground Markings" },
   { src: numberGridImg, alt: "Number grid educational floor marking for primary school playground", category: "Playground Markings" },
   { src: spaceTrackImg, alt: "Space track game painted on school playground surface", category: "Playground Markings" },
