@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link } from "wouter";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { usePageTitle } from "@/hooks/use-page-title";
 
 import carparkImg from "../assets/images/auckland-car-park-line-marking.webp";
@@ -57,7 +57,7 @@ const categories = ["All", "Car Parks", "Warehouses & Industrial", "Safety Marki
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [lightbox, setLightbox] = useState<GalleryImage | null>(null);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   usePageTitle({
     title: "Our Work | Line Marking Gallery | Line-Marking.co.nz",
@@ -66,6 +66,29 @@ export default function Gallery() {
   });
 
   const filtered = activeCategory === "All" ? images : images.filter(img => img.category === activeCategory);
+
+  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
+
+  const goNext = useCallback(() => {
+    setLightboxIndex(prev => prev === null ? null : (prev + 1) % filtered.length);
+  }, [filtered.length]);
+
+  const goPrev = useCallback(() => {
+    setLightboxIndex(prev => prev === null ? null : (prev - 1 + filtered.length) % filtered.length);
+  }, [filtered.length]);
+
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === "ArrowRight") goNext();
+      else if (e.key === "ArrowLeft") goPrev();
+      else if (e.key === "Escape") closeLightbox();
+    }
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [lightboxIndex, goNext, goPrev, closeLightbox]);
+
+  const currentImage = lightboxIndex !== null ? filtered[lightboxIndex] : null;
 
   return (
     <div>
@@ -83,7 +106,7 @@ export default function Gallery() {
           {categories.map(cat => (
             <button
               key={cat}
-              onClick={() => setActiveCategory(cat)}
+              onClick={() => { setActiveCategory(cat); setLightboxIndex(null); }}
               data-testid={`filter-${cat.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === cat
@@ -101,7 +124,7 @@ export default function Gallery() {
             <div
               key={i}
               className="overflow-hidden rounded-md cursor-pointer group relative"
-              onClick={() => setLightbox(img)}
+              onClick={() => setLightboxIndex(i)}
               data-testid={`gallery-item-${i}`}
             >
               <img
@@ -129,26 +152,47 @@ export default function Gallery() {
         </div>
       </div>
 
-      {lightbox && (
+      {currentImage && (
         <div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-          onClick={() => setLightbox(null)}
+          onClick={closeLightbox}
           data-testid="lightbox-overlay"
         >
           <button
-            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
-            onClick={() => setLightbox(null)}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+            onClick={closeLightbox}
             data-testid="button-lightbox-close"
           >
             <X className="w-8 h-8" />
           </button>
+
+          <button
+            className="absolute left-3 md:left-6 text-white hover:text-gray-300 transition-colors z-10 bg-black/40 rounded-full p-2"
+            onClick={e => { e.stopPropagation(); goPrev(); }}
+            data-testid="button-lightbox-prev"
+          >
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+
+          <button
+            className="absolute right-3 md:right-6 text-white hover:text-gray-300 transition-colors z-10 bg-black/40 rounded-full p-2"
+            onClick={e => { e.stopPropagation(); goNext(); }}
+            data-testid="button-lightbox-next"
+          >
+            <ChevronRight className="w-8 h-8" />
+          </button>
+
           <img
-            src={lightbox.src}
-            alt={lightbox.alt}
-            className="max-w-full max-h-[85vh] object-contain rounded-md"
+            src={currentImage.src}
+            alt={currentImage.alt}
+            className="max-w-full max-h-[80vh] object-contain rounded-md"
             onClick={e => e.stopPropagation()}
           />
-          <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/80 text-sm text-center px-4">{lightbox.alt}</p>
+
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center px-4">
+            <p className="text-white/90 text-sm">{currentImage.alt}</p>
+            <p className="text-white/50 text-xs mt-1">{(lightboxIndex ?? 0) + 1} / {filtered.length}</p>
+          </div>
         </div>
       )}
     </div>
