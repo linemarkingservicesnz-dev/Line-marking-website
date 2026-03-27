@@ -86,6 +86,12 @@ export function Navigation() {
               </span>
             </Link>
 
+            <Link href="/gallery/">
+              <span className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 cursor-pointer transition-colors" data-testid="nav-gallery">
+                Gallery
+              </span>
+            </Link>
+
             <Link href="/blog/">
               <span className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 cursor-pointer transition-colors" data-testid="nav-blog">
                 Blog
@@ -137,6 +143,9 @@ export function Navigation() {
 
             <Link href="/About-Us/">
               <span className="block py-2 text-sm font-medium text-gray-700" onClick={() => setMobileOpen(false)}>About Us</span>
+            </Link>
+            <Link href="/gallery/">
+              <span className="block py-2 text-sm font-medium text-gray-700" onClick={() => setMobileOpen(false)}>Gallery</span>
             </Link>
             <Link href="/blog/">
               <span className="block py-2 text-sm font-medium text-gray-700" onClick={() => setMobileOpen(false)}>Blog</span>

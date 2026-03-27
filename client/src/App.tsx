@@ -21,6 +21,7 @@ import Contact from "@/pages/Contact";
 import RegionalLanding from "@/pages/RegionalLanding";
 import Blog from "@/pages/Blog";
 import BlogPostPage from "@/pages/BlogPost";
+import Gallery from "@/pages/Gallery";
 import NotFound from "@/pages/not-found";
 
 function Redirect({ to }: { to: string }) {
@@ -102,6 +103,8 @@ function Router() {
 
           <Route path="/About-Us/" component={About} />
           <Route path="/Contact/" component={Contact} />
+
+          <Route path="/gallery/" component={Gallery} />
 
           <Route path="/blog/" component={Blog} />
           <Route path="/blog/:slug/">
