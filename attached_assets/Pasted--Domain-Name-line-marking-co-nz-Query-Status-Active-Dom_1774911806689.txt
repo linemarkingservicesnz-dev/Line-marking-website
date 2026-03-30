@@ -1,0 +1,61 @@
+
+Domain Name	line-marking.co.nz
+Query Status	Active
+Domain Date Registered	04 August 2021 10:18 +12:00
+Domain Date Expiration	04 August 2026 10:18 +12:00
+Domain Date Last Changed	18 September 2025 10:23 +12:00
+Domain Date Created	04 August 2021 10:18 +12:00
+Domain Signed	No
+Registrar contact
+Registrar Name	InterNetX GmbH
+Registrar Website	https://www.internetx.com
+Registrant contact
+Registrant Name	RTC Concrete Grinding Ltd
+Registrant Contact Address	65 Glengarriff Drive
+Registrant Contact City	Lincoln
+Registrant Contact State	NZ
+Registrant Contact Postal Code	7672
+Registrant Contact Country	NZ
+Registrant Contact Phone	+64 224393344
+Registrant Contact Email	rogeriotc2@gmail.com
+Admin contact
+Admin Contact Name	HostPapa
+Admin Contact Address	1623 Military Road., Unit 1013
+Admin Contact City	Niagara Falls
+Admin Contact State	NY
+Admin Contact Postal Code	14304-1745
+Admin Contact Country	US
+Admin Contact Phone	+1 9053153455
+Admin Contact Email	domains@hostpapasupport.com
+Technical contact
+Technical Contact Name	HostPapa
+Technical Contact Address	1623 Military Road., Unit 1013
+Technical Contact City	Niagara Falls
+Technical Contact State	NY
+Technical Contact Postal Code	14304-1745
+Technical Contact Country	US
+Technical Contact Phone	+1 9053153455
+Technical Contact Email	domains@hostpapasupport.com
+Name server
+NS Name	ns1.activehost.nz
+NS Name	ns2.activehost.nz
+Terms of Use
+By submitting a WHOIS query you are entering into an agreement with Domain Name Commission Ltd on the following terms and conditions, and subject to all relevant .nz Policies and procedures as found at https://dnc.org.nz/.
+
+It is prohibited to:
+
+Send high volume WHOIS queries with the effect of downloading part of or all of the .nz Register or collecting register data or records;
+Access the .nz Register in bulk through the WHOIS service (ie. where a user is able to access WHOIS data other than by sending individual queries to the database);
+Use WHOIS data to allow, enable, or otherwise support mass unsolicited commercial advertising, or mass solicitations to registrants or to undertake market research via direct mail, electronic mail, SMS, telephone or any other medium;
+Use WHOIS data in contravention of any applicable data and privacy laws, including the Unsolicited Electronic Messages Act 2007;
+Store or compile WHOIS data to build up a secondary register of information;
+Publish historical or non-current versions of WHOIS data; and
+Publish any WHOIS data in bulk.
+Copyright Domain Name Commission Limited (a company wholly-owned by Internet New Zealand Incorporated) which may enforce its rights against any person or entity that undertakes any prohibited activity without its written permission.
+
+The WHOIS service is provided by Internet New Zealand Incorporated.
+
+Print
+Make a complaint
+Top
+DNC news
