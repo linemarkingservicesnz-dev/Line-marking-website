@@ -38,3 +38,8 @@ author = "agent"
 task = "shell.exec"
 args = "npm run dev"
 waitForPort = 5000
+
+[userenv]
+
+[userenv.shared]
+NOTIFY_EMAIL = "rogeriotc2@gmail.com"
