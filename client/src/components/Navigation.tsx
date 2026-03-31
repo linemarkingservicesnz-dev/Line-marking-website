@@ -40,10 +40,10 @@ export function Navigation() {
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm" data-testid="navigation">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-[148px]">
           <Link href="/" data-testid="link-home">
             <span className="flex items-center cursor-pointer">
-              <img src={logoImage} alt="Line-Marking.co.nz logo" className="h-[66px] w-auto" data-testid="img-logo" />
+              <img src={logoImage} alt="Line-Marking.co.nz logo" className="h-[132px] w-auto" data-testid="img-logo" />
             </span>
           </Link>
 
