@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 195" width="920" height="195">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 210" width="920" height="210">
   <defs>
     <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#3B82C4;stop-opacity:1" />
@@ -32,8 +32,8 @@
     </linearGradient>
   </defs>
 
-  <rect width="920" height="195" rx="12" fill="#FFFFFF"/>
-  <rect x="1" y="1" width="918" height="193" rx="11" fill="none" stroke="#E4EDF7" stroke-width="1.5"/>
+  <rect width="920" height="210" rx="12" fill="#FFFFFF"/>
+  <rect x="1" y="1" width="918" height="208" rx="11" fill="none" stroke="#E4EDF7" stroke-width="1.5"/>
 
   <g filter="url(#iconShadow)">
     <rect x="22" y="22" width="148" height="148" rx="30" fill="url(#iconBg)"/>
@@ -56,5 +56,5 @@
 
   <rect x="188" y="120" width="706" height="3" rx="1.5" fill="url(#ruleGrad)"/>
 
-  <text x="190" y="152" font-family="'Barlow', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" letter-spacing="5" fill="#7A9EC0">PROFESSIONAL LINE MARKING</text>
+  <text x="190" y="168" font-family="'Barlow', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="400" letter-spacing="5" fill="#7A9EC0">PROFESSIONAL LINE MARKING</text>
 </svg>
