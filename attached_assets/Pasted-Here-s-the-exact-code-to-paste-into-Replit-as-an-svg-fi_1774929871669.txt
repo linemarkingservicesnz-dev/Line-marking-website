@@ -1,0 +1,66 @@
+Here's the exact code to paste into Replit as an .svg file or inline in HTML:
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82C4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E63A8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF8C2A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E06000;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="iconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A9AE0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A5FA8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gloss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.28" />
+      <stop offset="55%" style="stop-color:#FFFFFF;stop-opacity:0.04" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+    </linearGradient>
+    <filter id="iconShadow" x="-15%" y="-10%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#1A5FA8" flood-opacity="0.35"/>
+    </filter>
+    <filter id="textShadow" x="-2%" y="-5%" width="110%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#1A5FA8" flood-opacity="0.15"/>
+    </filter>
+    <filter id="orangeGlow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#FF8C2A" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="ruleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3B82C4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C2A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="200" rx="12" fill="#FFFFFF"/>
+  <rect x="1" y="1" width="598" height="198" rx="11" fill="none" stroke="#E4EDF7" stroke-width="1.5"/>
+
+  <g filter="url(#iconShadow)">
+    <rect x="22" y="22" width="136" height="136" rx="30" fill="url(#iconBg)"/>
+  </g>
+  <rect x="22" y="22" width="136" height="68" rx="30" fill="url(#gloss)"/>
+  <rect x="22" y="72" width="136" height="18" fill="url(#gloss)"/>
+
+  <g filter="url(#iconShadow)">
+    <polygon points="50,36  114,90  50,144  70,144  120,90  70,36" fill="#FFFFFF" opacity="0.92"/>
+  </g>
+  <g filter="url(#orangeGlow)">
+    <polygon points="76,50  136,90  76,130  94,130  138,90  94,50" fill="url(#orangeGrad)"/>
+  </g>
+
+  <rect x="23.5" y="23.5" width="133" height="133" rx="29" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.25"/>
+
+  <text x="178" y="102" font-family="'Barlow Condensed', 'Arial Narrow', 'Impact', sans-serif" font-size="64" font-weight="800" letter-spacing="1.5" fill="url(#blueGrad)" filter="url(#textShadow)">LINE-MARKING</text>
+
+  <rect x="178" y="112" width="392" height="3" rx="1.5" fill="url(#ruleGrad)"/>
+
+  <text x="596" y="145" font-family="'Barlow Condensed', 'Arial Narrow', sans-serif" font-size="28" font-weight="700" letter-spacing="3" text-anchor="end" fill="url(#orangeGrad)">.CO.NZ</text>
+
+  <text x="180" y="145" font-family="'Barlow', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" letter-spacing="5" fill="#7A9EC0">PROFESSIONAL LINE MARKING</text>
+</svg>
+To use in Replit:
+Save as logo.svg and reference with <img src="logo.svg">, OR
+Paste the SVG code directly inline inside your HTML <body> for best font/filter rendering
+The font Barlow Condensed will render best if you add this in your <head>:
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400&display=swap" rel="stylesheet">
