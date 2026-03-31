@@ -19,8 +19,12 @@ function createTransporter() {
 
 async function sendInquiryNotification(inquiry: { name: string; email: string; phone?: string | null; message: string }) {
   const transporter = createTransporter();
-  if (!transporter || !process.env.NOTIFY_EMAIL) return;
+  if (!transporter || !process.env.NOTIFY_EMAIL) {
+    console.error("Email not configured: missing GMAIL_APP_PASSWORD or NOTIFY_EMAIL");
+    return;
+  }
 
+  console.log(`Sending enquiry notification to ${process.env.NOTIFY_EMAIL} for ${inquiry.name}`);
   try {
     await transporter.sendMail({
       from: `"Line-Marking.co.nz" <${process.env.NOTIFY_EMAIL}>`,
@@ -39,6 +43,7 @@ async function sendInquiryNotification(inquiry: { name: string; email: string; p
         </div>
       `,
     });
+    console.log("Enquiry notification email sent successfully");
   } catch (err) {
     console.error("Failed to send enquiry notification email:", err);
   }
