@@ -3,6 +3,9 @@ import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
 import { servicePageSchema } from "@/lib/schemas";
 import heroImage from "../assets/images/industrial-marking.png";
+import projectImg1 from "../assets/images/warehouse-exclusion-zones-1.jpg";
+import projectImg2 from "../assets/images/warehouse-exclusion-zones-2.jpg";
+import projectImg3 from "../assets/images/warehouse-exclusion-zones-3.jpg";
 
 export default function Industrial() {
   usePageTitle({
@@ -76,6 +79,14 @@ export default function Industrial() {
               {benefit}
             </div>
           ))}
+        </div>
+
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Recent Project — Warehouse Safety Marking</h2>
+        <p className="text-gray-600 mb-4">Red exclusion zones and yellow pedestrian walkways around truck bays — a full warehouse safety layout for a Christchurch distribution centre.</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-10">
+          <img src={projectImg1} alt="Warehouse red exclusion zones and yellow walkways around truck bays" className="w-full h-52 object-cover rounded-md" data-testid="img-project-1" />
+          <img src={projectImg2} alt="Looking down warehouse aisle with red and yellow safety markings" className="w-full h-52 object-cover rounded-md" data-testid="img-project-2" />
+          <img src={projectImg3} alt="Ground-level view of red and yellow floor markings at warehouse entrance" className="w-full h-52 object-cover rounded-md" data-testid="img-project-3" />
         </div>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Areas We Serve</h2>

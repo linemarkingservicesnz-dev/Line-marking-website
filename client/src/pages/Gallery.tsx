@@ -3,6 +3,10 @@ import { Link } from "wouter";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { usePageTitle } from "@/hooks/use-page-title";
 
+import warehouseExclusion1Img from "../assets/images/warehouse-exclusion-zones-1.jpg";
+import warehouseExclusion2Img from "../assets/images/warehouse-exclusion-zones-2.jpg";
+import warehouseExclusion3Img from "../assets/images/warehouse-exclusion-zones-3.jpg";
+import warehouseBayImg from "../assets/images/warehouse-bay-markings.jpg";
 import carparkImg from "../assets/images/auckland-car-park-line-marking.webp";
 import carparkNightImg from "../assets/images/auckland-carpark-night.jpg";
 import heroCarparkImg from "../assets/images/hero-carpark.png";
@@ -34,9 +38,13 @@ const images: GalleryImage[] = [
   { src: carparkImg, alt: "Car park line marking with fresh white bay lines and wheel stops", category: "Car Parks" },
   { src: carparkNightImg, alt: "Commercial car park re-marking completed overnight with white bay lines", category: "Car Parks" },
   { src: heroCarparkImg, alt: "Professional car park line marking — clean white bays on asphalt", category: "Car Parks" },
+  { src: warehouseExclusion1Img, alt: "Warehouse floor with red exclusion zones and yellow forklift lanes around truck bays", category: "Warehouses & Industrial" },
+  { src: warehouseExclusion2Img, alt: "Red and yellow safety markings in warehouse — exclusion zones and pedestrian walkways", category: "Warehouses & Industrial" },
+  { src: warehouseBayImg, alt: "New warehouse with orange storage bay markings on polished concrete floor", category: "Warehouses & Industrial" },
   { src: warehouseImg, alt: "Warehouse floor with yellow forklift lanes and pedestrian walkways", category: "Warehouses & Industrial" },
   { src: industrialImg, alt: "Industrial facility safety line marking — yellow walkway and hazard zones", category: "Warehouses & Industrial" },
   { src: factoryImg, alt: "Factory floor with red and yellow safety markings and exclusion zones", category: "Warehouses & Industrial" },
+  { src: warehouseExclusion3Img, alt: "Ground-level view of red and yellow exclusion zone markings on warehouse concrete", category: "Safety Markings" },
   { src: hazardImg, alt: "Red exclusion and hazard zone markings at an industrial site", category: "Safety Markings" },
   { src: pedestrianImg, alt: "Freshly painted pedestrian crossing with white zebra stripes at industrial site", category: "Safety Markings" },
   { src: arrowsImg, alt: "Blue directional arrow and orange mobility bays with disability symbols at night", category: "Safety Markings" },
