@@ -84,7 +84,7 @@ export default function LineMarking() {
           <div>
             <h3 className="text-lg font-semibold text-gray-800 mb-1">How long will the lines last?</h3>
             <p className="text-gray-600 leading-relaxed">
-              Typically <strong>18–24 months</strong>, depending on traffic volume. High-traffic areas may require maintenance every <strong>4–8 months</strong>.
+              Typically <strong>18–24 months</strong>, depending on traffic volume. High-traffic areas may require maintenance every <strong>6–12 months</strong>. In extreme work environments — such as port container pads where heavy machinery and straddle carriers operate constantly — lines may need refreshing more frequently due to the intense weight and movement.
             </p>
           </div>
           <div>
