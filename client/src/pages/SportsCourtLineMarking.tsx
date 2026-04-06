@@ -48,6 +48,21 @@ export default function SportsCourtLineMarking() {
           <p className="text-sm text-gray-500 mt-2 italic px-1" data-testid="text-showcase-caption">Indoor multi-sport court with basketball and volleyball line markings completed by our team.</p>
         </div>
 
+        <div className="my-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">See Us In Action</h2>
+          <p className="text-gray-600 mb-4">Watch our team mark a half basketball court — precision work from start to finish.</p>
+          <div className="relative w-full rounded-md overflow-hidden shadow-md" style={{ paddingBottom: "56.25%" }}>
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/AAjyt2HSYXM?rel=0"
+              title="Half basketball court line marking by Line-Marking.co.nz"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              data-testid="video-basketball-court"
+            />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           <div className="bg-gray-50 border border-gray-100 rounded-md p-5">
             <h2 className="text-lg font-bold text-gray-800 mb-3">We Mark:</h2>
