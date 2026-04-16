@@ -42,4 +42,4 @@ waitForPort = 5000
 [userenv]
 
 [userenv.shared]
-NOTIFY_EMAIL = "rogeriotc2@gmail.com"
+NOTIFY_EMAIL = "linemarking.services.nz@gmail.com"
