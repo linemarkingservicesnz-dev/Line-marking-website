@@ -41,7 +41,7 @@ export default function Home() {
           "name": "Line-Marking.co.nz",
           "url": "https://line-marking.co.nz",
           "telephone": "+64224393344",
-          "email": "rogeriotc2@gmail.com",
+          "email": "linemarking.services.nz@gmail.com",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Halswell",

@@ -40,8 +40,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800">Email</p>
-                  <a href="mailto:rogeriotc2@gmail.com" className="text-blue-600 hover:underline" data-testid="link-email">
-                    rogeriotc2@gmail.com
+                  <a href="mailto:linemarking.services.nz@gmail.com" className="text-blue-600 hover:underline" data-testid="link-email">
+                    linemarking.services.nz@gmail.com
                   </a>
                 </div>
               </div>
