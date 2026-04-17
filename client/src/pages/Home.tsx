@@ -189,9 +189,9 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-gray-800 mb-2">Recent Project</h2>
           <p className="text-gray-600 mb-4">Warehouse safety layout — red exclusion zones, yellow walkways and truck bay markings for a Christchurch distribution centre.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            <img src={recentProject1} alt="Warehouse red exclusion zones and yellow walkways around truck bays" className="w-full h-52 object-cover rounded-md" data-testid="img-recent-1" />
-            <img src={recentProject2} alt="New warehouse with orange storage bay markings on polished concrete" className="w-full h-52 object-cover rounded-md" data-testid="img-recent-2" />
-            <img src={recentProject3} alt="Red and yellow safety markings down warehouse aisle" className="w-full h-52 object-cover rounded-md" data-testid="img-recent-3" />
+            <img src={recentProject1} alt="Warehouse red exclusion zones and yellow walkways around truck bays" className="w-full h-52 object-cover rounded-md" data-testid="img-recent-1" loading="lazy" />
+            <img src={recentProject2} alt="New warehouse with orange storage bay markings on polished concrete" className="w-full h-52 object-cover rounded-md" data-testid="img-recent-2" loading="lazy" />
+            <img src={recentProject3} alt="Red and yellow safety markings down warehouse aisle" className="w-full h-52 object-cover rounded-md" data-testid="img-recent-3" loading="lazy" />
           </div>
           <div className="mt-3 text-right">
             <Link href="/gallery/"><span className="text-blue-600 font-medium hover:underline cursor-pointer text-sm" data-testid="link-view-gallery">View all projects in our gallery →</span></Link>

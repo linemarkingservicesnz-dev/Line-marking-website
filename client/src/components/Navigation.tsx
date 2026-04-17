@@ -108,6 +108,8 @@ export function Navigation() {
             className="md:hidden p-2"
             onClick={() => setMobileOpen(!mobileOpen)}
             data-testid="button-mobile-menu"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
