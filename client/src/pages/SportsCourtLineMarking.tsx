@@ -10,12 +10,31 @@ export default function SportsCourtLineMarking() {
     title: "Sports Court Line Marking NZ | Basketball, Tennis, Pickleball",
     description: "Professional sports court line marking for schools, clubs and homes. Basketball, tennis, pickleball, netball and multi-sport courts. UV-resistant paints.",
     path: "/sports-court-line-marking/",
-    schema: servicePageSchema(
-      "Sports Court Line Marking",
-      "Professional sports court line marking for schools, clubs and homes. Basketball, tennis, pickleball, netball and multi-sport courts. UV-resistant paints.",
-      "/sports-court-line-marking/",
-      [{ question: "Can you mark multiple sports on the same court?", answer: "Yes — we specialise in multi-sport court layouts using different colours for each sport, clearly defined on a single surface." }]
-    )
+    schema: {
+      "@context": "https://schema.org",
+      "@graph": [
+        servicePageSchema(
+          "Sports Court Line Marking",
+          "Professional sports court line marking for schools, clubs and homes. Basketball, tennis, pickleball, netball and multi-sport courts. UV-resistant paints.",
+          "/sports-court-line-marking/",
+          [{ question: "Can you mark multiple sports on the same court?", answer: "Yes — we specialise in multi-sport court layouts using different colours for each sport, clearly defined on a single surface." }]
+        ),
+        {
+          "@type": "VideoObject",
+          "name": "Half Basketball Court Line Marking by Line-Marking.co.nz",
+          "description": "Watch our team mark a half basketball court — precision line marking work from start to finish in Christchurch, New Zealand.",
+          "thumbnailUrl": "https://img.youtube.com/vi/AAjyt2HSYXM/maxresdefault.jpg",
+          "uploadDate": "2024-01-01",
+          "embedUrl": "https://www.youtube.com/embed/AAjyt2HSYXM",
+          "url": "https://www.youtube.com/watch?v=AAjyt2HSYXM",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Line-Marking.co.nz",
+            "url": "https://line-marking.co.nz"
+          }
+        }
+      ]
+    }
   });
   return (
     <div data-testid="page-sports-court">
