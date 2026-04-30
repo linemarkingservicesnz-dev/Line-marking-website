@@ -6,3 +6,15 @@ id = "SHSROwOHdZkP9EI7UiRCc"
 uri = "file://website-content.txt"
 type = "text"
 title = "Line-Marking.co.nz — Full Website Text Content"
+
+[[outputs]]
+id = "lmw8wlSE2mmMPcSHZfPp4"
+uri = "file://client/src/assets/images/logo.png"
+type = "image"
+title = "Logo (PNG)"
+
+[[outputs]]
+id = "LBsdFkaWIfWObfyAKi835"
+uri = "file://client/src/assets/images/logo-alt.png"
+type = "image"
+title = "Logo Alt (PNG)"
