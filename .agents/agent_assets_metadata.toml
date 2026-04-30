@@ -11,10 +11,16 @@ title = "Line-Marking.co.nz — Full Website Text Content"
 id = "lmw8wlSE2mmMPcSHZfPp4"
 uri = "file://client/src/assets/images/logo.png"
 type = "image"
-title = "Logo (PNG)"
+title = "Website Logo (PNG) — use this for Google Ads"
 
 [[outputs]]
 id = "LBsdFkaWIfWObfyAKi835"
 uri = "file://client/src/assets/images/logo-alt.png"
 type = "image"
 title = "Logo Alt (PNG)"
+
+[[outputs]]
+id = "snSfXRtIMITyz8UTnxw5X"
+uri = "file://client/src/assets/images/logo.svg"
+type = "image"
+title = "Website Logo (SVG)"
