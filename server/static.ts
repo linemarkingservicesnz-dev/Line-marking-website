@@ -19,6 +19,13 @@ export function serveStatic(app: Express) {
   );
 
   app.use(
+    "/images",
+    express.static(path.join(distPath, "images"), {
+      maxAge: "30d",
+    }),
+  );
+
+  app.use(
     express.static(distPath, {
       maxAge: "1h",
       setHeaders: (res, filePath) => {

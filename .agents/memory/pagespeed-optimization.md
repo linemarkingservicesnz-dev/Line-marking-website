@@ -20,5 +20,12 @@ description: Hard-won lessons optimizing this React+Vite SPA's mobile PageSpeed 
 - Deferring GTM until first interaction OR a timeout dropped TBT 470ms → 0ms and Speed Index 6.8s → 3.8s.
 - The timeout must be **longer than PageSpeed's measurement window (~5s)** — set to 10s. A 3.5s timer fired during the test and re-added the 500KB+ of third-party JS to the trace.
 
+## Server-side delivery wins (biggest remaining levers after image/JS work)
+- The Express production server had **no gzip** — PageSpeed flagged "No compression applied" and a render-blocking ~75KB CSS taking ~1.3s. Adding `app.use(compression())` as the first middleware in `server/index.ts` (ahead of static serving) compresses CSS/JS and is the single highest-impact fix once the obvious image work is done.
+- Static cache TTLs matter for the "efficient cache lifetimes" audit: Vite's hashed `/assets` get `1y, immutable`; non-hashed `/images` were defaulting to `1h` → bump to `30d` via a dedicated `express.static` mount placed BEFORE the generic one. Trade-off: non-hashed image URLs can serve stale after edits, so version the filename if an image changes.
+
+## Gallery/below-fold images flagged by "Improve image delivery"
+- Lazy images don't hurt LCP but still count toward total bytes / "improve image delivery". The recent-project warehouse webps were 3000–4000px wide but display ~380px → resizing to 800px cut ~1.7MB to ~160KB. Resize source files in place so the existing imports keep working (Vite re-hashes content).
+
 ## Reserve space to avoid CLS
 - Below-fold images all use fixed Tailwind heights (`h-48`, `h-52`, `h-56`) so `loading="lazy"` on them does not cause shift. Keep width/height attrs on them anyway.
