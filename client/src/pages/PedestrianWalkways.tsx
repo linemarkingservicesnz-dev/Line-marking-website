@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
 import { servicePageSchema } from "@/lib/schemas";
-import heroImage from "../assets/images/pedestrian-walkway.png";
+import heroImage from "../assets/images/pedestrian-walkway.webp";
 import heroImageWebp from "../assets/images/pedestrian-walkway.webp";
 
 export default function PedestrianWalkways() {

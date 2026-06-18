@@ -21,11 +21,11 @@ export interface BlogPost {
   }[];
 }
 
-import durabilityImg from "../assets/images/blog-line-marking-durability.png";
-import epoxyImg from "../assets/images/blog-epoxy-vs-polyurethane.png";
-import warehouseImg from "../assets/images/blog-warehouse-walkways.png";
-import playgroundImg from "../assets/images/blog-playground-markings.png";
-import preparingImg from "../assets/images/blog-preparing-for-marking.png";
+import durabilityImg from "../assets/images/blog-line-marking-durability.webp";
+import epoxyImg from "../assets/images/blog-epoxy-vs-polyurethane.webp";
+import warehouseImg from "../assets/images/blog-warehouse-walkways.webp";
+import playgroundImg from "../assets/images/blog-playground-markings.webp";
+import preparingImg from "../assets/images/blog-preparing-for-marking.webp";
 
 export const blogPosts: BlogPost[] = [
   {

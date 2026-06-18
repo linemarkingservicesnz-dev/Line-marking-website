@@ -1,17 +1,17 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
-import heroImage from "../assets/images/regional-nz.png";
+import heroImage from "../assets/images/regional-nz.webp";
 import heroImageWebp from "../assets/images/regional-nz.webp";
 import aucklandHeroImage from "../assets/images/auckland-car-park-line-marking.webp";
-import aucklandWarehouseImg from "../assets/images/auckland-warehouse.jpg";
-import aucklandCarparkNightImg from "../assets/images/auckland-carpark-night.jpg";
-import aucklandPedestrianImg from "../assets/images/auckland-pedestrian-crossing.jpg";
-import aucklandFactoryImg from "../assets/images/auckland-factory-safety.jpg";
-import aucklandArrowsImg from "../assets/images/auckland-arrows-mobility.jpg";
-import aucklandHazardImg from "../assets/images/auckland-hazard-zones.jpg";
-import aucklandLogisticsImg from "../assets/images/auckland-logistics-stencil.jpg";
-import aucklandStencilImg from "../assets/images/auckland-stencil-visitor.jpg";
-import aucklandSportsCourtImg from "../assets/images/auckland-sports-court.jpg";
+import aucklandWarehouseImg from "../assets/images/auckland-warehouse.webp";
+import aucklandCarparkNightImg from "../assets/images/auckland-carpark-night.webp";
+import aucklandPedestrianImg from "../assets/images/auckland-pedestrian-crossing.webp";
+import aucklandFactoryImg from "../assets/images/auckland-factory-safety.webp";
+import aucklandArrowsImg from "../assets/images/auckland-arrows-mobility.webp";
+import aucklandHazardImg from "../assets/images/auckland-hazard-zones.webp";
+import aucklandLogisticsImg from "../assets/images/auckland-logistics-stencil.webp";
+import aucklandStencilImg from "../assets/images/auckland-stencil-visitor.webp";
+import aucklandSportsCourtImg from "../assets/images/auckland-sports-court.webp";
 
 const aucklandProjectImages: Record<number, string> = {
   0: aucklandHeroImage,

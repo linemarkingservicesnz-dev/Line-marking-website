@@ -1,15 +1,15 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
-import heroImage from "../assets/images/hero-carpark.png";
+import heroImage from "../assets/images/hero-carpark.webp";
 import heroImageWebp from "../assets/images/hero-carpark.webp";
-import warehouseImage from "../assets/images/warehouse-safety.png";
-import epoxyImage from "../assets/images/epoxy-floor.png";
-import sportsImage from "../assets/images/sports-court.png";
-import recentProject1 from "../assets/images/warehouse-exclusion-zones-1.jpg";
+import warehouseImage from "../assets/images/warehouse-safety.webp";
+import epoxyImage from "../assets/images/epoxy-floor.webp";
+import sportsImage from "../assets/images/sports-court.webp";
+import recentProject1 from "../assets/images/warehouse-exclusion-zones-1.webp";
 import recentProject1Webp from "../assets/images/warehouse-exclusion-zones-1.webp";
-import recentProject2 from "../assets/images/warehouse-bay-markings.jpg";
+import recentProject2 from "../assets/images/warehouse-bay-markings.webp";
 import recentProject2Webp from "../assets/images/warehouse-bay-markings.webp";
-import recentProject3 from "../assets/images/warehouse-exclusion-zones-2.jpg";
+import recentProject3 from "../assets/images/warehouse-exclusion-zones-2.webp";
 import recentProject3Webp from "../assets/images/warehouse-exclusion-zones-2.webp";
 
 const canterburyLinks = [

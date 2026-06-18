@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
 import { servicePageSchema } from "@/lib/schemas";
-import heroImage from "../assets/images/epoxy-flooring-page.png";
+import heroImage from "../assets/images/epoxy-flooring-page.webp";
 import heroImageWebp from "../assets/images/epoxy-flooring-page.webp";
 
 export default function EpoxyFlooring() {

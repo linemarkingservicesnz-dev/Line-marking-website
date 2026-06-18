@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
-import heroImage from "../assets/images/about-team.png";
+import heroImage from "../assets/images/about-team.webp";
 import heroImageWebp from "../assets/images/about-team.webp";
 
 export default function About() {

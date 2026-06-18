@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
 import { servicePageSchema } from "@/lib/schemas";
-import heroImage from "../assets/images/sports-court-real.jpg";
+import heroImage from "../assets/images/sports-court-real.webp";
 import heroImageWebp from "../assets/images/sports-court-real.webp";
 
 export default function SportsCourtLineMarking() {

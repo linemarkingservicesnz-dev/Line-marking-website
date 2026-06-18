@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
 import { servicePageSchema } from "@/lib/schemas";
-import heroImage from "../assets/images/real-hero-playground.jpg";
+import heroImage from "../assets/images/real-hero-playground.webp";
 import heroImageWebp from "../assets/images/real-hero-playground.webp";
 import hopscotchImage from "../assets/images/real-hopscotch.jpg";
 import hopscotchImageWebp from "../assets/images/real-hopscotch.webp";
@@ -11,11 +11,11 @@ import snakesLaddersImage from "../assets/images/real-snakes-ladders.jpg";
 import snakesLaddersImageWebp from "../assets/images/real-snakes-ladders.webp";
 import numberGridImage from "../assets/images/real-number-grid.jpg";
 import numberGridImageWebp from "../assets/images/real-number-grid.webp";
-import compassImage from "../assets/images/real-compass.jpg";
+import compassImage from "../assets/images/real-compass.webp";
 import compassImageWebp from "../assets/images/real-compass.webp";
-import spaceTrackImage from "../assets/images/real-space-track.jpg";
+import spaceTrackImage from "../assets/images/real-space-track.webp";
 import spaceTrackImageWebp from "../assets/images/real-space-track.webp";
-import targetImage from "../assets/images/real-target.jpg";
+import targetImage from "../assets/images/real-target.webp";
 import targetImageWebp from "../assets/images/real-target.webp";
 
 const games = [

@@ -2,13 +2,13 @@ import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
 import { servicePageSchema } from "@/lib/schemas";
-import heroImage from "../assets/images/industrial-marking.png";
+import heroImage from "../assets/images/industrial-marking.webp";
 import heroImageWebp from "../assets/images/industrial-marking.webp";
-import projectImg1 from "../assets/images/warehouse-exclusion-zones-1.jpg";
+import projectImg1 from "../assets/images/warehouse-exclusion-zones-1.webp";
 import projectImg1Webp from "../assets/images/warehouse-exclusion-zones-1.webp";
-import projectImg2 from "../assets/images/warehouse-exclusion-zones-2.jpg";
+import projectImg2 from "../assets/images/warehouse-exclusion-zones-2.webp";
 import projectImg2Webp from "../assets/images/warehouse-exclusion-zones-2.webp";
-import projectImg3 from "../assets/images/warehouse-exclusion-zones-3.jpg";
+import projectImg3 from "../assets/images/warehouse-exclusion-zones-3.webp";
 import projectImg3Webp from "../assets/images/warehouse-exclusion-zones-3.webp";
 
 export default function Industrial() {
