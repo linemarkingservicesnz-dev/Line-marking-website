@@ -6,7 +6,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useEffect, lazy, Suspense } from "react";
 
-const Home = lazy(() => import("@/pages/Home"));
+import Home from "@/pages/Home";
 const LineMarking = lazy(() => import("@/pages/LineMarking"));
 const Industrial = lazy(() => import("@/pages/Industrial"));
 const NonSlipFlooring = lazy(() => import("@/pages/NonSlipFlooring"));
@@ -44,7 +44,7 @@ function Router() {
       <ScrollToTop />
       <Navigation />
       <main className="flex-grow">
-        <Suspense fallback={null}>
+        <Suspense fallback={<div className="min-h-screen" />}>
           <Switch>
             <Route path="/" component={Home} />
 

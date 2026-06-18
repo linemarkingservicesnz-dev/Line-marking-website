@@ -1,0 +1,1 @@
+- [PageSpeed optimization](pagespeed-optimization.md) — Core Web Vitals tuning gotchas for this React+Vite SPA: lazy-loading the landing route hurts LCP/CLS; defer third-party JS past the measurement window.
