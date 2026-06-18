@@ -4,47 +4,60 @@ import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
 import { servicePageSchema } from "@/lib/schemas";
 import heroImage from "../assets/images/real-hero-playground.jpg";
+import heroImageWebp from "../assets/images/real-hero-playground.webp";
 import hopscotchImage from "../assets/images/real-hopscotch.jpg";
+import hopscotchImageWebp from "../assets/images/real-hopscotch.webp";
 import snakesLaddersImage from "../assets/images/real-snakes-ladders.jpg";
+import snakesLaddersImageWebp from "../assets/images/real-snakes-ladders.webp";
 import numberGridImage from "../assets/images/real-number-grid.jpg";
+import numberGridImageWebp from "../assets/images/real-number-grid.webp";
 import compassImage from "../assets/images/real-compass.jpg";
+import compassImageWebp from "../assets/images/real-compass.webp";
 import spaceTrackImage from "../assets/images/real-space-track.jpg";
+import spaceTrackImageWebp from "../assets/images/real-space-track.webp";
 import targetImage from "../assets/images/real-target.jpg";
+import targetImageWebp from "../assets/images/real-target.webp";
 
 const games = [
   {
     title: "Space Track",
     image: spaceTrackImage,
+    imageWebp: spaceTrackImageWebp,
     alt: "Painted space track with colourful stars, aliens, and balance trail on school playground",
     description: "One of our most popular designs, the Space Track is a colourful fitness trail painted directly onto the playground surface. Featuring bright painted stars, planets, aliens, a moon, and a balance trail, children follow the winding path completing activities at each station. Great for PE lessons, break-time fun, and encouraging active play.",
   },
   {
     title: "Hopscotch",
     image: hopscotchImage,
+    imageWebp: hopscotchImageWebp,
     alt: "Rainbow hopscotch with clouds and stars painted on school playground",
     description: "Our rainbow hopscotch designs are bright, durable, and perfectly sized for children of all ages. This design features colourful numbered squares with rainbow arches, painted clouds, and stars - turning a classic playground game into a work of art. Painted directly onto concrete or asphalt using hard-wearing floor paint that lasts through years of play and weather.",
   },
   {
     title: "Snakes & Ladders",
     image: snakesLaddersImage,
+    imageWebp: snakesLaddersImageWebp,
     alt: "Colourful snakes and ladders hopscotch painted on school playground with number grid in background",
     description: "Bring classic games to life on your playground surface. Our hand-painted designs feature vibrant colours and clear numbering, encouraging interactive play and early maths skills during break times. We can paint multiple games across your playground to create a full activity zone.",
   },
   {
     title: "Number Grids (1-100)",
     image: numberGridImage,
+    imageWebp: numberGridImageWebp,
     alt: "Rainbow coloured number grid 1 to 100 painted on school playground",
     description: "Our painted number grids are a fantastic educational resource, helping children with counting, number recognition, and basic maths. Each square is clearly numbered and painted in vibrant rainbow colours for easy visibility. This stunning 10x10 grid is one of our most popular school playground markings.",
   },
   {
     title: "Compass Rose & Clock",
     image: compassImage,
+    imageWebp: compassImageWebp,
     alt: "Pink green and yellow compass rose with clock face painted on school playground",
     description: "Teach children about directions, geography, and telling time with our beautifully painted compass rose and clock face design. Featuring bright pink, green, and yellow points with cardinal and intermediate directions, plus a central clock face - perfect for outdoor learning activities and cross-curricular lessons.",
   },
   {
     title: "Target & Bullseye Games",
     image: targetImage,
+    imageWebp: targetImageWebp,
     alt: "Painted dartboard target game with scoring zones on school playground",
     description: "Our painted dartboard target features numbered scoring zones from 1 to 20, with concentric rings in red, yellow, and orange. Perfect for throwing games, maths activities, and PE lessons. Children love the competitive element of aiming for the bullseye 20-point centre.",
   },
@@ -65,7 +78,10 @@ export default function PlaygroundGames() {
   return (
     <div data-testid="page-playground-games">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">
-        <img src={heroImage} alt="Painted playground games for schools" className="w-full h-full object-cover" data-testid="img-hero" />
+        <picture>
+          <source type="image/webp" srcSet={heroImageWebp} />
+          <img src={heroImage} alt="Painted playground games for schools" className="w-full h-full object-cover" width={2576} height={1932} fetchpriority="high" data-testid="img-hero" />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
@@ -99,13 +115,18 @@ export default function PlaygroundGames() {
           {games.map((game, index) => (
             <div key={game.title} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 items-center`}>
               <div className="w-full md:w-1/2">
-                <img
-                  src={game.image}
-                  alt={game.alt}
-                  loading="lazy"
-                  className="w-full rounded-md shadow-sm"
-                  data-testid={`img-game-${game.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-                />
+                <picture>
+                  <source type="image/webp" srcSet={game.imageWebp} />
+                  <img
+                    src={game.image}
+                    alt={game.alt}
+                    loading="lazy"
+                    className="w-full rounded-md shadow-sm"
+                    width={1600}
+                    height={1200}
+                    data-testid={`img-game-${game.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
+                  />
+                </picture>
               </div>
               <div className="w-full md:w-1/2">
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{game.title}</h3>

@@ -3,9 +3,13 @@ import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
 import { servicePageSchema } from "@/lib/schemas";
 import heroImage from "../assets/images/industrial-marking.png";
+import heroImageWebp from "../assets/images/industrial-marking.webp";
 import projectImg1 from "../assets/images/warehouse-exclusion-zones-1.jpg";
+import projectImg1Webp from "../assets/images/warehouse-exclusion-zones-1.webp";
 import projectImg2 from "../assets/images/warehouse-exclusion-zones-2.jpg";
+import projectImg2Webp from "../assets/images/warehouse-exclusion-zones-2.webp";
 import projectImg3 from "../assets/images/warehouse-exclusion-zones-3.jpg";
+import projectImg3Webp from "../assets/images/warehouse-exclusion-zones-3.webp";
 
 export default function Industrial() {
   usePageTitle({
@@ -22,7 +26,10 @@ export default function Industrial() {
   return (
     <div data-testid="page-industrial">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">
-        <img src={heroImage} alt="Warehouse pedestrian walkway marking" className="w-full h-full object-cover" data-testid="img-hero" />
+        <picture>
+          <source type="image/webp" srcSet={heroImageWebp} />
+          <img src={heroImage} alt="Warehouse pedestrian walkway marking" className="w-full h-full object-cover" width={1408} height={768} fetchpriority="high" data-testid="img-hero" />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
@@ -84,9 +91,18 @@ export default function Industrial() {
         <h2 className="text-2xl font-bold text-gray-800 mb-4">Recent Project — Warehouse Safety Marking</h2>
         <p className="text-gray-600 mb-4">Red exclusion zones and yellow pedestrian walkways around truck bays — a full warehouse safety layout for a Christchurch distribution centre.</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-10">
-          <img src={projectImg1} alt="Warehouse red exclusion zones and yellow walkways around truck bays" className="w-full h-52 object-cover rounded-md" data-testid="img-project-1" loading="lazy" />
-          <img src={projectImg2} alt="Looking down warehouse aisle with red and yellow safety markings" className="w-full h-52 object-cover rounded-md" data-testid="img-project-2" loading="lazy" />
-          <img src={projectImg3} alt="Ground-level view of red and yellow floor markings at warehouse entrance" className="w-full h-52 object-cover rounded-md" data-testid="img-project-3" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcSet={projectImg1Webp} />
+            <img src={projectImg1} alt="Warehouse red exclusion zones and yellow walkways around truck bays" className="w-full h-52 object-cover rounded-md" width={3000} height={2598} loading="lazy" data-testid="img-project-1" />
+          </picture>
+          <picture>
+            <source type="image/webp" srcSet={projectImg2Webp} />
+            <img src={projectImg2} alt="Looking down warehouse aisle with red and yellow safety markings" className="w-full h-52 object-cover rounded-md" width={1959} height={1919} loading="lazy" data-testid="img-project-2" />
+          </picture>
+          <picture>
+            <source type="image/webp" srcSet={projectImg3Webp} />
+            <img src={projectImg3} alt="Ground-level view of red and yellow floor markings at warehouse entrance" className="w-full h-52 object-cover rounded-md" width={2236} height={1900} loading="lazy" data-testid="img-project-3" />
+          </picture>
         </div>
 
         <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Areas We Serve</h2>

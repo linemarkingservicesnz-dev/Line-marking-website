@@ -1,12 +1,16 @@
 import { Link } from "wouter";
 import { usePageTitle } from "@/hooks/use-page-title";
 import heroImage from "../assets/images/hero-carpark.png";
+import heroImageWebp from "../assets/images/hero-carpark.webp";
 import warehouseImage from "../assets/images/warehouse-safety.png";
 import epoxyImage from "../assets/images/epoxy-floor.png";
 import sportsImage from "../assets/images/sports-court.png";
 import recentProject1 from "../assets/images/warehouse-exclusion-zones-1.jpg";
+import recentProject1Webp from "../assets/images/warehouse-exclusion-zones-1.webp";
 import recentProject2 from "../assets/images/warehouse-bay-markings.jpg";
+import recentProject2Webp from "../assets/images/warehouse-bay-markings.webp";
 import recentProject3 from "../assets/images/warehouse-exclusion-zones-2.jpg";
+import recentProject3Webp from "../assets/images/warehouse-exclusion-zones-2.webp";
 
 const canterburyLinks = [
   { href: "/ashburton-line-marking/", label: "Ashburton" },
@@ -96,12 +100,18 @@ export default function Home() {
   return (
     <div data-testid="page-home">
       <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
-        <img
-          src={heroImage}
-          alt="Professional car park line marking in New Zealand"
-          className="w-full h-full object-cover"
-          data-testid="img-hero"
-        />
+        <picture>
+          <source type="image/webp" srcSet={heroImageWebp} />
+          <img
+            src={heroImage}
+            alt="Professional car park line marking in New Zealand"
+            className="w-full h-full object-cover"
+            width={1408}
+            height={768}
+            fetchpriority="high"
+            data-testid="img-hero"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
@@ -189,9 +199,18 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-gray-800 mb-2">Recent Project</h2>
           <p className="text-gray-600 mb-4">Warehouse safety layout — red exclusion zones, yellow walkways and truck bay markings for a Christchurch distribution centre.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            <img src={recentProject1} alt="Warehouse red exclusion zones and yellow walkways around truck bays" className="w-full h-52 object-cover rounded-md" data-testid="img-recent-1" loading="lazy" />
-            <img src={recentProject2} alt="New warehouse with orange storage bay markings on polished concrete" className="w-full h-52 object-cover rounded-md" data-testid="img-recent-2" loading="lazy" />
-            <img src={recentProject3} alt="Red and yellow safety markings down warehouse aisle" className="w-full h-52 object-cover rounded-md" data-testid="img-recent-3" loading="lazy" />
+            <picture>
+              <source type="image/webp" srcSet={recentProject1Webp} />
+              <img src={recentProject1} alt="Warehouse red exclusion zones and yellow walkways around truck bays" className="w-full h-52 object-cover rounded-md" width={3000} height={2598} loading="lazy" data-testid="img-recent-1" />
+            </picture>
+            <picture>
+              <source type="image/webp" srcSet={recentProject2Webp} />
+              <img src={recentProject2} alt="New warehouse with orange storage bay markings on polished concrete" className="w-full h-52 object-cover rounded-md" width={4000} height={3000} loading="lazy" data-testid="img-recent-2" />
+            </picture>
+            <picture>
+              <source type="image/webp" srcSet={recentProject3Webp} />
+              <img src={recentProject3} alt="Red and yellow safety markings down warehouse aisle" className="w-full h-52 object-cover rounded-md" width={1959} height={1919} loading="lazy" data-testid="img-recent-3" />
+            </picture>
           </div>
           <div className="mt-3 text-right">
             <Link href="/gallery/"><span className="text-blue-600 font-medium hover:underline cursor-pointer text-sm" data-testid="link-view-gallery">View all projects in our gallery →</span></Link>

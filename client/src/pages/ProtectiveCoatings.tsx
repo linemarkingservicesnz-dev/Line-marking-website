@@ -3,6 +3,7 @@ import { usePageTitle } from "@/hooks/use-page-title";
 import { RelatedServices } from "@/components/RelatedServices";
 import { servicePageSchema } from "@/lib/schemas";
 import heroImage from "../assets/images/protective-coatings.png";
+import heroImageWebp from "../assets/images/protective-coatings.webp";
 
 export default function ProtectiveCoatings() {
   usePageTitle({
@@ -19,7 +20,10 @@ export default function ProtectiveCoatings() {
   return (
     <div data-testid="page-protective-coatings">
       <div className="relative w-full h-[300px] md:h-[380px] overflow-hidden">
-        <img src={heroImage} alt="Protective concrete floor coating" className="w-full h-full object-cover" data-testid="img-hero" />
+        <picture>
+          <source type="image/webp" srcSet={heroImageWebp} />
+          <img src={heroImage} alt="Protective concrete floor coating" className="w-full h-full object-cover" width={1408} height={768} fetchpriority="high" data-testid="img-hero" />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-4xl mx-auto px-4 w-full">
