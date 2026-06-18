@@ -99,6 +99,8 @@ export default function Home() {
       <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
         <img
           src={heroImage}
+          srcSet="/images/hero-carpark-800.webp 800w, /images/hero-carpark-1200.webp 1200w, /images/hero-carpark.webp 1408w"
+          sizes="100vw"
           alt="Professional car park line marking in New Zealand"
           className="w-full h-full object-cover"
           width={1408}
