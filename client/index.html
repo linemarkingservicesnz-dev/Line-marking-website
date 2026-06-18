@@ -15,6 +15,7 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://line-marking.co.nz" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preload" as="image" href="/images/hero-carpark.webp" type="image/webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -42,7 +43,7 @@
       var events=['mousedown','keydown','touchstart','scroll'];
       function onInteract(){loadGTM();events.forEach(function(e){document.removeEventListener(e,onInteract)});}
       events.forEach(function(e){document.addEventListener(e,onInteract,{once:true,passive:true})});
-      setTimeout(loadGTM,3500);
+      setTimeout(loadGTM,10000);
     })();
     </script>
     <!-- End Google Tag Manager -->
