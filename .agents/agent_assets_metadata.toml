@@ -24,3 +24,9 @@ id = "snSfXRtIMITyz8UTnxw5X"
 uri = "file://client/src/assets/images/logo.svg"
 type = "image"
 title = "Website Logo (SVG)"
+
+[[outputs]]
+id = "hufT20y96_k2bbXRMRSjm"
+uri = "file://line-marking-website.tar.gz"
+type = "unspecified"
+title = "Line Marking Website - Source Code"
