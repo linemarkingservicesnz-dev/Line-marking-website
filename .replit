@@ -43,3 +43,4 @@ waitForPort = 5000
 
 [userenv.shared]
 NOTIFY_EMAIL = "linemarking.services.nz@gmail.com"
+GITHUB_TOKEN = "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"
